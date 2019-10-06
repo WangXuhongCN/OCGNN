@@ -7,8 +7,8 @@ from dgl import DGLGraph
 from dgl.data import register_data_args, load_data
 
 from gcn import GCN
-#from gcn_mp import GCN
-#from gcn_spmv import GCN
+from loss import loss_function,init_center
+
 
 def evaluate(model, features, labels, mask):
     model.eval()
@@ -83,14 +83,18 @@ def main(args):
     loss_fcn = torch.nn.CrossEntropyLoss()
 
     # use optimizer
-    optimizer = torch.optim.Adam(model.parameters(),
+    optimizer = torch.optim.AdamW(model.parameters(),
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)
 
-    # initialize graph
+    # initialize data center
+    data_center= init_center(args,features, model)
+
+
     dur = []
+    model.train()
     for epoch in range(args.n_epochs):
-        model.train()
+        #model.train()
         if epoch >= 3:
             t0 = time.time()
         # forward
