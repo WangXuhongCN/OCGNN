@@ -88,7 +88,7 @@ def main(args):
                                  weight_decay=args.weight_decay)
 
     # initialize data center
-    data_center= init_center(args,features, model)
+    #data_center= init_center(args,features, model)
 
 
     dur = []
@@ -98,8 +98,9 @@ def main(args):
         if epoch >= 3:
             t0 = time.time()
         # forward
-        logits = model(features)
-        loss = loss_fcn(logits[train_mask], labels[train_mask])
+        outputs= model(features)
+        #loss=loss_function(data_center,outputs,train_mask)
+        loss = loss_fcn(outputs[train_mask], labels[train_mask])
 
         optimizer.zero_grad()
         loss.backward()
