@@ -12,6 +12,7 @@
             "console": "integratedTerminal",
             "args": [
                 "--dataset", "cora",
+                "--normal-class", "2",
                 "--gpu", "0",
                 "--self-loop"
             ],

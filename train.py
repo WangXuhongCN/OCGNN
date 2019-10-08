@@ -8,6 +8,7 @@ from dgl.data import register_data_args, load_data
 
 from gcn import GCN
 from loss import loss_function,init_center
+from prepocessing import one_class_processing
 
 
 def evaluate(model, features, labels, mask):
@@ -23,11 +24,13 @@ def evaluate(model, features, labels, mask):
 def main(args):
     # load and preprocess dataset
     data = load_data(args)
+    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,args.normal_class)
+
     features = torch.FloatTensor(data.features)
-    labels = torch.LongTensor(data.labels)
-    train_mask = torch.BoolTensor(data.train_mask)
-    val_mask = torch.BoolTensor(data.val_mask)
-    test_mask = torch.BoolTensor(data.test_mask)
+    labels = torch.LongTensor(labels)
+    train_mask = torch.BoolTensor(train_mask)
+    val_mask = torch.BoolTensor(val_mask)
+    test_mask = torch.BoolTensor(test_mask)
     in_feats = features.shape[1]
     n_classes = data.num_labels
     n_edges = data.graph.number_of_edges()
@@ -124,6 +127,8 @@ if __name__ == '__main__':
     register_data_args(parser)
     parser.add_argument("--dropout", type=float, default=0.5,
             help="dropout probability")
+    parser.add_argument("--normal-class", type=int, default=2,
+            help="normal-class")
     parser.add_argument("--gpu", type=int, default=-1,
             help="gpu")
     parser.add_argument("--lr", type=float, default=1e-2,
