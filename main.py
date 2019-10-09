@@ -8,6 +8,7 @@ from utils.evaluate import evaluate
 from networks.init import init_model
 
 def main(args):
+    #测试git是否配置成功
     datadict=dataloader(args)
     model=init_model(args,datadict)
     model=train(args,datadict,model)
