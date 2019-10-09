@@ -1,8 +1,11 @@
 import torch    
+import numpy as np
     
-def loss_function(data_center,outputs,train_mask):
+def loss_function(args,data_center,outputs,train_mask,radius):
     dist = torch.sum((outputs[train_mask] - data_center) ** 2, dim=1)
-    return torch.mean(dist)
+    scores = dist - radius ** 2
+    loss = radius ** 2 + (1 / args.nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
+    return loss,dist,scores
 
 
 def init_center(args,features, model,train_mask, eps=0.001):
@@ -15,7 +18,7 @@ def init_center(args,features, model,train_mask, eps=0.001):
         
         # get the inputs of the batch
 
-        outputs = model(features[train_mask])
+        outputs = model(features)
         n_samples = outputs.shape[0]
         c =torch.sum(outputs, dim=0)
 
@@ -26,3 +29,8 @@ def init_center(args,features, model,train_mask, eps=0.001):
     c[(abs(c) < eps) & (c > 0)] = eps
 
     return c
+
+
+def get_radius(dist: torch.Tensor, nu: float):
+    """Optimally solve for radius R via the (1-nu)-quantile of distances."""
+    return np.quantile(np.sqrt(dist.clone().data.cpu().numpy()), 1 - nu)
