@@ -1,12 +1,11 @@
 import torch    
 import numpy as np
     
-def loss_function(args,data_center,outputs,train_mask,radius):
-    dist = torch.sum((outputs[train_mask] - data_center) ** 2, dim=1)
+def loss_function(args,data_center,outputs,mask,radius):
+    dist = torch.sum((outputs[mask] - data_center) ** 2, dim=1)
     scores = dist - radius ** 2
     loss = radius ** 2 + (1 / args.nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
     return loss,dist,scores
-
 
 def init_center(args,features, model,train_mask, eps=0.001):
     """Initialize hypersphere center c as the mean from an initial forward pass on the data."""

@@ -10,15 +10,16 @@ def evaluate(args,model, data_center,features, labels, mask,radius):
         outputs = model(features)
         #outputs = outputs[mask]
         labels = labels[mask]
-        _ , _,scores=loss_function(args,data_center,outputs,mask,radius)
+        _ , dist ,scores=loss_function(args,data_center,outputs,mask,radius)
         
         labels=labels.cpu().numpy()
+        dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()
         # print(scores.min())
         # print(scores.max())
         # print(scores.mean())
-        auroc=roc_auc_score(labels,scores)
-        auprc=average_precision_score(labels,scores)
+        auroc=roc_auc_score(labels, dist)
+        auprc=average_precision_score(labels, dist)
         # _, indices = torch.max(logits, dim=1)
         # correct = torch.sum(indices == labels)
         #return correct.item() * 1.0 / len(labels)
@@ -26,3 +27,27 @@ def evaluate(args,model, data_center,features, labels, mask,radius):
     #metric={}
 
     return auroc,auprc
+
+def thresholding(recon_error,threshold):
+    ano_pred=np.zeros(recon_error.shape[0])
+    for i in range(recon_error.shape[0]):
+        if recon_error[i]>threshold:
+            ano_pred[i]=1
+    return ano_pred
+
+def baseline_evaluate(datadict,y_pred,y_score,val=True):
+    
+    if val==True:
+        mask=datadict['val_mask']
+    if val==False:
+        mask=datadict['test_mask']
+
+    auc=roc_auc_score(datadict['labels'][mask],y_score)
+    ap=average_precision_score(datadict['labels'][mask],y_score)
+    acc=accuracy_score(datadict['labels'][mask],y_pred)
+    recall=recall_score(datadict['labels'][mask],y_pred)
+    precision=precision_score(datadict['labels'][mask],y_pred)
+    f1=f1_score(datadict['labels'][mask],y_pred)
+
+    print(f'AUC:{round(auc,4)},AP:{round(ap,4)}')
+    print(f'f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')

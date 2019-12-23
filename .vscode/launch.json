@@ -5,15 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: baseline",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/xuhongwa/GNN/OCGNN/baseline.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--dataset", "cora",
+                "--mode", "AX",
+                "--gpu","0"
+            ],
+        },
+        {
             "name": "Python: 当前文件",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "cora",
-                "--normal-class", "2",
-                "--gpu", "0",
+                "--dataset",
+                "cora",
+                "--normal-class",
+                "2",
+                "--gpu",
+                "0",
                 "--self-loop"
             ],
         }
