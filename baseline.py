@@ -1,17 +1,18 @@
 import argparse
 from dgl.data import register_data_args
 
-from datasets.dataloader import baselinedataloader
+from datasets.dataloader import emb_dataloader
 from utils.evaluate import baseline_evaluate
 
 
 from embedding.get_embedding import embedding
 from pyod.models.ocsvm import OCSVM
+from pyod.models.lof import LOF
 import numpy as np
 from sklearn.metrics import f1_score, accuracy_score,precision_score,recall_score,average_precision_score,roc_auc_score,roc_curve
 
 def main(args):
-	datadict=baselinedataloader(args)
+	datadict=emb_dataloader(args)
 
 	if args.mode=='X':
 		data=datadict['features']
@@ -25,8 +26,13 @@ def main(args):
 			data=np.concatenate((embeddings,datadict['features']),axis=1)
 			#print('AX shape',data.shape)
 
+	print('data shape: ',data.shape)
 
-	clf = OCSVM(nu=args.nu,contamination=0.1)
+	if args.ad_method=='OCSVM':
+		clf = OCSVM(nu=args.nu,contamination=0.1)
+	if args.ad_method=='LOF':
+		clf = LOF(n_neighbors=20,contamination=0.1,n_jobs=-1)
+
 	clf.fit(data[datadict['train_mask']])
 
 	print('-------------Evaluating Validation Results--------------')
@@ -54,7 +60,7 @@ if __name__ == '__main__':
             help="gpu")
     parser.add_argument("--emb-method", type=str, default='DeepWalk',
             help="embedding methods: DeepWalk, Node2Vec, LINE, SDNE, Struc2Vec")  
-    parser.add_argument("--ad-method", type=str, default='OCSVM',
+    parser.add_argument("--ad-method", type=str, default='LOF',
             help="embedding methods: LOF,OCSVM,IF")            
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
@@ -66,9 +72,9 @@ if __name__ == '__main__':
             help="number of hidden gcn layers")
     parser.add_argument("--weight-decay", type=float, default=1e-2,
             help="Weight for L2 loss")
-#     parser.add_argument("--self-loop", action='store_true',
-#             help="graph self-loop (default=False)")
-#     parser.set_defaults(self_loop=False)
+    parser.add_argument("--self-loop", action='store_true',
+            help="graph self-loop (default=False)")
+    parser.set_defaults(self_loop=False)
     args = parser.parse_args()
     print(args)
 
