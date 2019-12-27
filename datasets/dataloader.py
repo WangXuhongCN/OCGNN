@@ -6,7 +6,11 @@ from datasets.prepocessing import one_class_processing
 def dataloader(args):
     # load and preprocess dataset
     data = load_data(args)
-    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,args.normal_class)
+    if args.dataset=='citeseer':
+        normal_class=3
+    else:
+        normal_class=2
+    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,normal_class)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)
@@ -62,7 +66,11 @@ def dataloader(args):
 def emb_dataloader(args):
     # load and preprocess dataset
     data = load_data(args)
-    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,args.normal_class)
+    if args.dataset=='citeseer':
+        normal_class=3
+    else:
+        normal_class=2
+    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,normal_class)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)

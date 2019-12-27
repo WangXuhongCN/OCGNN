@@ -1,0 +1,696 @@
+2019-12-28 05:44:06,173-baseline-INFO-
+
+2019-12-28 05:44:06,174-baseline-INFO-
+
+2019-12-28 05:44:06,174-baseline-INFO-Parameters dataset:cora datamode:A ad-method:IF emb-method:DeepWalk
+2019-12-28 05:44:06,174-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:06,308-baseline-INFO-AUC:0.5169,AP:0.8675
+2019-12-28 05:44:06,308-baseline-INFO-f1:0.2945,acc:0.2542,pre:0.8487,recall:0.1781
+2019-12-28 05:44:06,308-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:06,510-baseline-INFO-AUC:0.5781,AP:0.9102
+2019-12-28 05:44:06,510-baseline-INFO-f1:0.2793,acc:0.2434,pre:0.916,recall:0.1648
+2019-12-28 05:44:13,558-baseline-INFO-
+
+2019-12-28 05:44:13,559-baseline-INFO-
+
+2019-12-28 05:44:13,559-baseline-INFO-Parameters dataset:cora datamode:X ad-method:IF emb-method:DeepWalk
+2019-12-28 05:44:13,559-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:13,871-baseline-INFO-AUC:0.5858,AP:0.9031
+2019-12-28 05:44:13,871-baseline-INFO-f1:0.1524,acc:0.1941,pre:0.94,recall:0.0829
+2019-12-28 05:44:13,871-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:14,486-baseline-INFO-AUC:0.5048,AP:0.8963
+2019-12-28 05:44:14,486-baseline-INFO-f1:0.1386,acc:0.1722,pre:0.934,recall:0.0748
+2019-12-28 05:44:22,042-baseline-INFO-
+
+2019-12-28 05:44:22,042-baseline-INFO-
+
+2019-12-28 05:44:22,042-baseline-INFO-Parameters dataset:cora datamode:AX ad-method:IF emb-method:DeepWalk
+2019-12-28 05:44:22,042-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:22,549-baseline-INFO-AUC:0.5507,AP:0.8976
+2019-12-28 05:44:22,549-baseline-INFO-f1:0.2009,acc:0.2157,pre:0.9143,recall:0.1129
+2019-12-28 05:44:22,549-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:24,094-baseline-INFO-AUC:0.5055,AP:0.8928
+2019-12-28 05:44:24,094-baseline-INFO-f1:0.1938,acc:0.1944,pre:0.8834,recall:0.1088
+2019-12-28 05:44:31,322-baseline-INFO-
+
+2019-12-28 05:44:31,322-baseline-INFO-
+
+2019-12-28 05:44:31,322-baseline-INFO-Parameters dataset:cora datamode:A ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:44:31,322-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:31,371-baseline-INFO-AUC:0.4297,AP:0.8353
+2019-12-28 05:44:31,371-baseline-INFO-f1:0.1798,acc:0.1849,pre:0.7436,recall:0.1023
+2019-12-28 05:44:31,371-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:31,481-baseline-INFO-AUC:0.5164,AP:0.8935
+2019-12-28 05:44:31,481-baseline-INFO-f1:0.2104,acc:0.2024,pre:0.8827,recall:0.1194
+2019-12-28 05:44:38,648-baseline-INFO-
+
+2019-12-28 05:44:38,648-baseline-INFO-
+
+2019-12-28 05:44:38,648-baseline-INFO-Parameters dataset:cora datamode:X ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:44:38,648-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:39,094-baseline-INFO-AUC:0.5219,AP:0.8706
+2019-12-28 05:44:39,094-baseline-INFO-f1:0.168,acc:0.1911,pre:0.8281,recall:0.0935
+2019-12-28 05:44:39,094-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:40,074-baseline-INFO-AUC:0.5295,AP:0.9001
+2019-12-28 05:44:40,074-baseline-INFO-f1:0.17,acc:0.1856,pre:0.9118,recall:0.0937
+2019-12-28 05:44:47,349-baseline-INFO-
+
+2019-12-28 05:44:47,349-baseline-INFO-
+
+2019-12-28 05:44:47,349-baseline-INFO-Parameters dataset:cora datamode:AX ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:44:47,349-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:47,809-baseline-INFO-AUC:0.424,AP:0.833
+2019-12-28 05:44:47,810-baseline-INFO-f1:0.1599,acc:0.1741,pre:0.7183,recall:0.0899
+2019-12-28 05:44:47,810-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:48,874-baseline-INFO-AUC:0.5117,AP:0.8918
+2019-12-28 05:44:48,874-baseline-INFO-f1:0.1972,acc:0.195,pre:0.875,recall:0.1111
+2019-12-28 05:44:55,760-baseline-INFO-
+
+2019-12-28 05:44:55,760-baseline-INFO-
+
+2019-12-28 05:44:55,760-baseline-INFO-Parameters dataset:cora datamode:A ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:44:55,760-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:44:55,774-baseline-INFO-AUC:0.4709,AP:0.8424
+2019-12-28 05:44:55,774-baseline-INFO-f1:0.1713,acc:0.1803,pre:0.7333,recall:0.097
+2019-12-28 05:44:55,774-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:44:55,801-baseline-INFO-AUC:0.5603,AP:0.9012
+2019-12-28 05:44:55,801-baseline-INFO-f1:0.1923,acc:0.1923,pre:0.872,recall:0.1081
+2019-12-28 05:45:02,944-baseline-INFO-
+
+2019-12-28 05:45:02,944-baseline-INFO-
+
+2019-12-28 05:45:02,944-baseline-INFO-Parameters dataset:cora datamode:X ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:45:02,944-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:45:03,418-baseline-INFO-AUC:0.5981,AP:0.8889
+2019-12-28 05:45:03,418-baseline-INFO-f1:0.5472,acc:0.4314,pre:0.8992,recall:0.3933
+2019-12-28 05:45:03,418-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:45:04,457-baseline-INFO-AUC:0.6235,AP:0.9265
+2019-12-28 05:45:04,457-baseline-INFO-f1:0.5551,acc:0.4351,pre:0.9274,recall:0.3961
+2019-12-28 05:45:11,613-baseline-INFO-
+
+2019-12-28 05:45:11,613-baseline-INFO-
+
+2019-12-28 05:45:11,613-baseline-INFO-Parameters dataset:cora datamode:AX ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:45:11,613-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:45:12,123-baseline-INFO-AUC:0.5958,AP:0.8883
+2019-12-28 05:45:12,123-baseline-INFO-f1:0.5479,acc:0.433,pre:0.9028,recall:0.3933
+2019-12-28 05:45:12,124-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:45:13,245-baseline-INFO-AUC:0.6252,AP:0.9269
+2019-12-28 05:45:13,245-baseline-INFO-f1:0.5633,acc:0.4432,pre:0.9319,recall:0.4036
+2019-12-28 05:45:21,545-gensim.models.word2vec-INFO-collecting all words and their counts
+2019-12-28 05:45:21,545-gensim.models.word2vec-INFO-PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2019-12-28 05:45:21,565-gensim.models.word2vec-INFO-PROGRESS: at sentence #10000, processed 50000 words, keeping 3327 word types
+2019-12-28 05:45:21,581-gensim.models.word2vec-INFO-PROGRESS: at sentence #20000, processed 100000 words, keeping 3327 word types
+2019-12-28 05:45:21,597-gensim.models.word2vec-INFO-PROGRESS: at sentence #30000, processed 150000 words, keeping 3327 word types
+2019-12-28 05:45:21,611-gensim.models.word2vec-INFO-PROGRESS: at sentence #40000, processed 200000 words, keeping 3327 word types
+2019-12-28 05:45:21,623-gensim.models.word2vec-INFO-PROGRESS: at sentence #50000, processed 250000 words, keeping 3327 word types
+2019-12-28 05:45:21,635-gensim.models.word2vec-INFO-PROGRESS: at sentence #60000, processed 300000 words, keeping 3327 word types
+2019-12-28 05:45:21,648-gensim.models.word2vec-INFO-PROGRESS: at sentence #70000, processed 350000 words, keeping 3327 word types
+2019-12-28 05:45:21,659-gensim.models.word2vec-INFO-PROGRESS: at sentence #80000, processed 400000 words, keeping 3327 word types
+2019-12-28 05:45:21,670-gensim.models.word2vec-INFO-PROGRESS: at sentence #90000, processed 450000 words, keeping 3327 word types
+2019-12-28 05:45:21,681-gensim.models.word2vec-INFO-PROGRESS: at sentence #100000, processed 500000 words, keeping 3327 word types
+2019-12-28 05:45:21,692-gensim.models.word2vec-INFO-PROGRESS: at sentence #110000, processed 550000 words, keeping 3327 word types
+2019-12-28 05:45:21,702-gensim.models.word2vec-INFO-PROGRESS: at sentence #120000, processed 600000 words, keeping 3327 word types
+2019-12-28 05:45:21,713-gensim.models.word2vec-INFO-PROGRESS: at sentence #130000, processed 650000 words, keeping 3327 word types
+2019-12-28 05:45:21,723-gensim.models.word2vec-INFO-PROGRESS: at sentence #140000, processed 700000 words, keeping 3327 word types
+2019-12-28 05:45:21,733-gensim.models.word2vec-INFO-PROGRESS: at sentence #150000, processed 750000 words, keeping 3327 word types
+2019-12-28 05:45:21,742-gensim.models.word2vec-INFO-PROGRESS: at sentence #160000, processed 800000 words, keeping 3327 word types
+2019-12-28 05:45:21,749-gensim.models.word2vec-INFO-collected 3327 word types from a corpus of 831750 raw words and 166350 sentences
+2019-12-28 05:45:21,749-gensim.models.word2vec-INFO-Loading a fresh vocabulary
+2019-12-28 05:45:21,761-gensim.models.word2vec-INFO-effective_min_count=0 retains 3327 unique words (100% of original 3327, drops 0)
+2019-12-28 05:45:21,761-gensim.models.word2vec-INFO-effective_min_count=0 leaves 831750 word corpus (100% of original 831750, drops 0)
+2019-12-28 05:45:21,770-gensim.models.word2vec-INFO-deleting the raw counts dictionary of 3327 items
+2019-12-28 05:45:21,771-gensim.models.word2vec-INFO-sample=0.001 downsamples 2 most-common words
+2019-12-28 05:45:21,771-gensim.models.word2vec-INFO-downsampling leaves estimated 829422 word corpus (99.7% of prior 831750)
+2019-12-28 05:45:21,773-gensim.models.word2vec-INFO-constructing a huffman tree from 3327 words
+2019-12-28 05:45:21,835-gensim.models.word2vec-INFO-built huffman tree with maximum node depth 13
+2019-12-28 05:45:21,839-gensim.models.base_any2vec-INFO-estimated required memory for 3327 words and 128 dimensions: 7439172 bytes
+2019-12-28 05:45:21,839-gensim.models.word2vec-INFO-resetting layer weights
+2019-12-28 05:45:21,867-gensim.models.base_any2vec-INFO-training model with 3 workers on 3327 vocabulary and 128 features, using sg=1 hs=1 sample=0.001 negative=5 window=10
+2019-12-28 05:45:22,910-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 37.27% examples, 300068 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:45:23,943-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 82.96% examples, 333445 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:45:24,265-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:24,268-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:24,301-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:24,301-gensim.models.base_any2vec-INFO-EPOCH - 1 : training on 831750 raw words (829446 effective words) took 2.4s, 342500 effective words/s
+2019-12-28 05:45:25,344-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 44.48% examples, 356128 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:45:26,363-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 94.98% examples, 383229 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:45:26,403-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:26,428-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:26,447-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:26,447-gensim.models.base_any2vec-INFO-EPOCH - 2 : training on 831750 raw words (829341 effective words) took 2.1s, 387620 effective words/s
+2019-12-28 05:45:27,459-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 45.69% examples, 378228 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:28,460-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 97.39% examples, 403256 words/s, in_qsize 3, out_qsize 0
+2019-12-28 05:45:28,471-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:28,476-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:28,499-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:28,499-gensim.models.base_any2vec-INFO-EPOCH - 3 : training on 831750 raw words (829455 effective words) took 2.0s, 406070 effective words/s
+2019-12-28 05:45:29,512-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 50.50% examples, 417163 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:45:30,466-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:30,480-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:30,488-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:30,488-gensim.models.base_any2vec-INFO-EPOCH - 4 : training on 831750 raw words (829435 effective words) took 2.0s, 418934 effective words/s
+2019-12-28 05:45:31,507-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 48.09% examples, 393797 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:32,458-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:32,460-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:32,489-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:32,489-gensim.models.base_any2vec-INFO-EPOCH - 5 : training on 831750 raw words (829409 effective words) took 2.0s, 415691 effective words/s
+2019-12-28 05:45:33,515-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 46.89% examples, 382688 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:34,479-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:34,480-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:34,489-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:34,489-gensim.models.base_any2vec-INFO-EPOCH - 6 : training on 831750 raw words (829380 effective words) took 2.0s, 416600 effective words/s
+2019-12-28 05:45:35,513-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 49.29% examples, 402938 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:36,406-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:36,424-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:36,443-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:36,443-gensim.models.base_any2vec-INFO-EPOCH - 7 : training on 831750 raw words (829426 effective words) took 1.9s, 426575 effective words/s
+2019-12-28 05:45:37,471-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 50.50% examples, 409942 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:38,359-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:38,371-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:38,398-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:38,398-gensim.models.base_any2vec-INFO-EPOCH - 8 : training on 831750 raw words (829499 effective words) took 1.9s, 425733 effective words/s
+2019-12-28 05:45:39,420-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 50.50% examples, 413478 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:40,284-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:40,288-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:40,290-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:40,290-gensim.models.base_any2vec-INFO-EPOCH - 9 : training on 831750 raw words (829452 effective words) took 1.9s, 440342 effective words/s
+2019-12-28 05:45:41,306-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 50.50% examples, 416086 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:45:42,152-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:45:42,155-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:45:42,163-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:45:42,164-gensim.models.base_any2vec-INFO-EPOCH - 10 : training on 831750 raw words (829325 effective words) took 1.9s, 444855 effective words/s
+2019-12-28 05:45:42,164-gensim.models.base_any2vec-INFO-training on a 8317500 raw words (8294168 effective words) took 20.3s, 408641 effective words/s
+2019-12-28 05:45:42,949-baseline-INFO-
+
+2019-12-28 05:45:42,949-baseline-INFO-
+
+2019-12-28 05:45:42,949-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:IF emb-method:DeepWalk
+2019-12-28 05:45:42,949-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:45:43,111-baseline-INFO-AUC:0.4561,AP:0.9055
+2019-12-28 05:45:43,111-baseline-INFO-f1:0.1718,acc:0.1564,pre:0.8721,recall:0.0953
+2019-12-28 05:45:43,111-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:45:43,352-baseline-INFO-AUC:0.4684,AP:0.9241
+2019-12-28 05:45:43,352-baseline-INFO-f1:0.2187,acc:0.1773,pre:0.9268,recall:0.124
+2019-12-28 05:45:47,944-baseline-INFO-
+
+2019-12-28 05:45:47,944-baseline-INFO-
+
+2019-12-28 05:45:47,944-baseline-INFO-Parameters dataset:citeseer datamode:X ad-method:IF emb-method:DeepWalk
+2019-12-28 05:45:47,944-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:45:48,848-baseline-INFO-AUC:0.4031,AP:0.9099
+2019-12-28 05:45:48,848-baseline-INFO-f1:0.1237,acc:0.14,pre:0.963,recall:0.0661
+2019-12-28 05:45:48,848-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:45:51,072-baseline-INFO-AUC:0.4856,AP:0.9276
+2019-12-28 05:45:51,073-baseline-INFO-f1:0.094,acc:0.1141,pre:0.9381,recall:0.0495
+2019-12-28 05:45:56,267-baseline-INFO-
+
+2019-12-28 05:45:56,267-baseline-INFO-
+
+2019-12-28 05:45:56,267-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:IF emb-method:DeepWalk
+2019-12-28 05:45:56,267-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:45:58,506-baseline-INFO-AUC:0.5151,AP:0.9203
+2019-12-28 05:45:58,506-baseline-INFO-f1:0.0707,acc:0.1109,pre:0.8788,recall:0.0368
+2019-12-28 05:45:58,506-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:03,624-baseline-INFO-AUC:0.4677,AP:0.9283
+2019-12-28 05:46:03,624-baseline-INFO-f1:0.0712,acc:0.1045,pre:0.9714,recall:0.037
+2019-12-28 05:46:07,283-baseline-INFO-
+
+2019-12-28 05:46:07,283-baseline-INFO-
+
+2019-12-28 05:46:07,283-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:46:07,283-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:07,340-baseline-INFO-AUC:0.4164,AP:0.899
+2019-12-28 05:46:07,340-baseline-INFO-f1:0.1427,acc:0.1447,pre:0.8971,recall:0.0775
+2019-12-28 05:46:07,340-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:07,465-baseline-INFO-AUC:0.4235,AP:0.9208
+2019-12-28 05:46:07,465-baseline-INFO-f1:0.1737,acc:0.1545,pre:0.9412,recall:0.0957
+2019-12-28 05:46:11,438-baseline-INFO-
+
+2019-12-28 05:46:11,439-baseline-INFO-
+
+2019-12-28 05:46:11,439-baseline-INFO-Parameters dataset:citeseer datamode:X ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:46:11,439-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:12,674-baseline-INFO-AUC:0.6239,AP:0.946
+2019-12-28 05:46:12,674-baseline-INFO-f1:0.2602,acc:0.217,pre:0.9833,recall:0.1499
+2019-12-28 05:46:12,674-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:15,499-baseline-INFO-AUC:0.5899,AP:0.9436
+2019-12-28 05:46:15,500-baseline-INFO-f1:0.2635,acc:0.2066,pre:0.9558,recall:0.1528
+2019-12-28 05:46:20,013-baseline-INFO-
+
+2019-12-28 05:46:20,013-baseline-INFO-
+
+2019-12-28 05:46:20,013-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:46:20,014-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:21,281-baseline-INFO-AUC:0.4116,AP:0.898
+2019-12-28 05:46:21,281-baseline-INFO-f1:0.1405,acc:0.1435,pre:0.8955,recall:0.0762
+2019-12-28 05:46:21,281-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:24,219-baseline-INFO-AUC:0.4209,AP:0.9203
+2019-12-28 05:46:24,219-baseline-INFO-f1:0.1755,acc:0.1551,pre:0.9368,recall:0.0968
+2019-12-28 05:46:27,747-baseline-INFO-
+
+2019-12-28 05:46:27,747-baseline-INFO-
+
+2019-12-28 05:46:27,747-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:46:27,748-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:27,765-baseline-INFO-AUC:0.4623,AP:0.9062
+2019-12-28 05:46:27,765-baseline-INFO-f1:0.1272,acc:0.1354,pre:0.871,recall:0.0686
+2019-12-28 05:46:27,765-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:27,799-baseline-INFO-AUC:0.461,AP:0.9252
+2019-12-28 05:46:27,799-baseline-INFO-f1:0.1646,acc:0.149,pre:0.9326,recall:0.0903
+2019-12-28 05:46:31,562-baseline-INFO-
+
+2019-12-28 05:46:31,562-baseline-INFO-
+
+2019-12-28 05:46:31,562-baseline-INFO-Parameters dataset:citeseer datamode:X ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:46:31,562-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:33,088-baseline-INFO-AUC:0.6344,AP:0.9455
+2019-12-28 05:46:33,088-baseline-INFO-f1:0.4934,acc:0.3746,pre:0.9631,recall:0.3316
+2019-12-28 05:46:33,088-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:36,564-baseline-INFO-AUC:0.6343,AP:0.9493
+2019-12-28 05:46:36,564-baseline-INFO-f1:0.4964,acc:0.3677,pre:0.9536,recall:0.3355
+2019-12-28 05:46:40,703-baseline-INFO-
+
+2019-12-28 05:46:40,703-baseline-INFO-
+
+2019-12-28 05:46:40,703-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:46:40,703-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:46:42,359-baseline-INFO-AUC:0.6327,AP:0.9451
+2019-12-28 05:46:42,359-baseline-INFO-f1:0.4776,acc:0.3617,pre:0.9615,recall:0.3177
+2019-12-28 05:46:42,359-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:46:46,199-baseline-INFO-AUC:0.6331,AP:0.9491
+2019-12-28 05:46:46,199-baseline-INFO-f1:0.4854,acc:0.3586,pre:0.9523,recall:0.3257
+2019-12-28 05:47:08,821-gensim.models.word2vec-INFO-collecting all words and their counts
+2019-12-28 05:47:08,821-gensim.models.word2vec-INFO-PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2019-12-28 05:47:08,845-gensim.models.word2vec-INFO-PROGRESS: at sentence #10000, processed 50000 words, keeping 15898 word types
+2019-12-28 05:47:08,862-gensim.models.word2vec-INFO-PROGRESS: at sentence #20000, processed 100000 words, keeping 19717 word types
+2019-12-28 05:47:08,876-gensim.models.word2vec-INFO-PROGRESS: at sentence #30000, processed 150000 words, keeping 19717 word types
+2019-12-28 05:47:08,890-gensim.models.word2vec-INFO-PROGRESS: at sentence #40000, processed 200000 words, keeping 19717 word types
+2019-12-28 05:47:08,902-gensim.models.word2vec-INFO-PROGRESS: at sentence #50000, processed 250000 words, keeping 19717 word types
+2019-12-28 05:47:08,915-gensim.models.word2vec-INFO-PROGRESS: at sentence #60000, processed 300000 words, keeping 19717 word types
+2019-12-28 05:47:08,927-gensim.models.word2vec-INFO-PROGRESS: at sentence #70000, processed 350000 words, keeping 19717 word types
+2019-12-28 05:47:08,938-gensim.models.word2vec-INFO-PROGRESS: at sentence #80000, processed 400000 words, keeping 19717 word types
+2019-12-28 05:47:08,949-gensim.models.word2vec-INFO-PROGRESS: at sentence #90000, processed 450000 words, keeping 19717 word types
+2019-12-28 05:47:08,960-gensim.models.word2vec-INFO-PROGRESS: at sentence #100000, processed 500000 words, keeping 19717 word types
+2019-12-28 05:47:08,970-gensim.models.word2vec-INFO-PROGRESS: at sentence #110000, processed 550000 words, keeping 19717 word types
+2019-12-28 05:47:08,980-gensim.models.word2vec-INFO-PROGRESS: at sentence #120000, processed 600000 words, keeping 19717 word types
+2019-12-28 05:47:08,992-gensim.models.word2vec-INFO-PROGRESS: at sentence #130000, processed 650000 words, keeping 19717 word types
+2019-12-28 05:47:09,003-gensim.models.word2vec-INFO-PROGRESS: at sentence #140000, processed 700000 words, keeping 19717 word types
+2019-12-28 05:47:09,013-gensim.models.word2vec-INFO-PROGRESS: at sentence #150000, processed 750000 words, keeping 19717 word types
+2019-12-28 05:47:09,024-gensim.models.word2vec-INFO-PROGRESS: at sentence #160000, processed 800000 words, keeping 19717 word types
+2019-12-28 05:47:09,034-gensim.models.word2vec-INFO-PROGRESS: at sentence #170000, processed 850000 words, keeping 19717 word types
+2019-12-28 05:47:09,045-gensim.models.word2vec-INFO-PROGRESS: at sentence #180000, processed 900000 words, keeping 19717 word types
+2019-12-28 05:47:09,054-gensim.models.word2vec-INFO-PROGRESS: at sentence #190000, processed 950000 words, keeping 19717 word types
+2019-12-28 05:47:09,065-gensim.models.word2vec-INFO-PROGRESS: at sentence #200000, processed 1000000 words, keeping 19717 word types
+2019-12-28 05:47:09,075-gensim.models.word2vec-INFO-PROGRESS: at sentence #210000, processed 1050000 words, keeping 19717 word types
+2019-12-28 05:47:09,084-gensim.models.word2vec-INFO-PROGRESS: at sentence #220000, processed 1100000 words, keeping 19717 word types
+2019-12-28 05:47:09,093-gensim.models.word2vec-INFO-PROGRESS: at sentence #230000, processed 1150000 words, keeping 19717 word types
+2019-12-28 05:47:09,103-gensim.models.word2vec-INFO-PROGRESS: at sentence #240000, processed 1200000 words, keeping 19717 word types
+2019-12-28 05:47:09,113-gensim.models.word2vec-INFO-PROGRESS: at sentence #250000, processed 1250000 words, keeping 19717 word types
+2019-12-28 05:47:09,123-gensim.models.word2vec-INFO-PROGRESS: at sentence #260000, processed 1300000 words, keeping 19717 word types
+2019-12-28 05:47:09,132-gensim.models.word2vec-INFO-PROGRESS: at sentence #270000, processed 1350000 words, keeping 19717 word types
+2019-12-28 05:47:09,142-gensim.models.word2vec-INFO-PROGRESS: at sentence #280000, processed 1400000 words, keeping 19717 word types
+2019-12-28 05:47:09,151-gensim.models.word2vec-INFO-PROGRESS: at sentence #290000, processed 1450000 words, keeping 19717 word types
+2019-12-28 05:47:09,160-gensim.models.word2vec-INFO-PROGRESS: at sentence #300000, processed 1500000 words, keeping 19717 word types
+2019-12-28 05:47:09,169-gensim.models.word2vec-INFO-PROGRESS: at sentence #310000, processed 1550000 words, keeping 19717 word types
+2019-12-28 05:47:09,179-gensim.models.word2vec-INFO-PROGRESS: at sentence #320000, processed 1600000 words, keeping 19717 word types
+2019-12-28 05:47:09,188-gensim.models.word2vec-INFO-PROGRESS: at sentence #330000, processed 1650000 words, keeping 19717 word types
+2019-12-28 05:47:09,197-gensim.models.word2vec-INFO-PROGRESS: at sentence #340000, processed 1700000 words, keeping 19717 word types
+2019-12-28 05:47:09,207-gensim.models.word2vec-INFO-PROGRESS: at sentence #350000, processed 1750000 words, keeping 19717 word types
+2019-12-28 05:47:09,216-gensim.models.word2vec-INFO-PROGRESS: at sentence #360000, processed 1800000 words, keeping 19717 word types
+2019-12-28 05:47:09,226-gensim.models.word2vec-INFO-PROGRESS: at sentence #370000, processed 1850000 words, keeping 19717 word types
+2019-12-28 05:47:09,236-gensim.models.word2vec-INFO-PROGRESS: at sentence #380000, processed 1900000 words, keeping 19717 word types
+2019-12-28 05:47:09,245-gensim.models.word2vec-INFO-PROGRESS: at sentence #390000, processed 1950000 words, keeping 19717 word types
+2019-12-28 05:47:09,254-gensim.models.word2vec-INFO-PROGRESS: at sentence #400000, processed 2000000 words, keeping 19717 word types
+2019-12-28 05:47:09,264-gensim.models.word2vec-INFO-PROGRESS: at sentence #410000, processed 2050000 words, keeping 19717 word types
+2019-12-28 05:47:09,273-gensim.models.word2vec-INFO-PROGRESS: at sentence #420000, processed 2100000 words, keeping 19717 word types
+2019-12-28 05:47:09,283-gensim.models.word2vec-INFO-PROGRESS: at sentence #430000, processed 2150000 words, keeping 19717 word types
+2019-12-28 05:47:09,293-gensim.models.word2vec-INFO-PROGRESS: at sentence #440000, processed 2200000 words, keeping 19717 word types
+2019-12-28 05:47:09,303-gensim.models.word2vec-INFO-PROGRESS: at sentence #450000, processed 2250000 words, keeping 19717 word types
+2019-12-28 05:47:09,313-gensim.models.word2vec-INFO-PROGRESS: at sentence #460000, processed 2300000 words, keeping 19717 word types
+2019-12-28 05:47:09,322-gensim.models.word2vec-INFO-PROGRESS: at sentence #470000, processed 2350000 words, keeping 19717 word types
+2019-12-28 05:47:09,332-gensim.models.word2vec-INFO-PROGRESS: at sentence #480000, processed 2400000 words, keeping 19717 word types
+2019-12-28 05:47:09,342-gensim.models.word2vec-INFO-PROGRESS: at sentence #490000, processed 2450000 words, keeping 19717 word types
+2019-12-28 05:47:09,351-gensim.models.word2vec-INFO-PROGRESS: at sentence #500000, processed 2500000 words, keeping 19717 word types
+2019-12-28 05:47:09,361-gensim.models.word2vec-INFO-PROGRESS: at sentence #510000, processed 2550000 words, keeping 19717 word types
+2019-12-28 05:47:09,371-gensim.models.word2vec-INFO-PROGRESS: at sentence #520000, processed 2600000 words, keeping 19717 word types
+2019-12-28 05:47:09,380-gensim.models.word2vec-INFO-PROGRESS: at sentence #530000, processed 2650000 words, keeping 19717 word types
+2019-12-28 05:47:09,390-gensim.models.word2vec-INFO-PROGRESS: at sentence #540000, processed 2700000 words, keeping 19717 word types
+2019-12-28 05:47:09,399-gensim.models.word2vec-INFO-PROGRESS: at sentence #550000, processed 2750000 words, keeping 19717 word types
+2019-12-28 05:47:09,409-gensim.models.word2vec-INFO-PROGRESS: at sentence #560000, processed 2800000 words, keeping 19717 word types
+2019-12-28 05:47:09,418-gensim.models.word2vec-INFO-PROGRESS: at sentence #570000, processed 2850000 words, keeping 19717 word types
+2019-12-28 05:47:09,428-gensim.models.word2vec-INFO-PROGRESS: at sentence #580000, processed 2900000 words, keeping 19717 word types
+2019-12-28 05:47:09,437-gensim.models.word2vec-INFO-PROGRESS: at sentence #590000, processed 2950000 words, keeping 19717 word types
+2019-12-28 05:47:09,448-gensim.models.word2vec-INFO-PROGRESS: at sentence #600000, processed 3000000 words, keeping 19717 word types
+2019-12-28 05:47:09,458-gensim.models.word2vec-INFO-PROGRESS: at sentence #610000, processed 3050000 words, keeping 19717 word types
+2019-12-28 05:47:09,468-gensim.models.word2vec-INFO-PROGRESS: at sentence #620000, processed 3100000 words, keeping 19717 word types
+2019-12-28 05:47:09,478-gensim.models.word2vec-INFO-PROGRESS: at sentence #630000, processed 3150000 words, keeping 19717 word types
+2019-12-28 05:47:09,487-gensim.models.word2vec-INFO-PROGRESS: at sentence #640000, processed 3200000 words, keeping 19717 word types
+2019-12-28 05:47:09,497-gensim.models.word2vec-INFO-PROGRESS: at sentence #650000, processed 3250000 words, keeping 19717 word types
+2019-12-28 05:47:09,506-gensim.models.word2vec-INFO-PROGRESS: at sentence #660000, processed 3300000 words, keeping 19717 word types
+2019-12-28 05:47:09,516-gensim.models.word2vec-INFO-PROGRESS: at sentence #670000, processed 3350000 words, keeping 19717 word types
+2019-12-28 05:47:09,526-gensim.models.word2vec-INFO-PROGRESS: at sentence #680000, processed 3400000 words, keeping 19717 word types
+2019-12-28 05:47:09,535-gensim.models.word2vec-INFO-PROGRESS: at sentence #690000, processed 3450000 words, keeping 19717 word types
+2019-12-28 05:47:09,544-gensim.models.word2vec-INFO-PROGRESS: at sentence #700000, processed 3500000 words, keeping 19717 word types
+2019-12-28 05:47:09,554-gensim.models.word2vec-INFO-PROGRESS: at sentence #710000, processed 3550000 words, keeping 19717 word types
+2019-12-28 05:47:09,564-gensim.models.word2vec-INFO-PROGRESS: at sentence #720000, processed 3600000 words, keeping 19717 word types
+2019-12-28 05:47:09,574-gensim.models.word2vec-INFO-PROGRESS: at sentence #730000, processed 3650000 words, keeping 19717 word types
+2019-12-28 05:47:09,584-gensim.models.word2vec-INFO-PROGRESS: at sentence #740000, processed 3700000 words, keeping 19717 word types
+2019-12-28 05:47:09,594-gensim.models.word2vec-INFO-PROGRESS: at sentence #750000, processed 3750000 words, keeping 19717 word types
+2019-12-28 05:47:09,604-gensim.models.word2vec-INFO-PROGRESS: at sentence #760000, processed 3800000 words, keeping 19717 word types
+2019-12-28 05:47:09,614-gensim.models.word2vec-INFO-PROGRESS: at sentence #770000, processed 3850000 words, keeping 19717 word types
+2019-12-28 05:47:09,623-gensim.models.word2vec-INFO-PROGRESS: at sentence #780000, processed 3900000 words, keeping 19717 word types
+2019-12-28 05:47:09,633-gensim.models.word2vec-INFO-PROGRESS: at sentence #790000, processed 3950000 words, keeping 19717 word types
+2019-12-28 05:47:09,642-gensim.models.word2vec-INFO-PROGRESS: at sentence #800000, processed 4000000 words, keeping 19717 word types
+2019-12-28 05:47:09,652-gensim.models.word2vec-INFO-PROGRESS: at sentence #810000, processed 4050000 words, keeping 19717 word types
+2019-12-28 05:47:09,661-gensim.models.word2vec-INFO-PROGRESS: at sentence #820000, processed 4100000 words, keeping 19717 word types
+2019-12-28 05:47:09,671-gensim.models.word2vec-INFO-PROGRESS: at sentence #830000, processed 4150000 words, keeping 19717 word types
+2019-12-28 05:47:09,681-gensim.models.word2vec-INFO-PROGRESS: at sentence #840000, processed 4200000 words, keeping 19717 word types
+2019-12-28 05:47:09,691-gensim.models.word2vec-INFO-PROGRESS: at sentence #850000, processed 4250000 words, keeping 19717 word types
+2019-12-28 05:47:09,700-gensim.models.word2vec-INFO-PROGRESS: at sentence #860000, processed 4300000 words, keeping 19717 word types
+2019-12-28 05:47:09,710-gensim.models.word2vec-INFO-PROGRESS: at sentence #870000, processed 4350000 words, keeping 19717 word types
+2019-12-28 05:47:09,720-gensim.models.word2vec-INFO-PROGRESS: at sentence #880000, processed 4400000 words, keeping 19717 word types
+2019-12-28 05:47:09,729-gensim.models.word2vec-INFO-PROGRESS: at sentence #890000, processed 4450000 words, keeping 19717 word types
+2019-12-28 05:47:09,739-gensim.models.word2vec-INFO-PROGRESS: at sentence #900000, processed 4500000 words, keeping 19717 word types
+2019-12-28 05:47:09,748-gensim.models.word2vec-INFO-PROGRESS: at sentence #910000, processed 4550000 words, keeping 19717 word types
+2019-12-28 05:47:09,758-gensim.models.word2vec-INFO-PROGRESS: at sentence #920000, processed 4600000 words, keeping 19717 word types
+2019-12-28 05:47:09,768-gensim.models.word2vec-INFO-PROGRESS: at sentence #930000, processed 4650000 words, keeping 19717 word types
+2019-12-28 05:47:09,778-gensim.models.word2vec-INFO-PROGRESS: at sentence #940000, processed 4700000 words, keeping 19717 word types
+2019-12-28 05:47:09,787-gensim.models.word2vec-INFO-PROGRESS: at sentence #950000, processed 4750000 words, keeping 19717 word types
+2019-12-28 05:47:09,798-gensim.models.word2vec-INFO-PROGRESS: at sentence #960000, processed 4800000 words, keeping 19717 word types
+2019-12-28 05:47:09,808-gensim.models.word2vec-INFO-PROGRESS: at sentence #970000, processed 4850000 words, keeping 19717 word types
+2019-12-28 05:47:09,817-gensim.models.word2vec-INFO-PROGRESS: at sentence #980000, processed 4900000 words, keeping 19717 word types
+2019-12-28 05:47:09,823-gensim.models.word2vec-INFO-collected 19717 word types from a corpus of 4929250 raw words and 985850 sentences
+2019-12-28 05:47:09,823-gensim.models.word2vec-INFO-Loading a fresh vocabulary
+2019-12-28 05:47:09,887-gensim.models.word2vec-INFO-effective_min_count=0 retains 19717 unique words (100% of original 19717, drops 0)
+2019-12-28 05:47:09,887-gensim.models.word2vec-INFO-effective_min_count=0 leaves 4929250 word corpus (100% of original 4929250, drops 0)
+2019-12-28 05:47:09,924-gensim.models.word2vec-INFO-deleting the raw counts dictionary of 19717 items
+2019-12-28 05:47:09,925-gensim.models.word2vec-INFO-sample=0.001 downsamples 0 most-common words
+2019-12-28 05:47:09,925-gensim.models.word2vec-INFO-downsampling leaves estimated 4929250 word corpus (100.0% of prior 4929250)
+2019-12-28 05:47:09,937-gensim.models.word2vec-INFO-constructing a huffman tree from 19717 words
+2019-12-28 05:47:10,313-gensim.models.word2vec-INFO-built huffman tree with maximum node depth 16
+2019-12-28 05:47:10,340-gensim.models.base_any2vec-INFO-estimated required memory for 19717 words and 128 dimensions: 44087212 bytes
+2019-12-28 05:47:10,340-gensim.models.word2vec-INFO-resetting layer weights
+2019-12-28 05:47:10,496-gensim.models.base_any2vec-INFO-training model with 3 workers on 19717 vocabulary and 128 features, using sg=1 hs=1 sample=0.001 negative=5 window=10
+2019-12-28 05:47:11,519-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 4.87% examples, 237679 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:47:12,566-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 10.75% examples, 257572 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:13,628-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 16.43% examples, 259691 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:47:14,631-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 22.11% examples, 264404 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:15,634-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 27.59% examples, 265344 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:16,661-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 33.27% examples, 266559 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:17,708-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 38.95% examples, 266679 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:18,734-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 44.83% examples, 268684 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:19,763-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 49.91% examples, 265834 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:20,766-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 55.59% examples, 267128 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:21,817-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 61.27% examples, 267051 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:22,828-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 67.15% examples, 268684 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:23,850-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 72.83% examples, 269100 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:24,853-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 78.51% examples, 269794 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:25,887-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 84.39% examples, 270519 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:26,890-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 89.87% examples, 270431 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:27,959-gensim.models.base_any2vec-INFO-EPOCH 1 - PROGRESS: at 95.35% examples, 269335 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:28,688-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:47:28,704-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:47:28,705-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:47:28,705-gensim.models.base_any2vec-INFO-EPOCH - 1 : training on 4929250 raw words (4929250 effective words) took 18.2s, 270898 effective words/s
+2019-12-28 05:47:29,769-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 5.07% examples, 237416 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:30,771-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 10.96% examples, 262686 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:31,799-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 16.84% examples, 269215 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:32,813-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 22.72% examples, 273339 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:33,816-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 28.20% examples, 272513 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:34,818-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 34.08% examples, 275296 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:35,841-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 39.97% examples, 276472 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:36,849-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 45.85% examples, 277879 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:37,867-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 51.73% examples, 278652 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:38,870-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 57.01% examples, 276714 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:39,926-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 63.09% examples, 277428 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:40,977-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 69.18% examples, 278104 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:42,025-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 75.26% examples, 278753 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:43,069-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 81.35% examples, 279371 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:44,111-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 87.44% examples, 279957 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:45,157-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 93.32% examples, 279779 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:46,192-gensim.models.base_any2vec-INFO-EPOCH 2 - PROGRESS: at 99.41% examples, 280377 words/s, in_qsize 3, out_qsize 0
+2019-12-28 05:47:46,194-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:47:46,226-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:47:46,266-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:47:46,266-gensim.models.base_any2vec-INFO-EPOCH - 2 : training on 4929250 raw words (4929250 effective words) took 17.6s, 280856 effective words/s
+2019-12-28 05:47:47,291-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 5.48% examples, 265078 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:48,320-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 11.56% examples, 278400 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:49,355-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 17.65% examples, 282179 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:47:50,374-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 23.74% examples, 285240 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:51,399-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 29.82% examples, 286735 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:52,425-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 35.91% examples, 287689 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:53,445-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 41.39% examples, 284422 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:54,448-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 47.07% examples, 283753 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:47:55,450-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 52.95% examples, 284375 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:56,467-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 58.83% examples, 284459 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:57,488-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 64.92% examples, 285308 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:58,498-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 70.80% examples, 285458 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:47:59,507-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 76.89% examples, 286358 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:00,508-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 82.57% examples, 285888 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:01,533-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 88.65% examples, 286345 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:02,558-gensim.models.base_any2vec-INFO-EPOCH 3 - PROGRESS: at 94.74% examples, 286759 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:03,355-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:48:03,384-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:48:03,385-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:48:03,385-gensim.models.base_any2vec-INFO-EPOCH - 3 : training on 4929250 raw words (4929250 effective words) took 17.1s, 288038 effective words/s
+2019-12-28 05:48:04,420-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 5.27% examples, 254889 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:05,434-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 11.36% examples, 275416 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:06,460-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 17.45% examples, 281083 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:07,480-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 23.53% examples, 284328 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:08,499-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 29.62% examples, 286336 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:09,516-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 35.71% examples, 287776 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:10,531-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 41.79% examples, 288901 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:11,544-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 47.88% examples, 289793 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:12,556-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 53.96% examples, 290532 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:13,575-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 60.05% examples, 290910 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:14,585-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 66.14% examples, 291473 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:15,596-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 72.02% examples, 291091 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:16,607-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 77.90% examples, 290758 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:17,623-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 83.99% examples, 291076 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:18,641-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 90.07% examples, 291318 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:19,658-gensim.models.base_any2vec-INFO-EPOCH 4 - PROGRESS: at 96.16% examples, 291550 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:20,179-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:48:20,247-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:48:20,250-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:48:20,250-gensim.models.base_any2vec-INFO-EPOCH - 4 : training on 4929250 raw words (4929250 effective words) took 16.8s, 292547 effective words/s
+2019-12-28 05:48:21,265-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 5.48% examples, 268950 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:22,265-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 11.56% examples, 284393 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:23,279-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 17.65% examples, 288198 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:24,291-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 23.74% examples, 290295 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:25,303-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 29.82% examples, 291528 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:26,305-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 35.50% examples, 289516 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:48:27,312-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 41.59% examples, 290742 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:28,326-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 47.67% examples, 291377 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:29,348-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 53.76% examples, 291601 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:30,371-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 59.85% examples, 291769 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:31,391-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 65.93% examples, 291995 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:32,391-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 72.02% examples, 292650 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:33,397-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 78.11% examples, 293085 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:34,400-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 83.99% examples, 292802 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:48:35,440-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 90.48% examples, 293814 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:36,488-gensim.models.base_any2vec-INFO-EPOCH 5 - PROGRESS: at 96.57% examples, 293333 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:36,969-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:48:36,981-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:48:37,003-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:48:37,003-gensim.models.base_any2vec-INFO-EPOCH - 5 : training on 4929250 raw words (4929250 effective words) took 16.7s, 294413 effective words/s
+2019-12-28 05:48:38,047-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 5.68% examples, 270894 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:39,048-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 11.77% examples, 285000 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:40,055-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 17.85% examples, 289338 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:41,058-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 23.94% examples, 291762 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:42,063-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 30.23% examples, 295070 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:43,068-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 36.31% examples, 295627 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:44,073-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 42.40% examples, 296027 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:45,086-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 48.28% examples, 294831 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:46,137-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 54.57% examples, 294836 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:47,137-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 60.66% examples, 295333 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:48,141-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 66.74% examples, 295647 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:49,204-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 73.03% examples, 295299 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:50,205-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 79.12% examples, 295645 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:51,230-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 85.41% examples, 296140 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:52,232-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 91.49% examples, 296341 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:53,235-gensim.models.base_any2vec-INFO-EPOCH 6 - PROGRESS: at 97.58% examples, 296514 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:53,536-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:48:53,593-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:48:53,605-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:48:53,605-gensim.models.base_any2vec-INFO-EPOCH - 6 : training on 4929250 raw words (4929250 effective words) took 16.6s, 297094 effective words/s
+2019-12-28 05:48:54,628-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 5.68% examples, 276569 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:55,633-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 11.77% examples, 287421 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:56,643-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 17.85% examples, 290608 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:57,646-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 23.74% examples, 290250 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:48:58,649-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 29.82% examples, 292013 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:48:59,651-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 35.91% examples, 293234 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:00,658-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 41.99% examples, 293915 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:01,660-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 47.88% examples, 293375 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:02,662-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 53.96% examples, 294035 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:03,666-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 60.05% examples, 294518 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:04,666-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 66.14% examples, 295004 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:05,688-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 72.22% examples, 294876 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:06,694-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 78.51% examples, 295898 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:07,702-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 84.60% examples, 296029 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:08,710-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 90.68% examples, 296136 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:09,714-gensim.models.base_any2vec-INFO-EPOCH 7 - PROGRESS: at 96.77% examples, 296294 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:10,189-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:49:10,198-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:49:10,255-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:49:10,255-gensim.models.base_any2vec-INFO-EPOCH - 7 : training on 4929250 raw words (4929250 effective words) took 16.6s, 296237 effective words/s
+2019-12-28 05:49:11,276-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 5.68% examples, 276948 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:12,331-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 11.97% examples, 285648 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:13,331-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 18.26% examples, 293569 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:14,345-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 24.55% examples, 296613 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:15,405-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 30.84% examples, 295751 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:16,405-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 37.13% examples, 298051 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:17,408-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 43.41% examples, 299623 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:18,464-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 49.70% examples, 298821 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:19,468-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 55.99% examples, 299904 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:20,480-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 62.28% examples, 300532 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:21,526-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 68.37% examples, 299262 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:22,533-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 74.45% examples, 299146 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:23,574-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 80.74% examples, 299042 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:24,613-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 87.03% examples, 299001 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:25,617-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 93.12% examples, 298995 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:26,645-gensim.models.base_any2vec-INFO-EPOCH 8 - PROGRESS: at 99.61% examples, 299766 words/s, in_qsize 2, out_qsize 1
+2019-12-28 05:49:26,645-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:49:26,701-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:49:26,701-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:49:26,701-gensim.models.base_any2vec-INFO-EPOCH - 8 : training on 4929250 raw words (4929250 effective words) took 16.4s, 299903 effective words/s
+2019-12-28 05:49:27,737-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 5.68% examples, 275371 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:28,771-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 11.77% examples, 282940 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:29,781-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 17.65% examples, 284302 words/s, in_qsize 5, out_qsize 1
+2019-12-28 05:49:30,810-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 23.94% examples, 288536 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:31,827-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 30.02% examples, 289855 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:32,868-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 36.31% examples, 291187 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:33,892-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 42.60% examples, 292820 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:34,906-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 48.69% examples, 293194 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:35,938-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 54.78% examples, 292916 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:36,985-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 61.06% examples, 293260 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:38,018-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 67.35% examples, 293871 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:39,051-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 73.03% examples, 291973 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:40,085-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 79.32% examples, 292562 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:41,095-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 85.41% examples, 292881 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:42,100-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 91.70% examples, 293892 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:43,102-gensim.models.base_any2vec-INFO-EPOCH 9 - PROGRESS: at 97.78% examples, 294231 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:43,382-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:49:43,453-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:49:43,458-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:49:43,458-gensim.models.base_any2vec-INFO-EPOCH - 9 : training on 4929250 raw words (4929250 effective words) took 16.7s, 294503 effective words/s
+2019-12-28 05:49:44,480-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 5.68% examples, 277751 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:45,493-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 11.97% examples, 291876 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:46,535-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 18.06% examples, 290548 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:47,544-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 24.34% examples, 294698 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:48,561-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 30.63% examples, 296702 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:49,623-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 36.72% examples, 294243 words/s, in_qsize 6, out_qsize 1
+2019-12-28 05:49:50,635-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 43.21% examples, 297338 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:51,695-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 49.50% examples, 296708 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:52,703-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 55.59% examples, 296833 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:53,713-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 61.88% examples, 297814 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:54,783-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 68.16% examples, 297042 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:55,809-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 74.45% examples, 297477 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:56,809-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 80.54% examples, 297653 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:57,838-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 86.83% examples, 297930 words/s, in_qsize 6, out_qsize 0
+2019-12-28 05:49:58,840-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 93.12% examples, 298667 words/s, in_qsize 5, out_qsize 0
+2019-12-28 05:49:59,889-gensim.models.base_any2vec-INFO-EPOCH 10 - PROGRESS: at 99.41% examples, 298463 words/s, in_qsize 3, out_qsize 0
+2019-12-28 05:49:59,899-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 2 more threads
+2019-12-28 05:49:59,913-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 1 more threads
+2019-12-28 05:49:59,959-gensim.models.base_any2vec-INFO-worker thread finished; awaiting finish of 0 more threads
+2019-12-28 05:49:59,959-gensim.models.base_any2vec-INFO-EPOCH - 10 : training on 4929250 raw words (4929250 effective words) took 16.5s, 298966 effective words/s
+2019-12-28 05:49:59,960-gensim.models.base_any2vec-INFO-training on a 49292500 raw words (49292500 effective words) took 169.5s, 290873 effective words/s
+2019-12-28 05:50:02,657-baseline-INFO-
+
+2019-12-28 05:50:02,657-baseline-INFO-
+
+2019-12-28 05:50:02,657-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:DeepWalk
+2019-12-28 05:50:02,657-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:50:03,075-baseline-INFO-AUC:0.6027,AP:0.861
+2019-12-28 05:50:03,075-baseline-INFO-f1:0.263,acc:0.2924,pre:0.8911,recall:0.1543
+2019-12-28 05:50:03,075-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:50:04,145-baseline-INFO-AUC:0.6159,AP:0.882
+2019-12-28 05:50:04,146-baseline-INFO-f1:0.2782,acc:0.283,pre:0.9032,recall:0.1644
+2019-12-28 05:50:09,863-baseline-INFO-
+
+2019-12-28 05:50:09,864-baseline-INFO-
+
+2019-12-28 05:50:09,864-baseline-INFO-Parameters dataset:pubmed datamode:X ad-method:IF emb-method:DeepWalk
+2019-12-28 05:50:09,864-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:50:10,564-baseline-INFO-AUC:0.6829,AP:0.8994
+2019-12-28 05:50:10,564-baseline-INFO-f1:0.4025,acc:0.374,pre:0.9196,recall:0.2576
+2019-12-28 05:50:10,564-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:50:12,349-baseline-INFO-AUC:0.6775,AP:0.9093
+2019-12-28 05:50:12,349-baseline-INFO-f1:0.4087,acc:0.3644,pre:0.9365,recall:0.2614
+2019-12-28 05:50:21,560-baseline-INFO-
+
+2019-12-28 05:50:21,560-baseline-INFO-
+
+2019-12-28 05:50:21,561-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:DeepWalk
+2019-12-28 05:50:21,561-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:50:23,534-baseline-INFO-AUC:0.6477,AP:0.8779
+2019-12-28 05:50:23,534-baseline-INFO-f1:0.3248,acc:0.3274,pre:0.9105,recall:0.1976
+2019-12-28 05:50:23,534-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:50:28,146-baseline-INFO-AUC:0.6682,AP:0.904
+2019-12-28 05:50:28,146-baseline-INFO-f1:0.3472,acc:0.3246,pre:0.9244,recall:0.2138
+2019-12-28 05:50:38,915-baseline-INFO-
+
+2019-12-28 05:50:38,915-baseline-INFO-
+
+2019-12-28 05:50:38,915-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:50:38,915-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:50:41,638-baseline-INFO-AUC:0.6034,AP:0.8646
+2019-12-28 05:50:41,638-baseline-INFO-f1:0.2657,acc:0.2945,pre:0.8964,recall:0.156
+2019-12-28 05:50:41,638-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:50:47,813-baseline-INFO-AUC:0.6233,AP:0.885
+2019-12-28 05:50:47,813-baseline-INFO-f1:0.2823,acc:0.2853,pre:0.9036,recall:0.1673
+2019-12-28 05:51:07,647-baseline-INFO-
+
+2019-12-28 05:51:07,647-baseline-INFO-
+
+2019-12-28 05:51:07,647-baseline-INFO-Parameters dataset:pubmed datamode:X ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:51:07,647-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:51:17,195-baseline-INFO-AUC:0.468,AP:0.808
+2019-12-28 05:51:17,195-baseline-INFO-f1:0.1568,acc:0.2369,pre:0.8191,recall:0.0867
+2019-12-28 05:51:17,195-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:51:39,086-baseline-INFO-AUC:0.4621,AP:0.8275
+2019-12-28 05:51:39,086-baseline-INFO-f1:0.1475,acc:0.2126,pre:0.8175,recall:0.0811
+2019-12-28 05:52:05,488-baseline-INFO-
+
+2019-12-28 05:52:05,488-baseline-INFO-
+
+2019-12-28 05:52:05,488-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:DeepWalk
+2019-12-28 05:52:05,488-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:52:17,814-baseline-INFO-AUC:0.6022,AP:0.8641
+2019-12-28 05:52:17,814-baseline-INFO-f1:0.2653,acc:0.2942,pre:0.8963,recall:0.1557
+2019-12-28 05:52:17,814-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:52:45,804-baseline-INFO-AUC:0.6221,AP:0.8845
+2019-12-28 05:52:45,804-baseline-INFO-f1:0.282,acc:0.285,pre:0.9035,recall:0.1671
+2019-12-28 05:52:51,704-baseline-INFO-
+
+2019-12-28 05:52:51,704-baseline-INFO-
+
+2019-12-28 05:52:51,704-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:52:51,704-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:52:51,777-baseline-INFO-AUC:0.6183,AP:0.8681
+2019-12-28 05:52:51,777-baseline-INFO-f1:0.2664,acc:0.2956,pre:0.9024,recall:0.1562
+2019-12-28 05:52:51,777-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:52:51,949-baseline-INFO-AUC:0.6371,AP:0.8876
+2019-12-28 05:52:51,949-baseline-INFO-f1:0.2786,acc:0.2834,pre:0.9046,recall:0.1647
+2019-12-28 05:52:56,334-baseline-INFO-
+
+2019-12-28 05:52:56,334-baseline-INFO-
+
+2019-12-28 05:52:56,334-baseline-INFO-Parameters dataset:pubmed datamode:X ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:52:56,334-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:52:57,221-baseline-INFO-AUC:0.7284,AP:0.9155
+2019-12-28 05:52:57,222-baseline-INFO-f1:0.4604,acc:0.4145,pre:0.9369,recall:0.3052
+2019-12-28 05:52:57,222-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:52:59,259-baseline-INFO-AUC:0.7242,AP:0.9256
+2019-12-28 05:52:59,259-baseline-INFO-f1:0.4817,acc:0.4159,pre:0.947,recall:0.323
+2019-12-28 05:53:06,377-baseline-INFO-
+
+2019-12-28 05:53:06,377-baseline-INFO-
+
+2019-12-28 05:53:06,377-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:DeepWalk
+2019-12-28 05:53:06,377-baseline-INFO--------------Evaluating Validation Results--------------
+2019-12-28 05:53:07,743-baseline-INFO-AUC:0.7372,AP:0.9174
+2019-12-28 05:53:07,743-baseline-INFO-f1:0.4607,acc:0.4147,pre:0.937,recall:0.3055
+2019-12-28 05:53:07,743-baseline-INFO--------------Evaluating Test Results--------------
+2019-12-28 05:53:10,860-baseline-INFO-AUC:0.7353,AP:0.9277
+2019-12-28 05:53:10,861-baseline-INFO-f1:0.4821,acc:0.4166,pre:0.949,recall:0.3232

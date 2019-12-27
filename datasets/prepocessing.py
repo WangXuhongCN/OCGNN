@@ -22,12 +22,12 @@ def one_class_masking(labels,normal_idx,abnormal_idx):
     val_mask=np.zeros(labels.shape)
     test_mask=np.zeros(labels.shape)
 
-    train_mask[normal_idx[:int(0.6*normal_idx.shape[0])]]=1
+    train_mask[normal_idx[:int(0.7*normal_idx.shape[0])]]=1
 
-    val_mask[normal_idx[int(0.6*normal_idx.shape[0]):int(0.8*normal_idx.shape[0])]]=1
-    val_mask[abnormal_idx[:int(0.5*abnormal_idx.shape[0])]]=1
+    val_mask[normal_idx[int(0.7*normal_idx.shape[0]):int(0.8*normal_idx.shape[0])]]=1
+    val_mask[abnormal_idx[:int(0.3*abnormal_idx.shape[0])]]=1
 
     test_mask[normal_idx[int(0.8*normal_idx.shape[0]):]]=1
-    test_mask[abnormal_idx[int(0.5*abnormal_idx.shape[0]):]]=1
+    test_mask[abnormal_idx[int(0.3*abnormal_idx.shape[0]):]]=1
 
     return labels,train_mask,val_mask,test_mask  

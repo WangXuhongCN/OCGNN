@@ -16,7 +16,7 @@ def train(args,data,model):
 
     #loss_fcn = torch.nn.CrossEntropyLoss()
 
-    # use optimizer
+    # use optimizer AdamW
     optimizer = torch.optim.AdamW(model.parameters(),
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)

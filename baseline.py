@@ -3,15 +3,37 @@ from dgl.data import register_data_args
 
 from datasets.dataloader import emb_dataloader
 from utils.evaluate import baseline_evaluate
-
-
+import fire
+import logging
 from embedding.get_embedding import embedding
 from pyod.models.ocsvm import OCSVM
-from pyod.models.lof import LOF
+from pyod.models.iforest import IForest
+from pyod.models.pca import PCA
+
 import numpy as np
+import torch
 from sklearn.metrics import f1_score, accuracy_score,precision_score,recall_score,average_precision_score,roc_auc_score,roc_curve
 
-def main(args):
+def main():
+	parser = argparse.ArgumentParser(description='OCGNN')
+	register_data_args(parser)
+	parser.add_argument("--mode", type=str, default='A',choices=['A','AX','X'],
+			help="dropout probability")
+	parser.add_argument("--emb-method", type=str, default='DeepWalk',
+			help="embedding methods: DeepWalk, Node2Vec, LINE, SDNE, Struc2Vec")  
+	parser.add_argument("--ad-method", type=str, default='OCSVM',
+			help="embedding methods: PCA,OCSVM,IF")            
+	args = parser.parse_args()
+	
+	SEED=46
+	np.random.seed(SEED)
+	torch.manual_seed(SEED)
+	torch.cuda.manual_seed_all(SEED)
+
+	logging.basicConfig(filename="config.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
+	logger=logging.getLogger('baseline')
+
+
 	datadict=emb_dataloader(args)
 
 	if args.mode=='X':
@@ -26,56 +48,36 @@ def main(args):
 			data=np.concatenate((embeddings,datadict['features']),axis=1)
 			#print('AX shape',data.shape)
 
-	print('data shape: ',data.shape)
+	logger.debug(f'data shape: {data.shape}')
 
 	if args.ad_method=='OCSVM':
-		clf = OCSVM(nu=args.nu,contamination=0.1)
-	if args.ad_method=='LOF':
-		clf = LOF(n_neighbors=20,contamination=0.1,n_jobs=-1)
+		clf = OCSVM(contamination=0.1)
+	if args.ad_method=='IF':
+		clf = IForest(n_estimators=100,contamination=0.1,n_jobs=-1,behaviour="new")
+	if args.ad_method=='PCA':
+		clf = PCA(contamination=0.1)
 
 	clf.fit(data[datadict['train_mask']])
-
-	print('-------------Evaluating Validation Results--------------')
+	logger.info('\n')
+	logger.info('\n')
+	logger.info(f'Parameters dataset:{args.dataset} datamode:{args.mode} ad-method:{args.ad_method} emb-method:{args.emb_method}')
+	logger.info('-------------Evaluating Validation Results--------------')
 	y_pred_val=clf.predict(data[datadict['val_mask']])
 	y_score_val=clf.decision_function(data[datadict['val_mask']])
-	baseline_evaluate(datadict,y_pred_val,y_score_val,val=True)
+	auc,ap,f1,acc,precision,recall=baseline_evaluate(datadict,y_pred_val,y_score_val,val=True)
+	logger.info(f'AUC:{round(auc,4)},AP:{round(ap,4)}')
+	logger.info(f'f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
 
-
-	print('-------------Evaluating Test Results--------------')
+	logger.info('-------------Evaluating Test Results--------------')
 	y_pred_test=clf.predict(data[datadict['test_mask']])
 	y_score_test=clf.decision_function(data[datadict['test_mask']])
-	baseline_evaluate(datadict,y_pred_test,y_score_test,val=False)
+	auc,ap,f1,acc,precision,recall=baseline_evaluate(datadict,y_pred_test,y_score_test,val=False)
+	logger.info(f'AUC:{round(auc,4)},AP:{round(ap,4)}')
+	logger.info(f'f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='GCN')
-    register_data_args(parser)
-    parser.add_argument("--mode", type=str, default='A',choices=['A','AX','X'],
-            help="dropout probability")
-    parser.add_argument("--normal-class", type=int, default=2,
-            help="normal-class")
-    parser.add_argument("--nu", type=float, default=0.1,
-            help="hyperparameter nu (must be 0 < nu <= 1)")
-    parser.add_argument("--gpu", type=int, default=-1,
-            help="gpu")
-    parser.add_argument("--emb-method", type=str, default='DeepWalk',
-            help="embedding methods: DeepWalk, Node2Vec, LINE, SDNE, Struc2Vec")  
-    parser.add_argument("--ad-method", type=str, default='LOF',
-            help="embedding methods: LOF,OCSVM,IF")            
-    parser.add_argument("--lr", type=float, default=1e-3,
-            help="learning rate")
-    parser.add_argument("--n-epochs", type=int, default=100,
-            help="number of training epochs")
-    parser.add_argument("--n-hidden", type=int, default=64,
-            help="number of hidden gcn units")
-    parser.add_argument("--n-layers", type=int, default=1,
-            help="number of hidden gcn layers")
-    parser.add_argument("--weight-decay", type=float, default=1e-2,
-            help="Weight for L2 loss")
-    parser.add_argument("--self-loop", action='store_true',
-            help="graph self-loop (default=False)")
-    parser.set_defaults(self_loop=False)
-    args = parser.parse_args()
-    print(args)
 
-    main(args)
+    #print(args)
+	#main()
+    fire.Fire(main)

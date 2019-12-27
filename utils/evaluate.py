@@ -49,5 +49,5 @@ def baseline_evaluate(datadict,y_pred,y_score,val=True):
     precision=precision_score(datadict['labels'][mask],y_pred)
     f1=f1_score(datadict['labels'][mask],y_pred)
 
-    print(f'AUC:{round(auc,4)},AP:{round(ap,4)}')
-    print(f'f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    return auc,ap,f1,acc,precision,recall
+

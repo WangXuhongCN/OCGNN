@@ -12,17 +12,18 @@ def embedding(args,datadict):
     datadict['g'] = nx.read_edgelist(f'./embedding/{args.dataset}.edgelist',create_using=nx.DiGraph(),nodetype=None,data=[('weight',int)])
     
     if not os.path.exists(f'./embedding/{args.dataset}_{args.emb_method}.emb'):
-        model = DeepWalk(datadict['g'], walk_length=10, num_walks=80, workers=8)
-        model.train(window_size=5, iter=3)
+        model = DeepWalk(datadict['g'], walk_length=5, num_walks=50, workers=8)
+        model.train(window_size=10, iter=10)
         dict_embeddings = model.get_embeddings()
         embeddings=np.zeros((datadict['labels'].shape[0],dict_embeddings['0'].shape[0]))
         print('Saving the embeddings......')
         for key in tqdm(dict_embeddings):
             embeddings[int(key)] = dict_embeddings[key]
         np.savetxt(f'./embedding/{args.dataset}_{args.emb_method}.emb',embeddings)
-        print('Embeddings saved.')
+        print(f'{embeddings.shape[1]}-dims Embeddings saved.')
     else:
         print('Loading the embeddings')
         embeddings=np.loadtxt(f'./embedding/{args.dataset}_{args.emb_method}.emb')
+        print(f'{embeddings.shape[1]}-dims Embeddings load.')
 
     return embeddings
