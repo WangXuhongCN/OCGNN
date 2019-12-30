@@ -30,15 +30,17 @@ if __name__ == '__main__':
             help="hyperparameter nu (must be 0 < nu <= 1)")
     parser.add_argument("--gpu", type=int, default=-1,
             help="gpu")
-    parser.add_argument("--lr", type=float, default=5e-4,
+    parser.add_argument("--module", type=str, default='GCN',
+            help="GCN/GraphSAGE")
+    parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
-    parser.add_argument("--n-epochs", type=int, default=2000,
+    parser.add_argument("--n-epochs", type=int, default=500,
             help="number of training epochs")
     parser.add_argument("--n-hidden", type=int, default=128,
             help="number of hidden gcn units")
-    parser.add_argument("--n-layers", type=int, default=1,
+    parser.add_argument("--n-layers", type=int, default=2,
             help="number of hidden gcn layers")
-    parser.add_argument("--weight-decay", type=float, default=5e-3,
+    parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")
     parser.add_argument("--self-loop", action='store_true',
             help="graph self-loop (default=False)")
