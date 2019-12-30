@@ -22,7 +22,7 @@ def train(args,data,model):
                                  weight_decay=args.weight_decay)
 
     # initialize data center
-    data_center= init_center(args,data['features'], model,data['train_mask'])
+    data_center= init_center(args,data, model)
     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
 
     dur = []
@@ -32,7 +32,10 @@ def train(args,data,model):
         if epoch >= 3:
             t0 = time.time()
         # forward
-        outputs= model(data['features'])
+        if args.module== 'GIN':
+            outputs= model(data['g'],data['features'])
+        else:
+            outputs= model(data['features'])
         
         loss,dist,_=loss_function(args,data_center,outputs,data['train_mask'],radius)
         #loss=torch.mean(loss)
@@ -48,13 +51,13 @@ def train(args,data,model):
 
 
 
-        auroc,auprc = evaluate(args,model, data_center,data['features'], data['labels'], data['val_mask'],radius)
+        auroc,auprc = evaluate(args,model, data_center,data,radius,'val')
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val AUPRC {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                             auroc,auprc, data['n_edges'] / np.mean(dur) / 1000))
 
     print()
-    auroc,auprc = evaluate(args,model, data_center,data['features'], data['labels'], data['test_mask'],radius)
+    auroc,auprc = evaluate(args,model, data_center,data,radius,'test')
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auroc,auprc))
 
     return model

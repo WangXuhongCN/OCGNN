@@ -3,15 +3,23 @@ import torch
 from optim.loss import loss_function
 import numpy as np
 
-def evaluate(args,model, data_center,features, labels, mask,radius):
+def evaluate(args,model, data_center,data,radius,mode='val'):
     
     model.eval()
     with torch.no_grad():
-        outputs = model(features)
-        #outputs = outputs[mask]
-        labels = labels[mask]
-        _ , dist ,scores=loss_function(args,data_center,outputs,mask,radius)
+
+        if args.module== 'GIN':
+            outputs= model(data['g'],data['features'])
+        else:
+            outputs= model(data['features'])
         
+        if mode=='val':
+            labels = data['labels'][data['val_mask']]
+            _ , dist ,scores=loss_function(args,data_center,outputs,data['val_mask'],radius)
+        if mode=='test':
+            labels = data['labels'][data['test_mask']]
+            _ , dist ,scores=loss_function(args,data_center,outputs,data['test_mask'],radius)
+
         labels=labels.cpu().numpy()
         dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()

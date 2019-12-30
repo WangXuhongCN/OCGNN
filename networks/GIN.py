@@ -153,19 +153,29 @@ class GIN(nn.Module):
 
     def forward(self, g, h):
         # list of hidden representation at each layer (including input)
-        hidden_rep = [h]
 
         for i in range(self.num_layers - 1):
             h = self.ginlayers[i](g, h)
             h = self.batch_norms[i](h)
             h = F.relu(h)
-            hidden_rep.append(h)
+        return h
 
-        score_over_layer = 0
+#下面这段代码是为了进行图的分类，我在这里先注释掉
+    # def forward(self, g, h):
+    #     # list of hidden representation at each layer (including input)
+    #     hidden_rep = [h]
 
-        # perform pooling over all nodes in each graph in every layer
-        for i, h in enumerate(hidden_rep):
-            pooled_h = self.pool(g, h)
-            score_over_layer += self.drop(self.linears_prediction[i](pooled_h))
+    #     for i in range(self.num_layers - 1):
+    #         h = self.ginlayers[i](g, h)
+    #         h = self.batch_norms[i](h)
+    #         h = F.relu(h)
+    #         hidden_rep.append(h)   
 
-        return score_over_layer
+    #     # perform pooling over all nodes in each graph in every layer
+        
+    #     score_over_layer = 0
+    #     for i, h in enumerate(hidden_rep):
+    #         pooled_h = self.pool(g, h)
+    #         score_over_layer += self.drop(self.linears_prediction[i](pooled_h))
+
+    #     return score_over_layer

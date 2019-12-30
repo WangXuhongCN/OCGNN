@@ -1,8 +1,8 @@
 import torch.nn.functional as F
-from .GCN import GCN
-from .GAT import GAT
-from .GIN import GIN
-from .GraphSAGE import GraphSAGE
+from networks.GCN import GCN
+from networks.GAT import GAT
+from networks.GIN import GIN
+from networks.GraphSAGE import GraphSAGE
 
 def init_model(args,datadict):
     # create GCN model
@@ -22,7 +22,7 @@ def init_model(args,datadict):
                 args.n_layers,
                 F.relu,
                 args.dropout,
-                'pool')
+                aggregator_type='pool')
     if args.module== 'GAT':
         model = GAT(datadict['g'],
                 args.n_layers,
@@ -30,7 +30,7 @@ def init_model(args,datadict):
                 args.n_hidden*2,
                 args.n_hidden,
                 heads=([8] * args.n_layers) + [1],
-                activation=F.elu,
+                activation=F.relu,
                 feat_drop=args.dropout,
                 attn_drop=args.dropout,
                 negative_slope=0.2,
