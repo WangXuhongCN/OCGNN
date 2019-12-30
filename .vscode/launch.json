@@ -24,7 +24,7 @@
             "console": "integratedTerminal",
             "args": [
                 "--dataset", "cora",
-                "--module", "GIN",
+                "--module", "GraphSAGE",
                 "--gpu",  "0",
                 "--self-loop"
             ],

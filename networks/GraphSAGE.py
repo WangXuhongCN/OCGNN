@@ -19,12 +19,12 @@ class GraphSAGE(nn.Module):
         self.g = g
 
         # input layer
-        self.layers.append(SAGEConv(in_feats, n_hidden, aggregator_type, feat_drop=dropout, activation=activation))
+        self.layers.append(SAGEConv(in_feats, n_hidden, aggregator_type, feat_drop=dropout, bias=False,activation=activation))
         # hidden layers
         for i in range(n_layers - 1):
-            self.layers.append(SAGEConv(n_hidden, n_hidden, aggregator_type, feat_drop=dropout, activation=activation))
+            self.layers.append(SAGEConv(n_hidden, n_hidden, aggregator_type, feat_drop=dropout, bias=False,activation=activation))
         # output layer
-        self.layers.append(SAGEConv(n_hidden, n_classes, aggregator_type, feat_drop=dropout, activation=None)) # activation None
+        self.layers.append(SAGEConv(n_hidden, n_classes, aggregator_type, feat_drop=dropout, bias=False, activation=None)) # activation None
 
     def forward(self, features):
         h = features
