@@ -29,7 +29,7 @@ def train(args,data,model):
     model.train()
     for epoch in range(args.n_epochs):
         #model.train()
-        if epoch >= 3:
+        if epoch %5 == 0:
             t0 = time.time()
         # forward
         if args.module== 'GIN':
@@ -45,21 +45,21 @@ def train(args,data,model):
         loss.backward()
         optimizer.step()
 
-        if epoch >= 3:
+        if epoch%5 == 0:
             dur.append(time.time() - t0)
             radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
 
 
 
-        auroc,auprc = evaluate(args,model, data_center,data,radius,'val')
-        print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val AUPRC {:.4f} | "
+        auc,ap,f1,acc,precision,recall = evaluate(args,model, data_center,data,radius,'val')
+        print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
-                                            auroc,auprc, data['n_edges'] / np.mean(dur) / 1000))
+                                            auc,f1, data['n_edges'] / np.mean(dur) / 1000))
 
     print()
-    auroc,auprc = evaluate(args,model, data_center,data,radius,'test')
-    print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auroc,auprc))
-
+    auc,ap,f1,acc,precision,recall = evaluate(args,model, data_center,data,radius,'test')
+    print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
+    print(f'f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     return model
 
 

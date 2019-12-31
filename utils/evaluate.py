@@ -23,18 +23,23 @@ def evaluate(args,model, data_center,data,radius,mode='val'):
         labels=labels.cpu().numpy()
         dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()
+
+        pred=thresholding(scores,0)
         # print(scores.min())
         # print(scores.max())
         # print(scores.mean())
-        auroc=roc_auc_score(labels, dist)
-        auprc=average_precision_score(labels, dist)
-        # _, indices = torch.max(logits, dim=1)
-        # correct = torch.sum(indices == labels)
-        #return correct.item() * 1.0 / len(labels)
+        auc=roc_auc_score(labels, scores)
+        ap=average_precision_score(labels, scores)
+
+        acc=accuracy_score(labels,pred)
+        recall=recall_score(labels,pred)
+        precision=precision_score(labels,pred)
+        f1=f1_score(labels,pred)
+
     
     #metric={}
 
-    return auroc,auprc
+    return auc,ap,f1,acc,precision,recall
 
 def thresholding(recon_error,threshold):
     ano_pred=np.zeros(recon_error.shape[0])
