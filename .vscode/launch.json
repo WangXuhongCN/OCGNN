@@ -27,6 +27,7 @@
                 "--module", "GraphSAGE",
                 "--gpu",  "0",
                 "--self-loop"
+                ,"--early-stop"
             ],
         }
     ]
