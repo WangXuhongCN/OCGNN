@@ -23,11 +23,11 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "cora",
+                "--dataset", "cora", // cora , citeseer , pubmed , reddit
                 "--module", "GraphSAGE",
                 "--gpu",  "0",
                 "--self-loop"
-                ,"--early-stop"
+                //,"--early-stop"
             ],
         }
     ]

@@ -9,7 +9,7 @@ from networks.init import init_model
 import numpy as np
 import torch
 def main(args):
-	SEED=52
+	SEED=46
 	np.random.seed(SEED)
 	torch.manual_seed(SEED)
 	torch.cuda.manual_seed_all(SEED)
@@ -33,13 +33,13 @@ if __name__ == '__main__':
             help="GCN/GAT/GIN/GraphSAGE")
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
-    parser.add_argument("--n-epochs", type=int, default=1000,
+    parser.add_argument("--n-epochs", type=int, default=800,
             help="number of training epochs")
     parser.add_argument("--n-hidden", type=int, default=128,
-            help="number of hidden gcn units")
+            help="number of hidden gnn units")
     parser.add_argument("--n-layers", type=int, default=1,
-            help="number of hidden gcn layers")
-    parser.add_argument("--weight-decay", type=float, default=5e-4,
+            help="number of hidden gnn layers")
+    parser.add_argument("--weight-decay", type=float, default=1e-3,
             help="Weight for L2 loss")
     parser.add_argument('--early-stop', action='store_true', default=False,
                         help="indicates whether to use early stop or not")

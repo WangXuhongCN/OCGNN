@@ -118,7 +118,8 @@ class GIN(nn.Module):
         self.ginlayers = torch.nn.ModuleList()
         self.batch_norms = torch.nn.ModuleList()
 
-        for layer in range(self.num_layers - 1):
+        #这里我做了修改for layer in range(self.num_layers - 1):
+        for layer in range(self.num_layers):
             if layer == 0:
                 mlp = MLP(num_mlp_layers, input_dim, hidden_dim, hidden_dim)
             else:
@@ -130,6 +131,7 @@ class GIN(nn.Module):
 
         # Linear function for graph poolings of output of each layer
         # which maps the output of different layers into a prediction score
+        '''
         self.linears_prediction = torch.nn.ModuleList()
 
         for layer in range(num_layers):
@@ -150,11 +152,12 @@ class GIN(nn.Module):
             self.pool = MaxPooling()
         else:
             raise NotImplementedError
+        '''
 
     def forward(self, g, h):
         # list of hidden representation at each layer (including input)
 
-        for i in range(self.num_layers - 1):
+        for i in range(self.num_layers):
             h = self.ginlayers[i](g, h)
             h = self.batch_norms[i](h)
             h = F.relu(h)

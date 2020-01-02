@@ -7,7 +7,7 @@ from networks.GraphSAGE import GraphSAGE
 def init_model(args,datadict):
     # create GCN model
     if args.module== 'GCN':
-        model = GCN(datadict['g'],
+        model = GCN(None,
                 datadict['in_feats'],
                 args.n_hidden*2,
                 args.n_hidden,
@@ -15,7 +15,7 @@ def init_model(args,datadict):
                 F.relu,
                 args.dropout)
     if args.module== 'GraphSAGE':
-        model = GraphSAGE(datadict['g'],
+        model = GraphSAGE(None,
                 datadict['in_feats'],
                 args.n_hidden*2,
                 args.n_hidden,
@@ -24,7 +24,7 @@ def init_model(args,datadict):
                 args.dropout,
                 aggregator_type='pool')
     if args.module== 'GAT':
-        model = GAT(datadict['g'],
+        model = GAT(None,
                 args.n_layers,
                 datadict['in_feats'],
                 args.n_hidden*2,

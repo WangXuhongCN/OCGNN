@@ -14,10 +14,9 @@ def init_center(args,data, model, eps=0.001):
 
     model.eval()
     with torch.no_grad():
-        if args.module== 'GIN':
-            outputs= model(data['g'],data['features'])
-        else:
-            outputs= model(data['features'])
+
+        outputs= model(data['g'],data['features'])
+
         # get the inputs of the batch
 
         n_samples = outputs.shape[0]

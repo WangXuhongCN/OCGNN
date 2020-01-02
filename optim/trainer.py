@@ -26,6 +26,8 @@ def train(args,data,model):
     data_center= init_center(args,data, model)
     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
 
+    #train_inputs=data['features']
+
     dur = []
     model.train()
     for epoch in range(args.n_epochs):
@@ -33,10 +35,8 @@ def train(args,data,model):
         if epoch %5 == 0:
             t0 = time.time()
         # forward
-        if args.module== 'GIN':
-            outputs= model(data['g'],data['features'])
-        else:
-            outputs= model(data['features'])
+        
+        outputs= model(data['g'],data['features'])
         
         loss,dist,_=loss_function(args,data_center,outputs,data['train_mask'],radius)
         #loss=torch.mean(loss)

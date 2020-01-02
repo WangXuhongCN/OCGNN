@@ -8,10 +8,9 @@ def evaluate(args,model, data_center,data,radius,mode='val'):
     model.eval()
     with torch.no_grad():
 
-        if args.module== 'GIN':
-            outputs= model(data['g'],data['features'])
-        else:
-            outputs= model(data['features'])
+
+        outputs= model(data['g'],data['features'])
+
         
         if mode=='val':
             labels = data['labels'][data['val_mask']]
