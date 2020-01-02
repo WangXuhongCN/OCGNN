@@ -7,7 +7,7 @@ def loss_function(args,data_center,outputs,mask,radius):
     loss = radius ** 2 + (1 / args.nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
     return loss,dist,scores
 
-def init_center(args,data, model, eps=0.001):
+def init_center(args,input_g,input_feat, model, eps=0.001):
     """Initialize hypersphere center c as the mean from an initial forward pass on the data."""
     n_samples = 0
     c = torch.zeros(args.n_hidden, device=f'cuda:{args.gpu}')
@@ -15,7 +15,7 @@ def init_center(args,data, model, eps=0.001):
     model.eval()
     with torch.no_grad():
 
-        outputs= model(data['g'],data['features'])
+        outputs= model(input_g,input_feat)
 
         # get the inputs of the batch
 

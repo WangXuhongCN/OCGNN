@@ -11,9 +11,9 @@
             "program": "/home/xuhongwa/GNN/OCGNN/baseline.py",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "cora",
-                "--mode", "AX",
-                "--ad-method", "IF",
+                "--dataset", "citeseer",
+                "--mode", "A",
+                "--ad-method", "OCSVM",
             ],
         },
         {
@@ -23,10 +23,10 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "cora", // cora , citeseer , pubmed , reddit
-                "--module", "GraphSAGE",
+                "--dataset", "citeseer", // cora , citeseer , pubmed , reddit
+                "--module", "GAT", //"GCN/GAT/GIN/GraphSAGE"
                 "--gpu",  "0",
-                "--self-loop"
+                //"--self-loop"
                 //,"--early-stop"
             ],
         }

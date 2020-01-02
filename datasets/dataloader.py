@@ -56,7 +56,7 @@ def dataloader(args):
     if args.self_loop and args.dataset!= 'reddit':
         g.remove_edges_from(g.selfloop_edges())
         g.add_edges_from(zip(g.nodes(), g.nodes()))
-        
+
     g = DGLGraph(g)
     n_edges = g.number_of_edges()
     # normalization
@@ -76,7 +76,7 @@ def emb_dataloader(args):
     # load and preprocess dataset
     data = load_data(args)
     normal_class=get_normal_class(args)
-    labels,train_mask,val_mask,test_mask=one_class_processing(data.labels,normal_class)
+    labels,train_mask,val_mask,test_mask=one_class_processing(args,data,normal_class)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)

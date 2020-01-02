@@ -39,7 +39,7 @@ if __name__ == '__main__':
             help="number of hidden gnn units")
     parser.add_argument("--n-layers", type=int, default=1,
             help="number of hidden gnn layers")
-    parser.add_argument("--weight-decay", type=float, default=1e-3,
+    parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")
     parser.add_argument('--early-stop', action='store_true', default=False,
                         help="indicates whether to use early stop or not")

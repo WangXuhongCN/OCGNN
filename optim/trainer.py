@@ -1,6 +1,7 @@
 import time
 import numpy as np
 import torch
+from dgl.contrib.sampling.sampler import NeighborSampler
 # import torch.nn as nn
 # import torch.nn.functional as F
 
@@ -15,7 +16,6 @@ def train(args,data,model):
 
     checkpoints_path=f'./checkpoints/{args.dataset}+OC-{args.module}+bestcheckpoint.pt'
     #loss_fcn = torch.nn.CrossEntropyLoss()
-
     # use optimizer AdamW
     optimizer = torch.optim.AdamW(model.parameters(),
                                  lr=args.lr,
@@ -23,7 +23,11 @@ def train(args,data,model):
     if args.early_stop:
         stopper = EarlyStopping(patience=200)
     # initialize data center
-    data_center= init_center(args,data, model)
+
+    input_feat=data['features']
+    input_g=data['g']
+
+    data_center= init_center(args,input_g,input_feat, model)
     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
 
     #train_inputs=data['features']
@@ -35,12 +39,10 @@ def train(args,data,model):
         if epoch %5 == 0:
             t0 = time.time()
         # forward
-        
-        outputs= model(data['g'],data['features'])
+
+        outputs= model(input_g,input_feat)
         
         loss,dist,_=loss_function(args,data_center,outputs,data['train_mask'],radius)
-        #loss=torch.mean(loss)
-        #loss = loss_fcn(outputs[train_mask], labels[train_mask])
 
         optimizer.zero_grad()
         loss.backward()
