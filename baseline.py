@@ -15,22 +15,24 @@ import torch
 from sklearn.metrics import f1_score, accuracy_score,precision_score,recall_score,average_precision_score,roc_auc_score,roc_curve
 
 def main():
-	parser = argparse.ArgumentParser(description='OCGNN')
+	parser = argparse.ArgumentParser(description='baseline')
 	register_data_args(parser)
 	parser.add_argument("--mode", type=str, default='A',choices=['A','AX','X'],
 			help="dropout probability")
+	parser.add_argument("--seed", type=int, default=-1,
+            help="random seed, -1 means dont fix seed")
 	parser.add_argument("--emb-method", type=str, default='DeepWalk',
 			help="embedding methods: DeepWalk, Node2Vec, LINE, SDNE, Struc2Vec")  
 	parser.add_argument("--ad-method", type=str, default='OCSVM',
 			help="embedding methods: PCA,OCSVM,IF")            
 	args = parser.parse_args()
 	
-	SEED=46
-	np.random.seed(SEED)
-	torch.manual_seed(SEED)
-	torch.cuda.manual_seed_all(SEED)
+	if args.seed!=-1:
+		np.random.seed(args.seed)
+		torch.manual_seed(args.seed)
+		torch.cuda.manual_seed_all(args.seed)
 
-	logging.basicConfig(filename="config.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
+	logging.basicConfig(filename="./log/baseline.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
 	logger=logging.getLogger('baseline')
 
 

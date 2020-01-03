@@ -1,6 +1,6 @@
 import numpy as np
 
-def one_class_processing(args,data,normal_class:int):
+def one_class_processing(data,normal_class:int,args=None):
     labels,normal_idx,abnormal_idx=one_class_labeling(data.labels,normal_class)
     return one_class_masking(args,data,labels,normal_idx,abnormal_idx)
 

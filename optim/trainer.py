@@ -1,6 +1,7 @@
 import time
 import numpy as np
 import torch
+import logging
 from dgl.contrib.sampling.sampler import NeighborSampler
 # import torch.nn as nn
 # import torch.nn.functional as F
@@ -15,13 +16,21 @@ from utils.evaluate import evaluate
 def train(args,data,model):
 
     checkpoints_path=f'./checkpoints/{args.dataset}+OC-{args.module}+bestcheckpoint.pt'
+
+    logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
+    logger=logging.getLogger('OCGNN')
     #loss_fcn = torch.nn.CrossEntropyLoss()
     # use optimizer AdamW
+    logger.info('Start training')
+    logger.info(f'dropout:{args.dropout}, nu:{args.nu},seed:{args.seed},lr:{args.lr},self-loop:{args.self_loop},morm:{args.norm}')
+
+    logger.info(f'n-epochs:{args.n_epochs}, n-hidden:{args.n_hidden},n-layers:{args.n_layers},weight-decay:{args.weight_decay}')
+
     optimizer = torch.optim.AdamW(model.parameters(),
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)
     if args.early_stop:
-        stopper = EarlyStopping(patience=200)
+        stopper = EarlyStopping(patience=500)
     # initialize data center
 
     input_feat=data['features']
@@ -58,7 +67,7 @@ def train(args,data,model):
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
-        if args.early_stop and epoch>int(0.5*args.n_epochs):
+        if args.early_stop:
             if stopper.step(auc, model,checkpoints_path):   
                 break
 
@@ -71,6 +80,9 @@ def train(args,data,model):
     auc,ap,f1,acc,precision,recall = evaluate(args,model, data_center,data,radius,'test')
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
+    logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    logger.info('\n')
     return model
 
 

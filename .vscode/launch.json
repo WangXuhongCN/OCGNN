@@ -25,9 +25,10 @@
             "args": [
                 "--dataset", "citeseer", // cora , citeseer , pubmed , reddit
                 "--module", "GAT", //"GCN/GAT/GIN/GraphSAGE"
-                "--gpu",  "0",
-                //"--self-loop"
-                //,"--early-stop"
+                "--seed","46",
+                "--gpu",  "1"
+                //,"--self-loop"
+                ,"--early-stop"
             ],
         }
     ]

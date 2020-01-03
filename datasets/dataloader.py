@@ -17,7 +17,7 @@ def dataloader(args):
     data = load_data(args)
     normal_class=get_normal_class(args)
     print(f'normal_class is {normal_class}')
-    labels,train_mask,val_mask,test_mask=one_class_processing(args,data,normal_class)
+    labels,train_mask,val_mask,test_mask=one_class_processing(data,normal_class,args)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)
@@ -53,19 +53,22 @@ def dataloader(args):
     g = data.graph
         
     # add self loop
-    if args.self_loop and args.dataset!= 'reddit':
+    if args.self_loop:
         g.remove_edges_from(g.selfloop_edges())
-        g.add_edges_from(zip(g.nodes(), g.nodes()))
+        if args.module!='GraphSAGE':
+            g.add_edges_from(zip(g.nodes(), g.nodes()))
 
     g = DGLGraph(g)
-    n_edges = g.number_of_edges()
-    # normalization
-    degs = g.in_degrees().float()
-    norm = torch.pow(degs, -0.5)
-    norm[torch.isinf(norm)] = 0
-    if cuda:
-        norm = norm.cuda()
-    g.ndata['norm'] = norm.unsqueeze(1)
+
+    if args.norm:
+        n_edges = g.number_of_edges()
+        # normalization
+        degs = g.in_degrees().float()
+        norm = torch.pow(degs, -0.5)
+        norm[torch.isinf(norm)] = 0
+        if cuda:
+            norm = norm.cuda()
+        g.ndata['norm'] = norm.unsqueeze(1)
 
     datadict={'g':g,'features':features,'labels':labels,'train_mask':train_mask,
         'val_mask':val_mask,'test_mask': test_mask,'in_feats':in_feats,'n_classes':n_classes,'n_edges':n_edges}
@@ -76,7 +79,7 @@ def emb_dataloader(args):
     # load and preprocess dataset
     data = load_data(args)
     normal_class=get_normal_class(args)
-    labels,train_mask,val_mask,test_mask=one_class_processing(args,data,normal_class)
+    labels,train_mask,val_mask,test_mask=one_class_processing(data,normal_class,args)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)
