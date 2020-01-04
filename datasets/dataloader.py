@@ -55,13 +55,13 @@ def dataloader(args):
     # add self loop
     if args.self_loop:
         g.remove_edges_from(g.selfloop_edges())
-        if args.module!='GraphSAGE':
-            g.add_edges_from(zip(g.nodes(), g.nodes()))
+        #if args.module!='GraphSAGE':
+        g.add_edges_from(zip(g.nodes(), g.nodes()))
 
     g = DGLGraph(g)
-
+    n_edges = g.number_of_edges()
     if args.norm:
-        n_edges = g.number_of_edges()
+        
         # normalization
         degs = g.in_degrees().float()
         norm = torch.pow(degs, -0.5)

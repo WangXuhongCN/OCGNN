@@ -22,7 +22,7 @@ def train(args,data,model):
     #loss_fcn = torch.nn.CrossEntropyLoss()
     # use optimizer AdamW
     logger.info('Start training')
-    logger.info(f'dropout:{args.dropout}, nu:{args.nu},seed:{args.seed},lr:{args.lr},self-loop:{args.self_loop},morm:{args.norm}')
+    logger.info(f'dropout:{args.dropout}, nu:{args.nu},seed:{args.seed},lr:{args.lr},self-loop:{args.self_loop},norm:{args.norm}')
 
     logger.info(f'n-epochs:{args.n_epochs}, n-hidden:{args.n_hidden},n-layers:{args.n_layers},weight-decay:{args.weight_decay}')
 
@@ -67,7 +67,7 @@ def train(args,data,model):
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
-        if args.early_stop:
+        if args.early_stop and epoch > 50:
             if stopper.step(auc, model,checkpoints_path):   
                 break
 
