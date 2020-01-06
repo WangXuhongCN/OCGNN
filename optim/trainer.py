@@ -30,7 +30,7 @@ def train(args,data,model):
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)
     if args.early_stop:
-        stopper = EarlyStopping(patience=500)
+        stopper = EarlyStopping(patience=100)
     # initialize data center
 
     input_feat=data['features']
@@ -63,12 +63,12 @@ def train(args,data,model):
 
 
 
-        auc,ap,f1,acc,precision,recall = evaluate(args,model, data_center,data,radius,'val')
+        auc,ap,f1,acc,precision,recall,the_loss = evaluate(args,model, data_center,data,radius,'val')
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
-        if args.early_stop and epoch > 100:
-            if stopper.step(auc, model,checkpoints_path):   
+        if args.early_stop:
+            if stopper.step(auc,float(the_loss.cpu().numpy()), model,checkpoints_path):   
                 break
 
     #model_path=checkpoints_path+f'{epoch}+bestcheckpoint.pt'
@@ -77,7 +77,7 @@ def train(args,data,model):
         print(f'model loaded.')
         model.load_state_dict(torch.load(checkpoints_path))
 
-    auc,ap,f1,acc,precision,recall = evaluate(args,model, data_center,data,radius,'test')
+    auc,ap,f1,acc,precision,recall,the_loss = evaluate(args,model, data_center,data,radius,'test')
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
@@ -91,14 +91,17 @@ class EarlyStopping:
         self.patience = patience
         self.counter = 0
         self.best_score = None
+        self.lowest_loss = None
         self.early_stop = False
 
-    def step(self, acc, model,path):
+    def step(self, acc,loss, model,path):
         score = acc
-        if self.best_score is None:
+        cur_loss=loss
+        if (self.best_score is None) or (self.lowest_loss is None):
             self.best_score = score
-            self.save_checkpoint(acc,model,path)
-        elif score <= self.best_score:
+            self.lowest_loss = cur_loss
+            self.save_checkpoint(acc,loss,model,path)
+        elif (score < self.best_score) and (cur_loss >= self.lowest_loss):
             self.counter += 1
             if self.counter >= 0.8*(self.patience):
                 print(f'Warning: EarlyStopping soon: {self.counter} out of {self.patience}')
@@ -106,11 +109,12 @@ class EarlyStopping:
                 self.early_stop = True
         else:
             self.best_score = score
-            self.save_checkpoint(acc,model,path)
+            self.lowest_loss = cur_loss
+            self.save_checkpoint(acc,loss,model,path)
             self.counter = 0
         return self.early_stop
 
-    def save_checkpoint(self, acc,model,path):
+    def save_checkpoint(self, acc,loss,model,path):
         '''Saves model when validation loss decrease.'''
-        print(f'model saved. AUC={acc}')
+        print(f'model saved. loss={loss} AUC={acc}')
         torch.save(model.state_dict(), path)
