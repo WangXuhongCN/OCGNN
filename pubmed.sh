@@ -1,183 +1,44 @@
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 1 
+python main.py --dataset pubmed --module GAT  --n-layers 2 
+python main.py --dataset pubmed --module GAT  --n-layers 3 
+python main.py --dataset pubmed --module GAT  --n-layers 4 
+python main.py --dataset pubmed --module GAT  --n-layers 5 
+python main.py --dataset pubmed --module GAT  --n-layers 6 
+python main.py --dataset pubmed --module GAT  --n-layers 7 
+python main.py --dataset pubmed --module GAT  --n-layers 1 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 2 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 3 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 4 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 5 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 6 --n-hidden 64
+python main.py --dataset pubmed --module GAT  --n-layers 7 --n-hidden 64
 
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 1 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 2 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 3 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 4 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 5 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 6 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 7 
+python main.py --dataset pubmed --module GraphSAGE --n-layers 1 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 2 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 3 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 4 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 5 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 6 --n-hidden 64
+python main.py --dataset pubmed --module GraphSAGE --n-layers 7 --n-hidden 64
 
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.0001 --self-loop --norm 
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.0001 --self-loop --norm 
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.0001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.001 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.01 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.0001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.001 --n-hidden 64  --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.001  --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.01 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.001 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-python main.py --dataset pubmed --module GCN --lr 0.0001 --n-layers 3 --weight-decay 0.01 --n-hidden 64 --self-loop --norm
-
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.001
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.01
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-# python main.py --dataset pubmed --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 1 
+python main.py --dataset pubmed --module GCN --n-layers 2 
+python main.py --dataset pubmed --module GCN --n-layers 3 
+python main.py --dataset pubmed --module GCN --n-layers 4 
+python main.py --dataset pubmed --module GCN --n-layers 5 
+python main.py --dataset pubmed --module GCN --n-layers 6 
+python main.py --dataset pubmed --module GCN --n-layers 7 
+python main.py --dataset pubmed --module GCN --n-layers 1 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 2 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 3 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 4 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 5 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 6 --n-hidden 64
+python main.py --dataset pubmed --module GCN --n-layers 7 --n-hidden 64

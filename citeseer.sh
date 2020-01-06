@@ -1,148 +1,45 @@
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GraphSAGE --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 1 
+python main.py --dataset citeseer --module GAT  --n-layers 2 
+python main.py --dataset citeseer --module GAT  --n-layers 3 
+python main.py --dataset citeseer --module GAT  --n-layers 4 
+python main.py --dataset citeseer --module GAT  --n-layers 5 
+python main.py --dataset citeseer --module GAT  --n-layers 6 
+python main.py --dataset citeseer --module GAT  --n-layers 7 
+python main.py --dataset citeseer --module GAT  --n-layers 1 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 2 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 3 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 4 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 5 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 6 --n-hidden 64
+python main.py --dataset citeseer --module GAT  --n-layers 7 --n-hidden 64
 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GAT --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 1 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 2 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 3 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 4 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 5 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 6 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 7 
+python main.py --dataset citeseer --module GraphSAGE --n-layers 1 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 2 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 3 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 4 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 5 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 6 --n-hidden 64
+python main.py --dataset citeseer --module GraphSAGE --n-layers 7 --n-hidden 64
 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GCN --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.0001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.001
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.01
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.0001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.001 --n-hidden 64 
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.001  --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 1 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.01 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
-python main.py --dataset citeseer --gpu 0 --module GIN --lr 0.0001 --n-layers 2 --weight-decay 0.01 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 1 
+python main.py --dataset citeseer --module GCN --n-layers 2 
+python main.py --dataset citeseer --module GCN --n-layers 3 
+python main.py --dataset citeseer --module GCN --n-layers 4 
+python main.py --dataset citeseer --module GCN --n-layers 5 
+python main.py --dataset citeseer --module GCN --n-layers 6 
+python main.py --dataset citeseer --module GCN --n-layers 7 
+python main.py --dataset citeseer --module GCN --n-layers 1 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 2 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 3 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 4 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 5 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 6 --n-hidden 64
+python main.py --dataset citeseer --module GCN --n-layers 7 --n-hidden 64
 

@@ -67,7 +67,7 @@ def train(args,data,model):
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
-        if args.early_stop and epoch > 50:
+        if args.early_stop and epoch > 100:
             if stopper.step(auc, model,checkpoints_path):   
                 break
 

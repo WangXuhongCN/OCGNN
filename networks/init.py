@@ -42,7 +42,7 @@ def init_model(args,datadict):
                     hidden_dim=args.n_hidden*2,
                     output_dim=args.n_hidden, 
                     final_dropout=args.dropout, 
-                    learn_eps=True, 
+                    learn_eps=False, 
                     graph_pooling_type="sum",
                     neighbor_pooling_type="sum")
 

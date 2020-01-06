@@ -23,12 +23,12 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "pubmed", // cora , citeseer , pubmed , reddit
+                "--dataset", "cora", // cora , citeseer , pubmed , reddit
                 "--module", "GraphSAGE", //"GCN/GAT/GIN/GraphSAGE"
                 "--seed","46",
                 "--gpu",  "0"
                 //,"--self-loop"
-                ,"--early-stop"
+                //,"--early-stop"
             ],
         }
     ]

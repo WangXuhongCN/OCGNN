@@ -1,0 +1,98 @@
+2020-01-06 01:13:21,582-OCGNN-INFO-Start training
+2020-01-06 01:13:21,582-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 01:13:21,582-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:1,weight-decay:0.001
+2020-01-06 01:18:10,446-OCGNN-INFO-Current epoch: 601 Test AUROC 0.6534 | Test AUPRC 0.6196
+2020-01-06 01:18:10,447-OCGNN-INFO-Test f1:0.6726,acc:0.5138,pre:0.507,recall:0.999
+2020-01-06 01:18:10,447-OCGNN-INFO-
+
+2020-01-06 01:18:17,509-OCGNN-INFO-Start training
+2020-01-06 01:18:17,510-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 01:18:17,510-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:2,weight-decay:0.001
+2020-01-06 02:10:36,443-OCGNN-INFO-Current epoch: 2461 Test AUROC 0.6858 | Test AUPRC 0.6705
+2020-01-06 02:10:36,443-OCGNN-INFO-Test f1:0.6754,acc:0.5324,pre:0.5171,recall:0.9731
+2020-01-06 02:10:36,443-OCGNN-INFO-
+
+2020-01-06 02:10:43,699-OCGNN-INFO-Start training
+2020-01-06 02:10:43,700-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 02:10:43,700-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:3,weight-decay:0.001
+2020-01-06 03:00:23,654-OCGNN-INFO-Current epoch: 1553 Test AUROC 0.6835 | Test AUPRC 0.6862
+2020-01-06 03:00:23,654-OCGNN-INFO-Test f1:0.6338,acc:0.6226,pre:0.6153,recall:0.6535
+2020-01-06 03:00:23,654-OCGNN-INFO-
+
+2020-01-06 03:00:31,092-OCGNN-INFO-Start training
+2020-01-06 03:00:31,092-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 03:00:31,092-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:4,weight-decay:0.001
+2020-01-06 03:52:42,279-OCGNN-INFO-Current epoch: 1358 Test AUROC 0.6227 | Test AUPRC 0.6439
+2020-01-06 03:52:42,280-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 03:52:42,280-OCGNN-INFO-
+
+2020-01-06 03:52:46,898-OCGNN-INFO-Start training
+2020-01-06 03:52:46,898-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 03:52:46,898-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:5,weight-decay:0.001
+2020-01-06 04:20:35,664-OCGNN-INFO-Current epoch: 659 Test AUROC 0.6179 | Test AUPRC 0.6086
+2020-01-06 04:20:35,664-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 04:20:35,665-OCGNN-INFO-
+
+2020-01-06 04:20:42,266-OCGNN-INFO-Start training
+2020-01-06 04:20:42,266-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 04:20:42,266-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:6,weight-decay:0.001
+2020-01-06 04:57:23,571-OCGNN-INFO-Current epoch: 696 Test AUROC 0.6714 | Test AUPRC 0.6684
+2020-01-06 04:57:23,572-OCGNN-INFO-Test f1:0.6679,acc:0.5725,pre:0.546,recall:0.8598
+2020-01-06 04:57:23,572-OCGNN-INFO-
+
+2020-01-06 04:57:30,276-OCGNN-INFO-Start training
+2020-01-06 04:57:30,276-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 04:57:30,276-OCGNN-INFO-n-epochs:10000, n-hidden:128,n-layers:7,weight-decay:0.001
+2020-01-06 05:34:18,510-OCGNN-INFO-Current epoch: 601 Test AUROC 0.6671 | Test AUPRC 0.7187
+2020-01-06 05:34:18,510-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 05:34:18,510-OCGNN-INFO-
+
+2020-01-06 05:34:23,985-OCGNN-INFO-Start training
+2020-01-06 05:34:23,985-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 05:34:23,985-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:1,weight-decay:0.001
+2020-01-06 05:37:07,904-OCGNN-INFO-Current epoch: 720 Test AUROC 0.6398 | Test AUPRC 0.6110
+2020-01-06 05:37:07,904-OCGNN-INFO-Test f1:0.6877,acc:0.5519,pre:0.5277,recall:0.9868
+2020-01-06 05:37:07,904-OCGNN-INFO-
+
+2020-01-06 05:37:12,967-OCGNN-INFO-Start training
+2020-01-06 05:37:12,967-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 05:37:12,967-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:2,weight-decay:0.001
+2020-01-06 06:04:17,585-OCGNN-INFO-Current epoch: 4188 Test AUROC 0.7058 | Test AUPRC 0.6884
+2020-01-06 06:04:17,585-OCGNN-INFO-Test f1:0.709,acc:0.6337,pre:0.588,recall:0.8928
+2020-01-06 06:04:17,585-OCGNN-INFO-
+
+2020-01-06 06:04:22,325-OCGNN-INFO-Start training
+2020-01-06 06:04:22,326-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 06:04:22,326-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:3,weight-decay:0.001
+2020-01-06 06:10:14,358-OCGNN-INFO-Current epoch: 610 Test AUROC 0.6207 | Test AUPRC 0.6106
+2020-01-06 06:10:14,359-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 06:10:14,359-OCGNN-INFO-
+
+2020-01-06 06:10:19,980-OCGNN-INFO-Start training
+2020-01-06 06:10:19,980-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 06:10:19,980-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:4,weight-decay:0.001
+2020-01-06 06:24:23,538-OCGNN-INFO-Current epoch: 1613 Test AUROC 0.6712 | Test AUPRC 0.6793
+2020-01-06 06:24:23,538-OCGNN-INFO-Test f1:0.601,acc:0.6071,pre:0.6103,recall:0.592
+2020-01-06 06:24:23,538-OCGNN-INFO-
+
+2020-01-06 06:24:28,149-OCGNN-INFO-Start training
+2020-01-06 06:24:28,149-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 06:24:28,149-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:5,weight-decay:0.001
+2020-01-06 06:30:08,876-OCGNN-INFO-Current epoch: 641 Test AUROC 0.6164 | Test AUPRC 0.6204
+2020-01-06 06:30:08,876-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 06:30:08,877-OCGNN-INFO-
+
+2020-01-06 06:30:14,048-OCGNN-INFO-Start training
+2020-01-06 06:30:14,048-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 06:30:14,048-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:6,weight-decay:0.001
+2020-01-06 06:37:08,376-OCGNN-INFO-Current epoch: 658 Test AUROC 0.6477 | Test AUPRC 0.6630
+2020-01-06 06:37:08,376-OCGNN-INFO-Test f1:0.6666,acc:0.4999,pre:0.4999,recall:1.0
+2020-01-06 06:37:08,376-OCGNN-INFO-
+
+2020-01-06 06:37:13,580-OCGNN-INFO-Start training
+2020-01-06 06:37:13,580-OCGNN-INFO-dropout:0.5, nu:0.1,seed:46,lr:0.0005,self-loop:True,norm:False
+2020-01-06 06:37:13,580-OCGNN-INFO-n-epochs:10000, n-hidden:64,n-layers:7,weight-decay:0.001
+2020-01-06 06:46:12,541-OCGNN-INFO-Current epoch: 735 Test AUROC 0.6346 | Test AUPRC 0.6290
+2020-01-06 06:46:12,542-OCGNN-INFO-Test f1:0.6612,acc:0.4999,pre:0.4999,recall:0.9761
+2020-01-06 06:46:12,542-OCGNN-INFO-
+

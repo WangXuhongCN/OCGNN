@@ -34,7 +34,7 @@ if __name__ == '__main__':
             help="random seed, -1 means dont fix seed")
     parser.add_argument("--module", type=str, default='GraphSAGE',
             help="GCN/GAT/GIN/GraphSAGE")
-    parser.add_argument("--lr", type=float, default=1e-3,
+    parser.add_argument("--lr", type=float, default=5e-4,
             help="learning rate")
     parser.add_argument("--n-epochs", type=int, default=10000,
             help="number of training epochs")
