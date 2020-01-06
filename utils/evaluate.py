@@ -14,10 +14,10 @@ def evaluate(args,model, data_center,data,radius,mode='val'):
         
         if mode=='val':
             labels = data['labels'][data['val_mask']]
-            _ , dist ,scores=loss_function(args,data_center,outputs,data['val_mask'],radius)
+            loss , dist ,scores=loss_function(args,data_center,outputs,data['val_mask'],radius)
         if mode=='test':
             labels = data['labels'][data['test_mask']]
-            _ , dist ,scores=loss_function(args,data_center,outputs,data['test_mask'],radius)
+            loss , dist ,scores=loss_function(args,data_center,outputs,data['test_mask'],radius)
 
         labels=labels.cpu().numpy()
         dist=dist.cpu().numpy()
@@ -38,7 +38,7 @@ def evaluate(args,model, data_center,data,radius,mode='val'):
     
     #metric={}
 
-    return auc,ap,f1,acc,precision,recall
+    return auc,ap,f1,acc,precision,recall,loss
 
 def thresholding(recon_error,threshold):
     ano_pred=np.zeros(recon_error.shape[0])
