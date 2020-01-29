@@ -1,4 +1,4 @@
-# OCGNN
+# IJCAI20-my-paper
 The anonymous implement of the paper (IJCAI paper id 1321). Since my code is a little "academic", I am still working on reconstructing my code. 
 
 # Requirements
