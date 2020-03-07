@@ -1,6 +1,7 @@
 from dgl.data import load_data
-from dgl import DGLGraph
+from dgl import DGLGraph, transform
 import torch
+import networkx as nx
 from datasets.prepocessing import one_class_processing
 
 def get_normal_class(args):
@@ -54,7 +55,8 @@ def dataloader(args):
         
     # add self loop
     if args.self_loop:
-        g.remove_edges_from(g.selfloop_edges())
+        g.remove_edges_from(nx.selfloop_edges(g))
+        #g=transform.remove_self_loop(g)
         #if args.module!='GraphSAGE':
         g.add_edges_from(zip(g.nodes(), g.nodes()))
 
