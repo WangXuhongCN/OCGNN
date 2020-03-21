@@ -1,9 +1,9 @@
 # IJCAI20-my-paper
-The anonymous implement of the paper (IJCAI paper id 1321). Since my code is a little "academic", I am still working on reconstructing my code. 
+The anonymous implement of the paper. Since my code is a little "academic", I am still working on reconstructing my code. 
 
 # Requirements
-pytorch>=1.0  
-DGL==0.4.1
+pytorch>=1.4
+DGL>=0.4.2
 sklearn>=0.20.1
 numpy>=1.16
 networkx>=2.1

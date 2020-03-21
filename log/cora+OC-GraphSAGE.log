@@ -5,3 +5,17 @@
 2020-03-07 12:25:13,245-OCGNN-INFO-Test f1:0.6895,acc:0.5575,pre:0.5303,recall:0.9853
 2020-03-07 12:25:13,246-OCGNN-INFO-
 
+2020-03-07 16:41:47,688-OCGNN-INFO-Start training
+2020-03-07 16:41:47,703-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-07 16:41:47,704-OCGNN-INFO-n-epochs:1000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-07 16:42:16,773-OCGNN-INFO-Current epoch: 999 Test AUROC 0.8166 | Test AUPRC 0.7689
+2020-03-07 16:42:16,774-OCGNN-INFO-Test f1:0.6755,acc:0.5208,pre:0.51,recall:1.0
+2020-03-07 16:42:16,774-OCGNN-INFO-
+
+2020-03-11 09:51:59,875-OCGNN-INFO-Start training
+2020-03-11 09:51:59,889-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-11 09:51:59,890-OCGNN-INFO-n-epochs:1000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-11 09:52:37,547-OCGNN-INFO-Current epoch: 999 Test AUROC 0.8252 | Test AUPRC 0.7716
+2020-03-11 09:52:37,547-OCGNN-INFO-Test f1:0.6722,acc:0.5134,pre:0.5062,recall:1.0
+2020-03-11 09:52:37,547-OCGNN-INFO-
+
