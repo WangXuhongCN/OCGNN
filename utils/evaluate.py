@@ -1,6 +1,6 @@
 from sklearn.metrics import f1_score, accuracy_score,precision_score,recall_score,average_precision_score,roc_auc_score,roc_curve
 import torch
-from optim.loss import loss_function
+from optim.loss import loss_function,anomaly_score
 import numpy as np
 
 def evaluate(args,model, data_center,data,radius,mode='val'):
@@ -14,13 +14,13 @@ def evaluate(args,model, data_center,data,radius,mode='val'):
         
         if mode=='val':
             labels = data['labels'][data['val_mask']]
-            loss , dist ,scores=loss_function(args,data_center,outputs,data['val_mask'],radius)
+            loss,_,scores=loss_function(args.nu,data_center,outputs,data['val_mask'],radius)
         if mode=='test':
             labels = data['labels'][data['test_mask']]
-            loss , dist ,scores=loss_function(args,data_center,outputs,data['test_mask'],radius)
+            loss,_,scores=loss_function(args.nu,data_center,outputs,data['test_mask'],radius)
 
         labels=labels.cpu().numpy()
-        dist=dist.cpu().numpy()
+        #dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()
 
         pred=thresholding(scores,0)

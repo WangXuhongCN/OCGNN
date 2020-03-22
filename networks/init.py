@@ -4,11 +4,11 @@ from networks.GAT import GAT
 from networks.GIN import GIN
 from networks.GraphSAGE import GraphSAGE
 
-def init_model(args,datadict):
+def init_model(args,input_dim):
     # create GCN model
     if args.module== 'GCN':
         model = GCN(None,
-                datadict['in_feats'],
+                input_dim,
                 args.n_hidden*2,
                 args.n_hidden,
                 args.n_layers,
@@ -16,7 +16,7 @@ def init_model(args,datadict):
                 args.dropout)
     if args.module== 'GraphSAGE':
         model = GraphSAGE(None,
-                datadict['in_feats'],
+                input_dim,
                 args.n_hidden*2,
                 args.n_hidden,
                 args.n_layers,
@@ -26,7 +26,7 @@ def init_model(args,datadict):
     if args.module== 'GAT':
         model = GAT(None,
                 args.n_layers,
-                datadict['in_feats'],
+                input_dim,
                 args.n_hidden*2,
                 args.n_hidden,
                 heads=([8] * args.n_layers) + [1],
@@ -38,7 +38,7 @@ def init_model(args,datadict):
     if args.module== 'GIN':
         model = GIN(num_layers=args.n_layers, 
                     num_mlp_layers=2, #1 means linear model.
-                    input_dim=datadict['in_feats'], 
+                    input_dim=input_dim, 
                     hidden_dim=args.n_hidden*2,
                     output_dim=args.n_hidden, 
                     final_dropout=args.dropout, 

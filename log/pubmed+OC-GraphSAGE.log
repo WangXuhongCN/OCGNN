@@ -1,0 +1,35 @@
+2020-03-21 21:47:41,400-OCGNN-INFO-Start training
+2020-03-21 21:47:41,400-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-21 21:47:41,401-OCGNN-INFO-n-epochs:5, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-21 21:47:42,481-OCGNN-INFO-Current epoch: 4 Test AUROC 0.5557 | Test AUPRC 0.5399
+2020-03-21 21:47:42,481-OCGNN-INFO-Test f1:0.0,acc:0.5001,pre:0.0,recall:0.0
+2020-03-21 21:47:42,482-OCGNN-INFO-
+
+2020-03-21 21:49:59,535-OCGNN-INFO-Start training
+2020-03-21 21:49:59,535-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-21 21:49:59,536-OCGNN-INFO-n-epochs:1, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-21 21:50:00,381-OCGNN-INFO-Current epoch: 0 Test AUROC 0.6283 | Test AUPRC 0.6018
+2020-03-21 21:50:00,382-OCGNN-INFO-Test f1:0.0,acc:0.5001,pre:0.0,recall:0.0
+2020-03-21 21:50:00,382-OCGNN-INFO-
+
+2020-03-22 10:47:07,953-OCGNN-INFO-Start training
+2020-03-22 10:47:07,972-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-22 10:47:07,973-OCGNN-INFO-n-epochs:5000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-22 10:47:51,636-OCGNN-INFO-Start training
+2020-03-22 10:47:51,636-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-22 10:47:51,637-OCGNN-INFO-n-epochs:5000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-22 10:49:53,178-OCGNN-INFO-Current epoch: 2711 Test AUROC 0.7150 | Test AUPRC 0.7118
+2020-03-22 10:49:53,179-OCGNN-INFO-Test f1:0.6022,acc:0.6574,pre:0.7175,recall:0.5188
+2020-03-22 10:49:53,179-OCGNN-INFO-
+
+2020-03-22 10:50:51,264-OCGNN-INFO-Current epoch: 4999 Test AUROC 0.7586 | Test AUPRC 0.7458
+2020-03-22 10:50:51,265-OCGNN-INFO-Test f1:0.7169,acc:0.665,pre:0.6206,recall:0.8486
+2020-03-22 10:50:51,265-OCGNN-INFO-
+
+2020-03-22 10:53:18,372-OCGNN-INFO-Start training
+2020-03-22 10:53:18,373-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-22 10:53:18,373-OCGNN-INFO-n-epochs:5000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-22 10:56:42,405-OCGNN-INFO-Current epoch: 4370 Test AUROC 0.6332 | Test AUPRC 0.6140
+2020-03-22 10:56:42,406-OCGNN-INFO-Test f1:0.5881,acc:0.5888,pre:0.5889,recall:0.5874
+2020-03-22 10:56:42,406-OCGNN-INFO-
+

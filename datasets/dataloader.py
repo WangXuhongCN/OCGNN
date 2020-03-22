@@ -1,23 +1,21 @@
-from dgl.data import load_data
+from dgl.data import load_data, tu
 from dgl import DGLGraph, transform
 import torch
+import torch.utils.data
+import numpy as np
+import torch
+import dgl
 import networkx as nx
-from datasets.prepocessing import one_class_processing
+from datasets.prepocessing import one_class_processing, get_normal_class
 
-def get_normal_class(args):
-    if args.dataset in ('citeseer' + 'reddit'):
-        normal_class=3
-    if args.dataset in ('cora' + 'pubmed'):
-        normal_class=2
-        
-    return normal_class
-
-
-def dataloader(args):
+def loader(args):
     # load and preprocess dataset
+    
     data = load_data(args)
+
     normal_class=get_normal_class(args)
     print(f'normal_class is {normal_class}')
+
     labels,train_mask,val_mask,test_mask=one_class_processing(data,normal_class,args)
 
     features = torch.FloatTensor(data.features)
@@ -73,7 +71,7 @@ def dataloader(args):
         g.ndata['norm'] = norm.unsqueeze(1)
 
     datadict={'g':g,'features':features,'labels':labels,'train_mask':train_mask,
-        'val_mask':val_mask,'test_mask': test_mask,'in_feats':in_feats,'n_classes':n_classes,'n_edges':n_edges}
+        'val_mask':val_mask,'test_mask': test_mask,'input_dim':in_feats,'n_classes':n_classes,'n_edges':n_edges}
 
     return datadict
 

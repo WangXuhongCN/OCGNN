@@ -12,7 +12,6 @@ from optim.loss import loss_function,init_center,get_radius
 
 from utils.evaluate import evaluate
 
-
 def train(args,data,model):
 
     checkpoints_path=f'./checkpoints/{args.dataset}+OC-{args.module}+bestcheckpoint.pt'
@@ -51,7 +50,7 @@ def train(args,data,model):
 
         outputs= model(input_g,input_feat)
         
-        loss,dist,_=loss_function(args,data_center,outputs,data['train_mask'],radius)
+        loss,dist,_=loss_function(args.nu, data_center,outputs,data['train_mask'],radius)
 
         optimizer.zero_grad()
         loss.backward()
@@ -77,7 +76,7 @@ def train(args,data,model):
         print(f'model loaded.')
         model.load_state_dict(torch.load(checkpoints_path))
 
-    auc,ap,f1,acc,precision,recall,the_loss = evaluate(args,model, data_center,data,radius,'test')
+    auc,ap,f1,acc,precision,recall,_ = evaluate(args,model, data_center,data,radius,'test')
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))

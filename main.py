@@ -2,22 +2,30 @@ import argparse
 from dgl.data import register_data_args
 import logging
 import fire
-from optim.trainer import train
+from optim import trainer, TUtrainer
 from optim.loss import loss_function,init_center
-from datasets.dataloader import dataloader
+from datasets import dataloader,TUloader
 from networks.init import init_model
 import numpy as np
 import torch
+from dgl import random as dr
 
 def main(args):
-	if args.seed!=-1:
-		np.random.seed(args.seed)
-		torch.manual_seed(args.seed)
-		torch.cuda.manual_seed_all(args.seed)
+    if args.seed!=-1:
+        np.random.seed(args.seed)
+        torch.manual_seed(args.seed)
+        torch.cuda.manual_seed_all(args.seed)
+        #torch.backends.cudnn.deterministic=True
+        dr.seed(args.seed)
 
-	datadict=dataloader(args)
-	model=init_model(args,datadict)
-	model=train(args,datadict,model)
+    if args.dataset in 'TU_PROTEINS_full':
+        train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
+        model=init_model(args,input_dim)
+        model=TUtrainer.train(args,train_loader,model,val_dataset=val_loader)
+    else:  
+        data=dataloader.loader(args)
+        model=init_model(args,data['input_dim'])
+        model=trainer.train(args,data,model)
 # valuation(args,datadict,model)
 # test(args,data,model)
 
@@ -34,6 +42,8 @@ if __name__ == '__main__':
             help="random seed, -1 means dont fix seed")
     parser.add_argument("--module", type=str, default='GraphSAGE',
             help="GCN/GAT/GIN/GraphSAGE")
+    parser.add_argument('--n-worker', type=int,default=4,
+            help='number of workers when dataloading')
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
     parser.add_argument("--n-epochs", type=int, default=5000,

@@ -1,11 +1,15 @@
 import torch    
 import numpy as np
     
-def loss_function(args,data_center,outputs,mask,radius):
+def loss_function(nu,data_center,outputs,mask,radius):
+    dist,scores=anomaly_score(data_center,outputs,mask,radius)
+    loss = radius ** 2 + (1 / nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
+    return loss,dist,scores
+
+def anomaly_score(data_center,outputs,mask,radius):
     dist = torch.sum((outputs[mask] - data_center) ** 2, dim=1)
     scores = dist - radius ** 2
-    loss = radius ** 2 + (1 / args.nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
-    return loss,dist,scores
+    return dist,scores
 
 def init_center(args,input_g,input_feat, model, eps=0.001):
     """Initialize hypersphere center c as the mean from an initial forward pass on the data."""
