@@ -21,7 +21,7 @@ def main(args):
     if args.dataset in 'TU_PROTEINS_full':
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
         model=init_model(args,input_dim)
-        model=TUtrainer.train(args,train_loader,model,val_dataset=val_loader)
+        model=TUtrainer.train(args,train_loader,model,val_dataset=None)
     else:  
         data=dataloader.loader(args)
         model=init_model(args,data['input_dim'])
@@ -42,7 +42,9 @@ if __name__ == '__main__':
             help="random seed, -1 means dont fix seed")
     parser.add_argument("--module", type=str, default='GraphSAGE',
             help="GCN/GAT/GIN/GraphSAGE")
-    parser.add_argument('--n-worker', type=int,default=4,
+    parser.add_argument('--n-worker', type=int,default=1,
+            help='number of workers when dataloading')
+    parser.add_argument('--batch-size', type=int,default=32,
             help='number of workers when dataloading')
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")

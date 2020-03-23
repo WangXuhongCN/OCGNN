@@ -9,6 +9,6 @@
 source activate torch
 
 
-python main.py --dataset cora --module GraphSAGE --gpu 0 --n-epochs 200 --early-stop
+python main.py --dataset PROTEINS_full --module GraphSAGE --gpu 0 --n-epochs 200 --early-stop
 # python main.py --dataset citeseer --module GraphSAGE --gpu 0 --n-epochs 1 --early-stop
 # python main.py --dataset pubmed --module GraphSAGE --gpu 0 --n-epochs 1 --early-stop

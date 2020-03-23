@@ -9,12 +9,27 @@ import networkx as nx
 from datasets.prepocessing import one_class_processing, get_normal_class
 
 
+# add self loop for TU dataset, other datasets haven't been tested. 
+def add_self_loop(dataset):
+
+    for i in range(len(dataset)):
+        #print(dataset.graph_lists[i])
+        g=dgl.transform.add_self_loop(dataset.graph_lists[i])
+        g.ndata.update(dataset.graph_lists[i].ndata)
+        dataset.graph_lists[i]=g
+        #print(dataset.graph_lists[i])
+        return dataset
+
+
 def loader(args):
     #if args.dataset == 'PROTEINS_full':
     dataset = tu.TUDataset(name=args.dataset)
-    train_size = int(args.train_ratio * len(dataset))
-    test_size = int(args.test_ratio * len(dataset))
+    train_size = int(0.6 * len(dataset))
+    test_size = int(0.25 * len(dataset))
     val_size = int(len(dataset) - train_size - test_size)
+    
+    if args.self_loop:
+        dataset = add_self_loop(dataset)
 
     dataset_train, dataset_val, dataset_test = torch.utils.data.random_split(
         dataset, (train_size, val_size, test_size))
@@ -22,7 +37,7 @@ def loader(args):
     val_loader = prepare_dataloader(dataset_val, args, train=False)
     test_loader = prepare_dataloader(dataset_test, args, train=False)
 
-    input_dim, label_dim, max_num_node = dataset.statistics()
+    input_dim,label_dim, max_num_node = dataset.statistics() #I rewrited the code of dgl.tu
     print("++++++++++STATISTICS ABOUT THE DATASET")
     print("dataset feature dimension is", input_dim)
     print("dataset label dimension is", label_dim)
@@ -64,7 +79,7 @@ def batching_graph(batch):
     # batch graphs and cast to PyTorch tensor
     for graph in graphs:
         for (key, value) in graph.ndata.items():
-            graph.ndata[key] = torch.FloatTensor(value)
+            graph.ndata[key] = value.float()
     batched_graphs = dgl.batch(graphs)
 
     # cast to PyTorch tensor
