@@ -46,14 +46,7 @@ def masking_reddit(mask,labels):
 	mask=np.logical_or(normal,abnormal)
 	return mask
 
-def get_normal_class(args):
-    if args.dataset in ('citeseer' + 'reddit'):
-        normal_class=3
-    if args.dataset in ('cora' + 'pubmed'):
-        normal_class=2
-    if args.dataset in 'TU_PROTEINS_full':
-        normal_class=0    
-    return normal_class
+
 
 
 '''

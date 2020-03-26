@@ -23,7 +23,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "cora", // cora , citeseer , pubmed , reddit, PROTEINS_full
+                "--dataset", "cora", // cora , citeseer , pubmed , reddit, PROTEINS_full, Synthie, ENZYMES
                 "--module", "GraphSAGE", //"GCN/GAT/GIN/GraphSAGE"
                 "--seed","46",
                 "--gpu",  "0"

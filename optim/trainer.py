@@ -64,7 +64,7 @@ def train(args,data,model):
 
         auc,ap,f1,acc,precision,recall,the_loss = evaluate(args,model, data_center,data,radius,'val')
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
-              "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
+              "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
         if args.early_stop:
             if stopper.step(auc,float(the_loss.cpu().numpy()), model,checkpoints_path):   
@@ -101,6 +101,7 @@ class EarlyStopping:
             self.lowest_loss = cur_loss
             self.save_checkpoint(acc,loss,model,path)
         elif (score < self.best_score) and (cur_loss > self.lowest_loss):
+        #elif (score < self.best_score):
             self.counter += 1
             if self.counter >= 0.8*(self.patience):
                 print(f'Warning: EarlyStopping soon: {self.counter} out of {self.patience}')

@@ -6,30 +6,38 @@ import numpy as np
 import torch
 import dgl
 import networkx as nx
-from datasets.prepocessing import one_class_processing, get_normal_class
 
 
 # add self loop for TU dataset, other datasets haven't been tested. 
-def add_self_loop(dataset):
+def pre_process(args,dataset):
 
     for i in range(len(dataset)):
         #print(dataset.graph_lists[i])
-        g=dgl.transform.add_self_loop(dataset.graph_lists[i])
-        g.ndata.update(dataset.graph_lists[i].ndata)
-        dataset.graph_lists[i]=g
+        #make labels become 0 or 1, other label is not our need.
+        dataset.graph_lists[i].ndata
+        normal_idx=torch.where(dataset.graph_lists[i].ndata['node_labels']==args.normal_class)[0]
+        abnormal_idx=torch.where(dataset.graph_lists[i].ndata['node_labels']!=args.normal_class)[0]
+        dataset.graph_lists[i].ndata['node_labels'][normal_idx]=0
+        dataset.graph_lists[i].ndata['node_labels'][abnormal_idx]=1
+
+        if args.self_loop:
+            g=dgl.transform.add_self_loop(dataset.graph_lists[i])
+            g.ndata.update(dataset.graph_lists[i].ndata)
+            dataset.graph_lists[i]=g
         #print(dataset.graph_lists[i])
         return dataset
-
 
 def loader(args):
     #if args.dataset == 'PROTEINS_full':
     dataset = tu.TUDataset(name=args.dataset)
+    
     train_size = int(0.6 * len(dataset))
+    #train_size=16
     test_size = int(0.25 * len(dataset))
     val_size = int(len(dataset) - train_size - test_size)
     
     if args.self_loop:
-        dataset = add_self_loop(dataset)
+        dataset = pre_process(args,dataset)
 
     dataset_train, dataset_val, dataset_test = torch.utils.data.random_split(
         dataset, (train_size, val_size, test_size))

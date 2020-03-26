@@ -22,8 +22,11 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
     if not os.path.exists(dir):
         os.makedirs(dir)
     dataloader = dataset
-    optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad,
-                                        model.parameters()), lr=0.001)
+    optimizer = torch.optim.AdamW(model.parameters(),
+                                 lr=args.lr,
+                                 weight_decay=args.weight_decay)
+    # optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad,
+    #                                     model.parameters()), lr=0.001)
     early_stopping_logger = {"best_epoch": -1, "val_acc": -1}
 
 
@@ -31,40 +34,51 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
     data_center= torch.zeros(args.n_hidden, device=f'cuda:{args.gpu}')
     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
 
+    model.train()
     for epoch in range(args.n_epochs):
         begin_time = time.time()
-        model.train()
-        accum_correct = 0
-        total = 0
+        # accum_correct = 0
+        # total = 0
         print("EPOCH ###### {} ######".format(epoch))
         computation_time = 0.0
         for (batch_idx, (batch_graph, graph_labels)) in enumerate(dataloader):
             if torch.cuda.is_available():
                 for (key, value) in batch_graph.ndata.items():
                     batch_graph.ndata[key] = value.cuda()
-                graph_labels = graph_labels.cuda()
-
-            train_mask=
-
+                #graph_labels = graph_labels.cuda()
+            #print(batch_graph)
+            train_mask=~batch_graph.ndata['node_labels'].bool().squeeze()
             model.zero_grad()
             compute_start = time.time()
-            outputs = model(batch_graph,batch_graph.ndata['node_attr'])
 
+            normlizing = nn.BatchNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
+            input_attr=normlizing(batch_graph.ndata['node_attr'])
+            #data_center= init_center(args,batch_graph,batch_graph.ndata['node_attr'], model)
+            #print('data_center',data_center)
+            outputs = model(batch_graph,input_attr)
+            # print('outputs mean',outputs.mean())
+            # print('outputs std',outputs.std())
             # indi = torch.argmax(ypred, dim=1)
             # correct = torch.sum(indi == graph_labels).item()
             # accum_correct += correct
             # total += graph_labels.size()[0]
-            loss,dist,_=loss_function(args.nu, data_center,outputs,train_mask,radius)
+            
+            loss,dist,score=loss_function(args.nu, data_center,outputs,train_mask,radius)
+            #if batch_idx<=3:
+                #print(dist)
+                # print(score)
+            # print('dist mean',dist.mean())
+            # print('dist std',dist.std())
             loss.backward()
             batch_compute_time = time.time() - compute_start
             computation_time += batch_compute_time
-            #nn.utils.clip_grad_norm_(model.parameters(), args.clip)
+            nn.utils.clip_grad_norm_(model.parameters(), 2.0)
             optimizer.step()
 
-            if epoch%5 == 0:
-                dur.append(time.time() - t0)
-                radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
-
+            radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
+            #print(radius.data)
+            print("loss {} with  computation time {} s ".format(
+            loss.item(), computation_time))
         #train_accu = accum_correct / total
         #print("train loss for this epoch {} is {}%".format(epoch,train_accu * 100))
         elapsed_time = time.time() - begin_time
@@ -83,6 +97,7 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
                                                                   early_stopping_logger['val_acc'] * 100))
         torch.cuda.empty_cache()
     return early_stopping_logger
+
 
 # def train(args,data,model, val_dataset=None):
 

@@ -6,17 +6,16 @@ import numpy as np
 import torch
 import dgl
 import networkx as nx
-from datasets.prepocessing import one_class_processing, get_normal_class
+from datasets.prepocessing import one_class_processing
 
 def loader(args):
     # load and preprocess dataset
     
     data = load_data(args)
 
-    normal_class=get_normal_class(args)
-    print(f'normal_class is {normal_class}')
+    print(f'normal_class is {args.normal_class}')
 
-    labels,train_mask,val_mask,test_mask=one_class_processing(data,normal_class,args)
+    labels,train_mask,val_mask,test_mask=one_class_processing(data,args.normal_class,args)
 
     features = torch.FloatTensor(data.features)
     labels = torch.LongTensor(labels)

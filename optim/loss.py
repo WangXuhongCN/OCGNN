@@ -1,13 +1,23 @@
 import torch    
 import numpy as np
+import torch.nn.functional as F
     
 def loss_function(nu,data_center,outputs,mask,radius):
+    # print('outputs mean',outputs.mean())
+    # print('outputs std',outputs.std())
     dist,scores=anomaly_score(data_center,outputs,mask,radius)
+    # print('dist mean',dist.mean())
+    # print('dist std',dist.std())
     loss = radius ** 2 + (1 / nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
     return loss,dist,scores
 
 def anomaly_score(data_center,outputs,mask,radius):
     dist = torch.sum((outputs[mask] - data_center) ** 2, dim=1)
+    # c=data_center.repeat(outputs[mask].size()[0],1)
+    # res=outputs[mask]-c
+    # res=torch.mean(res, 1, keepdim=True)
+    # dist=torch.diag(torch.mm(res,torch.transpose(res, 0, 1)))
+
     scores = dist - radius ** 2
     return dist,scores
 

@@ -1,0 +1,9 @@
+[1m[31mERROR: [0mCannot find key: --dataset
+Usage: main.py <group|command>
+  available groups:      argparse | logging | fire | trainer | TUtrainer |
+                         dataloader | TUloader | np | torch | dr | parser | args
+  available commands:    register_data_args | loss_function | init_center |
+                         init_model | main
+
+For detailed information on this command, run:
+  main.py --help

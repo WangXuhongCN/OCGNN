@@ -18,7 +18,7 @@ def main(args):
         #torch.backends.cudnn.deterministic=True
         dr.seed(args.seed)
 
-    if args.dataset in 'TU_PROTEINS_full':
+    if args.dataset in 'PROTEINS_full'+'ENZYMES'+'Synthie':
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
         model=init_model(args,input_dim)
         model=TUtrainer.train(args,train_loader,model,val_dataset=None)
@@ -44,15 +44,17 @@ if __name__ == '__main__':
             help="GCN/GAT/GIN/GraphSAGE")
     parser.add_argument('--n-worker', type=int,default=1,
             help='number of workers when dataloading')
-    parser.add_argument('--batch-size', type=int,default=32,
-            help='number of workers when dataloading')
+    parser.add_argument('--batch-size', type=int,default=16,
+            help='batch size')
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
+    parser.add_argument("--normal-class", type=int, default=0,
+            help="normal class")
     parser.add_argument("--n-epochs", type=int, default=5000,
             help="number of training epochs")
-    parser.add_argument("--n-hidden", type=int, default=32,
+    parser.add_argument("--n-hidden", type=int, default=64,
             help="number of hidden gnn units")
-    parser.add_argument("--n-layers", type=int, default=2,
+    parser.add_argument("--n-layers", type=int, default=3,
             help="number of hidden gnn layers")
     parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")
@@ -72,4 +74,12 @@ if __name__ == '__main__':
         args.self_loop=True
     if args.module=='GraphSAGE':
         args.self_loop=True
+
+    if args.dataset in ('citeseer' + 'reddit'):
+        args.normal_class=3
+    if args.dataset in ('cora' + 'pubmed'):
+        args.normal_class=2
+    if args.dataset in 'TU_PROTEINS_full':
+        args.normal_class=0    
+
     fire.Fire(main(args))

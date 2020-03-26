@@ -1,0 +1,7 @@
+2020-03-26 21:35:12,185-OCGNN-INFO-Start training
+2020-03-26 21:35:12,187-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-26 21:35:12,188-OCGNN-INFO-n-epochs:4000, n-hidden:64,n-layers:3,weight-decay:0.0005
+2020-03-26 21:36:33,972-OCGNN-INFO-Current epoch: 1821 Test AUROC 0.8805 | Test AUPRC 0.8033
+2020-03-26 21:36:33,973-OCGNN-INFO-Test f1:0.7289,acc:0.6308,pre:0.5751,recall:0.9951
+2020-03-26 21:36:33,973-OCGNN-INFO-
+
