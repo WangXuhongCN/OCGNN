@@ -1,0 +1,414 @@
+++++++++++STATISTICS ABOUT THE DATASET
+dataset feature dimension is 18
+dataset label dimension is [6]
+the max num node is 126
+number of graphs is 600
+EPOCH ###### 0 ######
+Epoch 00000,loss 293218.9375 with 0-th batch time(s) 0.9267
+Epoch 00000,loss 64962.6211 with 1-th batch time(s) 0.9452
+Epoch 00000,loss 43697.8203 with 2-th batch time(s) 0.9620
+Epoch 00000,loss 47481.1484 with 3-th batch time(s) 0.9785
+Epoch 00000,loss 36625.4102 with 4-th batch time(s) 0.9860
+Epoch 00000,loss 53171.8555 with 5-th batch time(s) 0.9922
+Epoch 00000,loss 47896.2891 with 6-th batch time(s) 0.9984
+Epoch 00000,loss 21965.1641 with 7-th batch time(s) 1.0046
+Epoch 00000,loss 15605.9082 with 8-th batch time(s) 1.0113
+Epoch 00000,loss 22262.8105 with 9-th batch time(s) 1.0175
+Epoch 00000,loss 30119.5020 with 10-th batch time(s) 1.0245
+Epoch 00000,loss 23530.7344 with 11-th batch time(s) 1.0309
+Epoch 00000,loss 15742.5020 with 12-th batch time(s) 1.0404
+Epoch 00000,loss 11301.1426 with 13-th batch time(s) 1.0473
+Epoch 00000,loss 9148.4600 with 14-th batch time(s) 1.0539
+Epoch 00000,loss 16065.8545 with 15-th batch time(s) 1.0648
+Epoch 00000,loss 9118.3691 with 16-th batch time(s) 1.0748
+Epoch 00000,loss 7966.3501 with 17-th batch time(s) 1.0862
+Epoch 00000,loss 11976.3906 with 18-th batch time(s) 1.0971
+Epoch 00000,loss 6773.5508 with 19-th batch time(s) 1.1072
+Epoch 00000,loss 258954.7500 with 20-th batch time(s) 1.1178
+Epoch 00000,loss 45426.2266 with 21-th batch time(s) 1.1283
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-1885.     -1873.2941 -1847.9308 -1824.7129 -1791.9678 -1768.0736
+ -1747.2178 -1812.6512 -1896.0093 -1898.234  -1893.6306 -1856.698
+ -1750.6127 -1693.2871 -1763.9664 -1800.821  -1802.2056 -1805.6036
+ -1819.8429 -1818.2563]
+Epoch 00000 | Time(s) 1.4321 | Loss 4542622656.2500 | Val AUROC 0.2959 | Val F1 0.0000 | 
+model saved. loss=1990.2484130859375 AUC=0.29594043733711606
+EPOCH ###### 1 ######
+Epoch 00001,loss 1990.2485 with 0-th batch time(s) 0.0137
+Epoch 00001,loss 383.6381 with 1-th batch time(s) 0.0235
+Epoch 00001,loss 292.3724 with 2-th batch time(s) 0.0381
+Epoch 00001,loss 203.8396 with 3-th batch time(s) 0.0451
+Epoch 00001,loss 149.5431 with 4-th batch time(s) 0.0517
+Epoch 00001,loss 108.3888 with 5-th batch time(s) 0.0576
+Epoch 00001,loss 201.4834 with 6-th batch time(s) 0.0640
+Epoch 00001,loss 135.2197 with 7-th batch time(s) 0.0699
+Epoch 00001,loss 116.3861 with 8-th batch time(s) 0.0759
+Epoch 00001,loss 82.1365 with 9-th batch time(s) 0.0839
+Epoch 00001,loss 52.9666 with 10-th batch time(s) 0.0898
+Epoch 00001,loss 41.1410 with 11-th batch time(s) 0.0960
+Epoch 00001,loss 30.4328 with 12-th batch time(s) 0.1189
+Epoch 00001,loss 38.2927 with 13-th batch time(s) 0.1313
+Epoch 00001,loss 57.3126 with 14-th batch time(s) 0.1425
+Epoch 00001,loss 39.7183 with 15-th batch time(s) 0.1583
+Epoch 00001,loss 23.1223 with 16-th batch time(s) 0.1659
+Epoch 00001,loss 14.5058 with 17-th batch time(s) 0.1735
+Epoch 00001,loss 21.5604 with 18-th batch time(s) 0.1818
+Epoch 00001,loss 1472.2467 with 19-th batch time(s) 0.2047
+Epoch 00001,loss 15.7810 with 20-th batch time(s) 0.2117
+Epoch 00001,loss 26.6896 with 21-th batch time(s) 0.2194
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-7.5714555 -7.3376184 -6.8233247 -6.3734603 -5.745467  -5.388921
+ -5.246727  -6.2494526 -8.127405  -8.198168  -8.139649  -7.518258
+ -5.311926  -3.8755374 -4.9710674 -5.609291  -5.5516906 -5.632834
+ -5.802866  -5.866807 ]
+Epoch 00001 | Time(s) 0.5282 | Loss 2668958.8547 | Val AUROC 0.4124 | Val F1 0.0684 | 
+model saved. loss=13.35943603515625 AUC=0.4124037472317805
+EPOCH ###### 2 ######
+Epoch 00002,loss 12.4877 with 0-th batch time(s) 0.0120
+Epoch 00002,loss 14.7896 with 1-th batch time(s) 0.0200
+Epoch 00002,loss 7.0300 with 2-th batch time(s) 0.0278
+Epoch 00002,loss 5.9823 with 3-th batch time(s) 0.0355
+Epoch 00002,loss 411.7694 with 4-th batch time(s) 0.0426
+Epoch 00002,loss 6.8861 with 5-th batch time(s) 0.0493
+Epoch 00002,loss 2.7475 with 6-th batch time(s) 0.0554
+Epoch 00002,loss 2.3469 with 7-th batch time(s) 0.0627
+Epoch 00002,loss 2.1043 with 8-th batch time(s) 0.0692
+Epoch 00002,loss 1.6498 with 9-th batch time(s) 0.0754
+Epoch 00002,loss 1.1384 with 10-th batch time(s) 0.0804
+Epoch 00002,loss 1.0656 with 11-th batch time(s) 0.0861
+Epoch 00002,loss 0.8830 with 12-th batch time(s) 0.0917
+Epoch 00002,loss 0.8645 with 13-th batch time(s) 0.0972
+Epoch 00002,loss 0.5609 with 14-th batch time(s) 0.1032
+Epoch 00002,loss 0.4984 with 15-th batch time(s) 0.1099
+Epoch 00002,loss 1.7071 with 16-th batch time(s) 0.1166
+Epoch 00002,loss 0.5961 with 17-th batch time(s) 0.1221
+Epoch 00002,loss 0.2733 with 18-th batch time(s) 0.1282
+Epoch 00002,loss 0.3087 with 19-th batch time(s) 0.1339
+Epoch 00002,loss 0.3106 with 20-th batch time(s) 0.1396
+Epoch 00002,loss 0.2146 with 21-th batch time(s) 0.1454
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182
+ -0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182
+ -0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182 -0.00960182
+ -0.00960182 -0.00960182]
+Epoch 00002 | Time(s) 0.3987 | Loss 21461.4078 | Val AUROC 0.5104 | Val F1 0.1992 | 
+model saved. loss=0.3267778754234314 AUC=0.5104243433386342
+EPOCH ###### 3 ######
+Epoch 00003,loss 0.2291 with 0-th batch time(s) 0.0120
+Epoch 00003,loss 0.1694 with 1-th batch time(s) 0.0187
+Epoch 00003,loss 0.1508 with 2-th batch time(s) 0.0265
+Epoch 00003,loss 0.1410 with 3-th batch time(s) 0.0338
+Epoch 00003,loss 0.1613 with 4-th batch time(s) 0.0395
+Epoch 00003,loss 0.1281 with 5-th batch time(s) 0.0452
+Epoch 00003,loss 0.1233 with 6-th batch time(s) 0.0522
+Epoch 00003,loss 0.1183 with 7-th batch time(s) 0.0578
+Epoch 00003,loss 0.1120 with 8-th batch time(s) 0.0629
+Epoch 00003,loss 0.1330 with 9-th batch time(s) 0.0685
+Epoch 00003,loss 0.1162 with 10-th batch time(s) 0.0739
+Epoch 00003,loss 0.0985 with 11-th batch time(s) 0.0803
+Epoch 00003,loss 0.0939 with 12-th batch time(s) 0.0858
+Epoch 00003,loss 0.0898 with 13-th batch time(s) 0.0915
+Epoch 00003,loss 0.0863 with 14-th batch time(s) 0.0972
+Epoch 00003,loss 0.0831 with 15-th batch time(s) 0.1030
+Epoch 00003,loss 0.0812 with 16-th batch time(s) 0.1090
+Epoch 00003,loss 0.0778 with 17-th batch time(s) 0.1150
+Epoch 00003,loss 0.0769 with 18-th batch time(s) 0.1211
+Epoch 00003,loss 0.0718 with 19-th batch time(s) 0.1272
+Epoch 00003,loss 0.0688 with 20-th batch time(s) 0.1329
+Epoch 00003,loss 113.3071 with 21-th batch time(s) 0.1379
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821
+ -0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821
+ -0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821 -0.00296821
+ -0.00296821 -0.00296821]
+Epoch 00003 | Time(s) 0.3949 | Loss 11330713.6536 | Val AUROC 0.5003 | Val F1 0.0587 | 
+model saved. loss=0.09154517948627472 AUC=0.5003386970759844
+EPOCH ###### 4 ######
+Epoch 00004,loss 0.0651 with 0-th batch time(s) 0.0176
+Epoch 00004,loss 0.0621 with 1-th batch time(s) 0.0257
+Epoch 00004,loss 0.0593 with 2-th batch time(s) 0.0322
+Epoch 00004,loss 0.0568 with 3-th batch time(s) 0.0401
+Epoch 00004,loss 0.0547 with 4-th batch time(s) 0.0474
+Epoch 00004,loss 0.0527 with 5-th batch time(s) 0.0543
+Epoch 00004,loss 0.0511 with 6-th batch time(s) 0.0607
+Epoch 00004,loss 0.0496 with 7-th batch time(s) 0.0677
+Epoch 00004,loss 0.0528 with 8-th batch time(s) 0.0743
+Epoch 00004,loss 0.0487 with 9-th batch time(s) 0.0805
+Epoch 00004,loss 0.0457 with 10-th batch time(s) 0.0866
+Epoch 00004,loss 0.0445 with 11-th batch time(s) 0.0927
+Epoch 00004,loss 0.0434 with 12-th batch time(s) 0.1009
+Epoch 00004,loss 0.0431 with 13-th batch time(s) 0.1084
+Epoch 00004,loss 0.0415 with 14-th batch time(s) 0.1153
+Epoch 00004,loss 74.2411 with 15-th batch time(s) 0.1216
+Epoch 00004,loss 0.0430 with 16-th batch time(s) 0.1285
+Epoch 00004,loss 0.0485 with 17-th batch time(s) 0.1347
+Epoch 00004,loss 0.0375 with 18-th batch time(s) 0.1414
+Epoch 00004,loss 0.0402 with 19-th batch time(s) 0.1478
+Epoch 00004,loss 0.0347 with 20-th batch time(s) 0.1541
+Epoch 00004,loss 0.0335 with 21-th batch time(s) 0.1604
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574
+ -0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574
+ -0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574 -0.00098574
+ -0.00098574 -0.00098574]
+Epoch 00004 | Time(s) 0.4972 | Loss 3346.5736 | Val AUROC 0.5136 | Val F1 0.0417 | 
+model saved. loss=0.04458458721637726 AUC=0.5136393104709344
+EPOCH ###### 5 ######
+Epoch 00005,loss 0.0323 with 0-th batch time(s) 0.0112
+Epoch 00005,loss 0.0314 with 1-th batch time(s) 0.0167
+Epoch 00005,loss 0.0305 with 2-th batch time(s) 0.0225
+Epoch 00005,loss 0.0301 with 3-th batch time(s) 0.0283
+Epoch 00005,loss 0.0290 with 4-th batch time(s) 0.0341
+Epoch 00005,loss 17.8346 with 5-th batch time(s) 0.0405
+Epoch 00005,loss 0.0278 with 6-th batch time(s) 0.0469
+Epoch 00005,loss 0.0279 with 7-th batch time(s) 0.0532
+Epoch 00005,loss 0.0268 with 8-th batch time(s) 0.0617
+Epoch 00005,loss 0.0261 with 9-th batch time(s) 0.0690
+Epoch 00005,loss 0.0255 with 10-th batch time(s) 0.0761
+Epoch 00005,loss 0.0250 with 11-th batch time(s) 0.0839
+Epoch 00005,loss 0.0245 with 12-th batch time(s) 0.0898
+Epoch 00005,loss 0.0264 with 13-th batch time(s) 0.0958
+Epoch 00005,loss 0.0236 with 14-th batch time(s) 0.1047
+Epoch 00005,loss 0.0232 with 15-th batch time(s) 0.1136
+Epoch 00005,loss 0.0228 with 16-th batch time(s) 0.1211
+Epoch 00005,loss 0.0225 with 17-th batch time(s) 0.1279
+Epoch 00005,loss 0.0227 with 18-th batch time(s) 0.1389
+Epoch 00005,loss 0.0230 with 19-th batch time(s) 0.1488
+Epoch 00005,loss 0.0220 with 20-th batch time(s) 0.1595
+Epoch 00005,loss 0.0212 with 21-th batch time(s) 0.1700
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897
+ -0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897
+ -0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897 -0.00046897
+ -0.00046897 -0.00046897]
+Epoch 00005 | Time(s) 0.4616 | Loss 2120.9406 | Val AUROC 0.5107 | Val F1 0.0330 | 
+model saved. loss=0.026382368057966232 AUC=0.5106589147286822
+EPOCH ###### 6 ######
+Epoch 00006,loss 0.0207 with 0-th batch time(s) 0.0125
+Epoch 00006,loss 3.8734 with 1-th batch time(s) 0.0194
+Epoch 00006,loss 0.0198 with 2-th batch time(s) 0.0258
+Epoch 00006,loss 0.0194 with 3-th batch time(s) 0.0316
+Epoch 00006,loss 0.0191 with 4-th batch time(s) 0.0374
+Epoch 00006,loss 0.0188 with 5-th batch time(s) 0.0432
+Epoch 00006,loss 0.0185 with 6-th batch time(s) 0.0489
+Epoch 00006,loss 0.0182 with 7-th batch time(s) 0.0546
+Epoch 00006,loss 0.0179 with 8-th batch time(s) 0.0609
+Epoch 00006,loss 0.0177 with 9-th batch time(s) 0.0671
+Epoch 00006,loss 0.0175 with 10-th batch time(s) 0.0727
+Epoch 00006,loss 0.0173 with 11-th batch time(s) 0.0784
+Epoch 00006,loss 0.0171 with 12-th batch time(s) 0.0842
+Epoch 00006,loss 0.0170 with 13-th batch time(s) 0.0900
+Epoch 00006,loss 0.0169 with 14-th batch time(s) 0.0958
+Epoch 00006,loss 0.0167 with 15-th batch time(s) 0.1015
+Epoch 00006,loss 0.0166 with 16-th batch time(s) 0.1072
+Epoch 00006,loss 0.0165 with 17-th batch time(s) 0.1124
+Epoch 00006,loss 0.0164 with 18-th batch time(s) 0.1183
+Epoch 00006,loss 0.0164 with 19-th batch time(s) 0.1240
+Epoch 00006,loss 0.0163 with 20-th batch time(s) 0.1300
+Epoch 00006,loss 0.0162 with 21-th batch time(s) 0.1356
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05
+ -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05
+ -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05
+ -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05 -5.146116e-05]
+Epoch 00006 | Time(s) 0.3298 | Loss 1623.1157 | Val AUROC 0.5039 | Val F1 0.0154 | 
+model saved. loss=0.01793951913714409 AUC=0.5038759689922481
+EPOCH ###### 7 ######
+Epoch 00007,loss 0.0162 with 0-th batch time(s) 0.0127
+Epoch 00007,loss 11.9655 with 1-th batch time(s) 0.0186
+Epoch 00007,loss 0.0161 with 2-th batch time(s) 0.0243
+Epoch 00007,loss 0.0160 with 3-th batch time(s) 0.0301
+Epoch 00007,loss 0.0160 with 4-th batch time(s) 0.0357
+Epoch 00007,loss 0.0160 with 5-th batch time(s) 0.0413
+Epoch 00007,loss 0.0159 with 6-th batch time(s) 0.0476
+Epoch 00007,loss 0.0159 with 7-th batch time(s) 0.0534
+Epoch 00007,loss 0.0159 with 8-th batch time(s) 0.0590
+Epoch 00007,loss 0.0159 with 9-th batch time(s) 0.0661
+Epoch 00007,loss 0.0158 with 10-th batch time(s) 0.0718
+Epoch 00007,loss 0.0158 with 11-th batch time(s) 0.0775
+Epoch 00007,loss 0.0158 with 12-th batch time(s) 0.0833
+Epoch 00007,loss 0.0158 with 13-th batch time(s) 0.0895
+Epoch 00007,loss 0.0158 with 14-th batch time(s) 0.0964
+Epoch 00007,loss 0.0158 with 15-th batch time(s) 0.1025
+Epoch 00007,loss 0.0157 with 16-th batch time(s) 0.1087
+Epoch 00007,loss 0.0157 with 17-th batch time(s) 0.1144
+Epoch 00007,loss 0.0156 with 18-th batch time(s) 0.1205
+Epoch 00007,loss 0.0155 with 19-th batch time(s) 0.1261
+Epoch 00007,loss 0.0154 with 20-th batch time(s) 0.1318
+Epoch 00007,loss 0.0154 with 21-th batch time(s) 0.1374
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-4.7972426e-05 -4.7972426e-05 -4.7972426e-05 -4.7972426e-05
+ -4.7972426e-05 -4.7972426e-05 -4.7972426e-05 -4.7972426e-05
+ -4.7972426e-05 -4.7972426e-05 -4.7972426e-05 -4.7972426e-05
+ -4.7972426e-05 -4.7972426e-05 -4.7972426e-05 -4.7972426e-05
+ -4.7972426e-05 -4.7972426e-05 -4.7972426e-05 -4.7972426e-05]
+Epoch 00007 | Time(s) 0.3309 | Loss 1538.1481 | Val AUROC 0.5045 | Val F1 0.0179 | 
+model saved. loss=0.01703483611345291 AUC=0.5045219638242894
+EPOCH ###### 8 ######
+Epoch 00008,loss 0.0153 with 0-th batch time(s) 0.0120
+Epoch 00008,loss 0.0153 with 1-th batch time(s) 0.0201
+Epoch 00008,loss 16.1758 with 2-th batch time(s) 0.0271
+Epoch 00008,loss 0.0152 with 3-th batch time(s) 0.0349
+Epoch 00008,loss 0.0152 with 4-th batch time(s) 0.0402
+Epoch 00008,loss 0.0151 with 5-th batch time(s) 0.0459
+Epoch 00008,loss 0.0151 with 6-th batch time(s) 0.0516
+Epoch 00008,loss 0.0151 with 7-th batch time(s) 0.0577
+Epoch 00008,loss 0.0150 with 8-th batch time(s) 0.0646
+Epoch 00008,loss 0.0150 with 9-th batch time(s) 0.0717
+Epoch 00008,loss 0.0150 with 10-th batch time(s) 0.0792
+Epoch 00008,loss 0.0150 with 11-th batch time(s) 0.0868
+Epoch 00008,loss 0.0150 with 12-th batch time(s) 0.0928
+Epoch 00008,loss 0.0149 with 13-th batch time(s) 0.0985
+Epoch 00008,loss 0.0149 with 14-th batch time(s) 0.1042
+Epoch 00008,loss 0.0149 with 15-th batch time(s) 0.1099
+Epoch 00008,loss 0.0148 with 16-th batch time(s) 0.1155
+Epoch 00008,loss 0.0148 with 17-th batch time(s) 0.1213
+Epoch 00008,loss 0.0148 with 18-th batch time(s) 0.1269
+Epoch 00008,loss 0.0148 with 19-th batch time(s) 0.1326
+Epoch 00008,loss 0.0148 with 20-th batch time(s) 0.1378
+Epoch 00008,loss 0.0147 with 21-th batch time(s) 0.1439
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-1.3373792e-05 -1.3373792e-05 -1.3373792e-05 -1.3373792e-05
+ -1.3373792e-05 -1.3373792e-05 -1.3373792e-05 -1.3373792e-05
+ -1.3373792e-05 -1.3373792e-05 -1.3373792e-05 -1.3373792e-05
+ -1.3373792e-05 -1.3373792e-05 -1.3373792e-05 -1.3373792e-05
+ -1.3373792e-05 -1.3373792e-05 -1.3373792e-05 -1.3373792e-05]
+Epoch 00008 | Time(s) 0.3601 | Loss 1473.6429 | Val AUROC 0.5045 | Val F1 0.0179 | 
+model saved. loss=0.016528066247701645 AUC=0.5045219638242894
+EPOCH ###### 9 ######
+Epoch 00009,loss 0.0147 with 0-th batch time(s) 0.0155
+Epoch 00009,loss 0.0147 with 1-th batch time(s) 0.0230
+Epoch 00009,loss 0.0147 with 2-th batch time(s) 0.0305
+Epoch 00009,loss 0.0147 with 3-th batch time(s) 0.0375
+Epoch 00009,loss 0.0147 with 4-th batch time(s) 0.0439
+Epoch 00009,loss 0.0147 with 5-th batch time(s) 0.0513
+Epoch 00009,loss 0.0147 with 6-th batch time(s) 0.0576
+Epoch 00009,loss 17.1415 with 7-th batch time(s) 0.0636
+Epoch 00009,loss 0.0146 with 8-th batch time(s) 0.0701
+Epoch 00009,loss 0.0146 with 9-th batch time(s) 0.0763
+Epoch 00009,loss 0.0146 with 10-th batch time(s) 0.0832
+Epoch 00009,loss 0.0146 with 11-th batch time(s) 0.0922
+Epoch 00009,loss 0.0146 with 12-th batch time(s) 0.0999
+Epoch 00009,loss 0.0146 with 13-th batch time(s) 0.1109
+Epoch 00009,loss 0.0146 with 14-th batch time(s) 0.1175
+Epoch 00009,loss 0.0146 with 15-th batch time(s) 0.1240
+Epoch 00009,loss 0.0146 with 16-th batch time(s) 0.1304
+Epoch 00009,loss 0.0146 with 17-th batch time(s) 0.1395
+Epoch 00009,loss 0.0146 with 18-th batch time(s) 0.1502
+Epoch 00009,loss 0.0146 with 19-th batch time(s) 0.1570
+Epoch 00009,loss 0.0146 with 20-th batch time(s) 0.1633
+Epoch 00009,loss 0.0146 with 21-th batch time(s) 0.1697
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878
+ -0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878
+ -0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878 -0.00010878
+ -0.00010878 -0.00010878]
+Epoch 00009 | Time(s) 0.5317 | Loss 1460.5179 | Val AUROC 0.5087 | Val F1 0.0293 | 
+model saved. loss=0.016620267182588577 AUC=0.5087209302325582
+EPOCH ###### 10 ######
+Epoch 00010,loss 0.0145 with 0-th batch time(s) 0.0137
+Epoch 00010,loss 0.0144 with 1-th batch time(s) 0.0292
+Epoch 00010,loss 0.0143 with 2-th batch time(s) 0.0422
+Epoch 00010,loss 0.0142 with 3-th batch time(s) 0.0554
+Epoch 00010,loss 0.0141 with 4-th batch time(s) 0.0686
+Epoch 00010,loss 0.0140 with 5-th batch time(s) 0.0758
+Epoch 00010,loss 0.0140 with 6-th batch time(s) 0.0816
+Epoch 00010,loss 0.0139 with 7-th batch time(s) 0.0876
+Epoch 00010,loss 0.0139 with 8-th batch time(s) 0.0947
+Epoch 00010,loss 0.0138 with 9-th batch time(s) 0.1012
+Epoch 00010,loss 0.0138 with 10-th batch time(s) 0.1073
+Epoch 00010,loss 0.0137 with 11-th batch time(s) 0.1138
+Epoch 00010,loss 0.0137 with 12-th batch time(s) 0.1200
+Epoch 00010,loss 0.0137 with 13-th batch time(s) 0.1261
+Epoch 00010,loss 0.0136 with 14-th batch time(s) 0.1345
+Epoch 00010,loss 0.0136 with 15-th batch time(s) 0.1410
+Epoch 00010,loss 0.0136 with 16-th batch time(s) 0.1471
+Epoch 00010,loss 0.0136 with 17-th batch time(s) 0.1531
+Epoch 00010,loss 0.0136 with 18-th batch time(s) 0.1592
+Epoch 00010,loss 0.0135 with 19-th batch time(s) 0.1653
+Epoch 00010,loss 0.0135 with 20-th batch time(s) 0.1709
+Epoch 00010,loss 0.0135 with 21-th batch time(s) 0.1785
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-1.0884367e-05 -1.0884367e-05 -1.0884367e-05 -1.0884367e-05
+ -1.0884367e-05 -1.0884367e-05 -1.0884367e-05 -1.0884367e-05
+ -1.0884367e-05 -1.0884367e-05 -1.0884367e-05 -1.0884367e-05
+ -1.0884367e-05 -1.0884367e-05 -1.0884367e-05 -1.0884367e-05
+ -1.0884367e-05 -1.0884367e-05 -1.0884367e-05 -1.0884367e-05]
+Epoch 00010 | Time(s) 0.5152 | Loss 1351.6673 | Val AUROC 0.5103 | Val F1 0.0405 | 
+model saved. loss=0.015749121084809303 AUC=0.5103359173126615
+EPOCH ###### 11 ######
+Epoch 00011,loss 0.0135 with 0-th batch time(s) 0.0123
+Epoch 00011,loss 0.0135 with 1-th batch time(s) 0.0193
+Epoch 00011,loss 0.0135 with 2-th batch time(s) 0.0271
+Epoch 00011,loss 0.0135 with 3-th batch time(s) 0.0347
+Epoch 00011,loss 0.0135 with 4-th batch time(s) 0.0426
+Epoch 00011,loss 0.0135 with 5-th batch time(s) 0.0490
+Epoch 00011,loss 0.0135 with 6-th batch time(s) 0.0561
+Epoch 00011,loss 0.0134 with 7-th batch time(s) 0.0632
+Epoch 00011,loss 0.0134 with 8-th batch time(s) 0.0696
+Epoch 00011,loss 0.0134 with 9-th batch time(s) 0.0768
+Epoch 00011,loss 0.0134 with 10-th batch time(s) 0.0841
+Epoch 00011,loss 0.0134 with 11-th batch time(s) 0.0920
+Epoch 00011,loss 0.0134 with 12-th batch time(s) 0.1977
+Epoch 00011,loss 0.0134 with 13-th batch time(s) 0.2049
+Epoch 00011,loss 0.0134 with 14-th batch time(s) 0.2119
+Epoch 00011,loss 0.0134 with 15-th batch time(s) 0.2187
+Epoch 00011,loss 0.0134 with 16-th batch time(s) 0.2254
+Epoch 00011,loss 0.0134 with 17-th batch time(s) 0.2333
+Epoch 00011,loss 0.0134 with 18-th batch time(s) 0.2403
+Epoch 00011,loss 0.0134 with 19-th batch time(s) 0.2539
+Epoch 00011,loss 0.0134 with 20-th batch time(s) 0.2608
+Epoch 00011,loss 0.0134 with 21-th batch time(s) 0.2669
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-1.1334196e-06 -1.1334196e-06 -1.1334196e-06 -1.1334196e-06
+ -1.1334196e-06 -1.1334196e-06 -1.1334196e-06 -1.1334196e-06
+ -1.1334196e-06 -1.1334196e-06 -1.1334196e-06 -1.1334196e-06
+ -1.1334196e-06 -1.1334196e-06 -1.1334196e-06 -1.1334196e-06
+ -1.1334196e-06 -1.1334196e-06 -1.1334196e-06 -1.1334196e-06]
+Epoch 00011 | Time(s) 0.5458 | Loss 1340.6262 | Val AUROC 0.5103 | Val F1 0.0405 | 
+model saved. loss=0.01568954437971115 AUC=0.5103359173126615
+EPOCH ###### 12 ######
+Epoch 00012,loss 0.0134 with 0-th batch time(s) 0.0119
+Epoch 00012,loss 0.0134 with 1-th batch time(s) 0.0212
+Epoch 00012,loss 0.0134 with 2-th batch time(s) 0.0293
+Epoch 00012,loss 0.0134 with 3-th batch time(s) 0.0375
+Epoch 00012,loss 0.0134 with 4-th batch time(s) 0.0474
+Epoch 00012,loss 0.0134 with 5-th batch time(s) 0.0560
+Epoch 00012,loss 0.0134 with 6-th batch time(s) 0.0620
+Epoch 00012,loss 0.0134 with 7-th batch time(s) 0.0679
+Epoch 00012,loss 0.0134 with 8-th batch time(s) 0.0744
+Epoch 00012,loss 0.0134 with 9-th batch time(s) 0.0817
+Epoch 00012,loss 0.0134 with 10-th batch time(s) 0.0979
+Epoch 00012,loss 0.0134 with 11-th batch time(s) 0.1102
+Epoch 00012,loss 0.0134 with 12-th batch time(s) 0.1204
+Epoch 00012,loss 0.0134 with 13-th batch time(s) 0.1309
+Epoch 00012,loss 0.0134 with 14-th batch time(s) 0.1450
+Epoch 00012,loss 0.0134 with 15-th batch time(s) 0.1563
+Epoch 00012,loss 0.0134 with 16-th batch time(s) 0.1744
+Epoch 00012,loss 0.0134 with 17-th batch time(s) 0.1869
+Epoch 00012,loss 0.0134 with 18-th batch time(s) 0.1939
+Epoch 00012,loss 0.0134 with 19-th batch time(s) 0.2013
+Epoch 00012,loss 0.0134 with 20-th batch time(s) 0.2119
+Epoch 00012,loss 0.0134 with 21-th batch time(s) 0.2237
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+1
+[-1.2945384e-07 -1.2945384e-07 -1.2945384e-07 -1.2945384e-07
+ -1.2945384e-07 -1.2945384e-07 -1.2945384e-07 -1.2945384e-07
+ -1.2945384e-07 -1.2945384e-07 -1.2945384e-07 -1.2945384e-07
+ -1.2945384e-07 -1.2945384e-07 -1.2945384e-07 -1.2945384e-07
+ -1.2945384e-07 -1.2945384e-07 -1.2945384e-07 -1.2945384e-07]
+Epoch 00012 | Time(s) 0.5576 | Loss 1339.4633 | Val AUROC 0.5103 | Val F1 0.0405 | 
+model saved. loss=0.015683189034461975 AUC=0.5103359173126615
+EPOCH ###### 13 ######

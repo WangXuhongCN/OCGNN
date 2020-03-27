@@ -1,0 +1,15 @@
+2020-03-27 15:25:17,999-OCGNN-INFO-Start training
+2020-03-27 15:25:18,000-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 15:25:18,001-OCGNN-INFO-n-epochs:1000, n-hidden:64,n-layers:3,weight-decay:0.0005
+2020-03-27 15:32:39,631-OCGNN-INFO-Start training
+2020-03-27 15:32:39,632-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 15:32:39,632-OCGNN-INFO-n-epochs:1000, n-hidden:64,n-layers:3,weight-decay:0.0005
+2020-03-27 15:40:45,908-OCGNN-INFO-Start training
+2020-03-27 15:40:45,909-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 15:40:45,909-OCGNN-INFO-n-epochs:1000, n-hidden:64,n-layers:1,weight-decay:0.0005
+2020-03-27 15:45:04,366-OCGNN-INFO-Start training
+2020-03-27 15:45:04,367-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 15:45:04,367-OCGNN-INFO-n-epochs:1000, n-hidden:64,n-layers:1,weight-decay:0.0005
+2020-03-27 16:08:34,381-OCGNN-INFO-Start training
+2020-03-27 16:08:34,382-OCGNN-INFO-dropout:0.5, nu:0.1,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 16:08:34,382-OCGNN-INFO-n-epochs:1000, n-hidden:64,n-layers:1,weight-decay:0.0005

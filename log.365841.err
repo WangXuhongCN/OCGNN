@@ -1,3 +1,5 @@
+/cluster/home/it_stu168/.conda/envs/torch/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1272: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
 [1m[31mERROR: [0mCannot find key: --dataset
 Usage: main.py <group|command>
   available groups:      argparse | logging | fire | trainer | TUtrainer |

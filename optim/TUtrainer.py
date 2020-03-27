@@ -4,30 +4,38 @@ import torch
 import os
 import torch.nn as nn
 import logging
-from dgl.contrib.sampling.sampler import NeighborSampler
+#from dgl.contrib.sampling.sampler import NeighborSampler
 # import torch.nn as nn
 # import torch.nn.functional as F
 
 
 
-from optim.loss import loss_function,init_center,get_radius
+from optim.loss import loss_function,init_center,get_radius,EarlyStopping
 
-from utils.evaluate import evaluate
+from utils.evaluate import multi_graph_evaluate
 
-def train(args, dataset, model, same_feat=True, val_dataset=None):
+def train(args, logger,dataset, model, val_dataset=None,path=None):
     '''
     training function
     '''
-    dir =  "./" + args.dataset
-    if not os.path.exists(dir):
-        os.makedirs(dir)
+    checkpoints_path=path
+
+    #loss_fcn = torch.nn.CrossEntropyLoss()
+    # use optimizer AdamW
+    logger.info('Start training')
+    logger.info(f'dropout:{args.dropout}, nu:{args.nu},seed:{args.seed},lr:{args.lr},self-loop:{args.self_loop},norm:{args.norm}')
+
+    logger.info(f'n-epochs:{args.n_epochs}, n-hidden:{args.n_hidden},n-layers:{args.n_layers},weight-decay:{args.weight_decay}')
+    
     dataloader = dataset
     optimizer = torch.optim.AdamW(model.parameters(),
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)
     # optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad,
     #                                     model.parameters()), lr=0.001)
-    early_stopping_logger = {"best_epoch": -1, "val_acc": -1}
+    if args.early_stop:
+        stopper = EarlyStopping(patience=100)
+    #early_stopping_logger = {"best_epoch": -1, "val_acc": -1}
 
 
     #data_center= init_center(args,input_g,input_feat, model)
@@ -51,11 +59,11 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
             model.zero_grad()
             compute_start = time.time()
 
-            normlizing = nn.BatchNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
-            input_attr=normlizing(batch_graph.ndata['node_attr'])
+            #normlizing = nn.BatchNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
+            #input_attr=normlizing(batch_graph.ndata['node_attr'])
             #data_center= init_center(args,batch_graph,batch_graph.ndata['node_attr'], model)
             #print('data_center',data_center)
-            outputs = model(batch_graph,input_attr)
+            outputs = model(batch_graph,batch_graph.ndata['node_attr'])
             # print('outputs mean',outputs.mean())
             # print('outputs std',outputs.std())
             # indi = torch.argmax(ypred, dim=1)
@@ -63,7 +71,7 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
             # accum_correct += correct
             # total += graph_labels.size()[0]
             
-            loss,dist,score=loss_function(args.nu, data_center,outputs,train_mask,radius)
+            loss,dist,score=loss_function(args.nu, data_center,outputs,radius,train_mask)
             #if batch_idx<=3:
                 #print(dist)
                 # print(score)
@@ -77,130 +85,28 @@ def train(args, dataset, model, same_feat=True, val_dataset=None):
 
             radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
             #print(radius.data)
-            print("loss {} with  computation time {} s ".format(
-            loss.item(), computation_time))
+            print("Epoch {:05d},loss {:.4f} with {}-th batch time(s) {:.4f}".format(
+            epoch, loss.item(), batch_idx, computation_time))
         #train_accu = accum_correct / total
         #print("train loss for this epoch {} is {}%".format(epoch,train_accu * 100))
         elapsed_time = time.time() - begin_time
-        print("loss {} with epoch time {} s & computation time {} s ".format(
-            loss.item(), elapsed_time, computation_time))
+        #print("Epoch {:05d}, loss {:.4f} with epoch time(s) {:.4f}".format(epoch,loss.item(), elapsed_time))
         if val_dataset is not None:
-            result = evaluate(val_dataset, model, args)
-            print("validation  accuracy {}%".format(result * 100))
-            if result >= early_stopping_logger['val_acc'] and result <=\
-                    train_accu:
-                early_stopping_logger.update(best_epoch=epoch, val_acc=result)
-                #if args.save_dir is not None:
-                torch.save(model.state_dict(),  "./" + args.dataset
-                            + "/model.iter-" + str(early_stopping_logger['best_epoch']))
-            print("best epoch is EPOCH {}, val_acc is {}%".format(early_stopping_logger['best_epoch'],
-                                                                  early_stopping_logger['val_acc'] * 100))
-        torch.cuda.empty_cache()
-    return early_stopping_logger
+            auc,ap,f1,acc,precision,recall,the_loss = multi_graph_evaluate(args,checkpoints_path, model, data_center,val_dataset,radius,'val')
+            print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | ". format(
+                epoch, elapsed_time, loss.item()*100000, auc,f1))
+            torch.cuda.empty_cache()
+            if args.early_stop:
+                if stopper.step(auc,float(the_loss.cpu().numpy()), model,epoch,checkpoints_path):  
+                    print("best epoch is EPOCH {}, val_auc is {}%".format(stopper.best_epoch,
+                                                        stopper.best_score)) 
+                    break
 
-
-# def train(args,data,model, val_dataset=None):
-
-#     checkpoints_path=f'./checkpoints/{args.dataset}+OC-{args.module}+bestcheckpoint.pt'
-
-#     logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
-#     logger=logging.getLogger('OCGNN')
-#     #loss_fcn = torch.nn.CrossEntropyLoss()
-#     # use optimizer AdamW
-#     logger.info('Start training')
-#     logger.info(f'dropout:{args.dropout}, nu:{args.nu},seed:{args.seed},lr:{args.lr},self-loop:{args.self_loop},norm:{args.norm}')
-
-#     logger.info(f'n-epochs:{args.n_epochs}, n-hidden:{args.n_hidden},n-layers:{args.n_layers},weight-decay:{args.weight_decay}')
-
-#     optimizer = torch.optim.AdamW(model.parameters(),
-#                                  lr=args.lr,
-#                                  weight_decay=args.weight_decay)
-#     if args.early_stop:
-#         stopper = EarlyStopping(patience=100)
-#     # initialize data center
-
-#     input_feat=data['features']
-#     input_g=data['g']
-
-#     data_center= init_center(args,input_g,input_feat, model)
-#     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
-
-#     #train_inputs=data['features']
-
-#     dur = []
-#     model.train()
-#     for epoch in range(args.n_epochs):
-#         #model.train()
-#         if epoch %5 == 0:
-#             t0 = time.time()
-#         # forward
-#         for 
-#         outputs= model(input_g,input_feat)
-        
-#         loss,dist,_=loss_function(args.nu, data_center,outputs,data['train_mask'],radius)
-
-#         optimizer.zero_grad()
-#         loss.backward()
-#         optimizer.step()
-
-#         if epoch%5 == 0:
-#             dur.append(time.time() - t0)
-#             radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
-
-
-
-#         auc,ap,f1,acc,precision,recall,the_loss = evaluate(args,model, data_center,data,radius,'val')
-#         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
-#               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
-#                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
-#         if args.early_stop:
-#             if stopper.step(auc,float(the_loss.cpu().numpy()), model,checkpoints_path):   
-#                 break
-
-#     #model_path=checkpoints_path+f'{epoch}+bestcheckpoint.pt'
-#     print()
-#     if args.early_stop:
-#         print(f'model loaded.')
-#         model.load_state_dict(torch.load(checkpoints_path))
-
-#     auc,ap,f1,acc,precision,recall,_ = evaluate(args,model, data_center,data,radius,'test')
-#     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
-#     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-#     logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
-#     logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-#     logger.info('\n')
-#     return model
-
-
-# class EarlyStopping:
-#     def __init__(self, patience=10):
-#         self.patience = patience
-#         self.counter = 0
-#         self.best_score = None
-#         self.lowest_loss = None
-#         self.early_stop = False
-
-#     def step(self, acc,loss, model,path):
-#         score = acc
-#         cur_loss=loss
-#         if (self.best_score is None) or (self.lowest_loss is None):
-#             self.best_score = score
-#             self.lowest_loss = cur_loss
-#             self.save_checkpoint(acc,loss,model,path)
-#         elif (score < self.best_score) and (cur_loss > self.lowest_loss):
-#             self.counter += 1
-#             if self.counter >= 0.8*(self.patience):
-#                 print(f'Warning: EarlyStopping soon: {self.counter} out of {self.patience}')
-#             if self.counter >= self.patience:
-#                 self.early_stop = True
-#         else:
-#             self.best_score = score
-#             self.lowest_loss = cur_loss
-#             self.save_checkpoint(acc,loss,model,path)
-#             self.counter = 0
-#         return self.early_stop
-
-#     def save_checkpoint(self, acc,loss,model,path):
-#         '''Saves model when validation loss decrease.'''
-#         print(f'model saved. loss={loss} AUC={acc}')
-#         torch.save(model.state_dict(), path)
+    # auc,ap,f1,acc,precision,recall,_ = multi_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,'test')
+    # torch.cuda.empty_cache()
+    # print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
+    # print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    # logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
+    # logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    # logger.info('\n')
+    return model    

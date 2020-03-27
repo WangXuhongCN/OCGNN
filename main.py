@@ -18,16 +18,28 @@ def main(args):
         #torch.backends.cudnn.deterministic=True
         dr.seed(args.seed)
 
-    if args.dataset in 'PROTEINS_full'+'ENZYMES'+'Synthie':
+    checkpoints_path=f'./checkpoints/{args.dataset}+OC-{args.module}+bestcheckpoint.pt'
+    logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
+    logger=logging.getLogger('OCGNN')
+
+    if args.dataset in 'PROTEINS_full'+'ENZYMES'+'FRANKENSTEIN':
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
         model=init_model(args,input_dim)
-        model=TUtrainer.train(args,train_loader,model,val_dataset=None)
+        model=TUtrainer.train(args,logger,train_loader,model,val_dataset=val_loader,path=checkpoints_path)
+        # auc,ap,f1,acc,precision,recall,_= multi_graph_evaluate(args,checkpoints_path, 
+        #     model, data_center,test_loader,radius,mode='test') 
+        
+        # torch.cuda.empty_cache()
+        # print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
+        # print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+        # logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
+        # logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+        # logger.info('\n')
     else:  
         data=dataloader.loader(args)
         model=init_model(args,data['input_dim'])
-        model=trainer.train(args,data,model)
-# valuation(args,datadict,model)
-# test(args,data,model)
+        model=trainer.train(args,logger,data,model,checkpoints_path)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='OCGNN')
@@ -44,7 +56,7 @@ if __name__ == '__main__':
             help="GCN/GAT/GIN/GraphSAGE")
     parser.add_argument('--n-worker', type=int,default=1,
             help='number of workers when dataloading')
-    parser.add_argument('--batch-size', type=int,default=16,
+    parser.add_argument('--batch-size', type=int,default=128,
             help='batch size')
     parser.add_argument("--lr", type=float, default=1e-3,
             help="learning rate")
@@ -54,7 +66,7 @@ if __name__ == '__main__':
             help="number of training epochs")
     parser.add_argument("--n-hidden", type=int, default=64,
             help="number of hidden gnn units")
-    parser.add_argument("--n-layers", type=int, default=3,
+    parser.add_argument("--n-layers", type=int, default=1,
             help="number of hidden gnn layers")
     parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")

@@ -14,18 +14,21 @@ def pre_process(args,dataset):
     for i in range(len(dataset)):
         #print(dataset.graph_lists[i])
         #make labels become 0 or 1, other label is not our need.
-        dataset.graph_lists[i].ndata
+        #dataset.graph_lists[i].ndata
         normal_idx=torch.where(dataset.graph_lists[i].ndata['node_labels']==args.normal_class)[0]
         abnormal_idx=torch.where(dataset.graph_lists[i].ndata['node_labels']!=args.normal_class)[0]
         dataset.graph_lists[i].ndata['node_labels'][normal_idx]=0
         dataset.graph_lists[i].ndata['node_labels'][abnormal_idx]=1
+        
 
         if args.self_loop:
             g=dgl.transform.add_self_loop(dataset.graph_lists[i])
             g.ndata.update(dataset.graph_lists[i].ndata)
             dataset.graph_lists[i]=g
+
+        #print(dataset.graph_lists[i].ndata['node_labels'].max())
         #print(dataset.graph_lists[i])
-        return dataset
+    return dataset
 
 def loader(args):
     #if args.dataset == 'PROTEINS_full':
@@ -36,8 +39,7 @@ def loader(args):
     test_size = int(0.25 * len(dataset))
     val_size = int(len(dataset) - train_size - test_size)
     
-    if args.self_loop:
-        dataset = pre_process(args,dataset)
+    dataset = pre_process(args,dataset)
 
     dataset_train, dataset_val, dataset_test = torch.utils.data.random_split(
         dataset, (train_size, val_size, test_size))
@@ -62,9 +64,10 @@ def prepare_dataloader(dataset, args, train=False, pre_process=None):
     '''
     if train:
         shuffle = True
+        drop_last = True
     else:
         shuffle = False
-
+        drop_last = False
     if pre_process:
         pre_process(dataset, args)
 
@@ -73,7 +76,7 @@ def prepare_dataloader(dataset, args, train=False, pre_process=None):
                                        batch_size=args.batch_size,
                                        shuffle=shuffle,
                                        collate_fn=batching_graph,
-                                       drop_last=True,
+                                       drop_last=drop_last,
                                        num_workers=args.n_worker)
 
 def batching_graph(batch):

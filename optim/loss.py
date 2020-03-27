@@ -2,17 +2,20 @@ import torch
 import numpy as np
 import torch.nn.functional as F
     
-def loss_function(nu,data_center,outputs,mask,radius):
+def loss_function(nu,data_center,outputs,radius,mask=None):
     # print('outputs mean',outputs.mean())
     # print('outputs std',outputs.std())
-    dist,scores=anomaly_score(data_center,outputs,mask,radius)
+    dist,scores=anomaly_score(data_center,outputs,radius,mask)
     # print('dist mean',dist.mean())
     # print('dist std',dist.std())
     loss = radius ** 2 + (1 / nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
     return loss,dist,scores
 
-def anomaly_score(data_center,outputs,mask,radius):
-    dist = torch.sum((outputs[mask] - data_center) ** 2, dim=1)
+def anomaly_score(data_center,outputs,radius,mask):
+    if mask == None:
+        dist = torch.sum((outputs - data_center) ** 2, dim=1)
+    else:
+        dist = torch.sum((outputs[mask] - data_center) ** 2, dim=1)
     # c=data_center.repeat(outputs[mask].size()[0],1)
     # res=outputs[mask]-c
     # res=torch.mean(res, 1, keepdim=True)
@@ -48,3 +51,39 @@ def init_center(args,input_g,input_feat, model, eps=0.001):
 def get_radius(dist: torch.Tensor, nu: float):
     """Optimally solve for radius R via the (1-nu)-quantile of distances."""
     return np.quantile(np.sqrt(dist.clone().data.cpu().numpy()), 1 - nu)
+
+class EarlyStopping:
+    def __init__(self, patience=10):
+        self.patience = patience
+        self.counter = 0
+        self.best_score = None
+        self.best_epoch = None
+        self.lowest_loss = None
+        self.early_stop = False
+
+    def step(self, acc,loss, model,epoch,path):
+        score = acc
+        cur_loss=loss
+        if (self.best_score is None) or (self.lowest_loss is None):
+            self.best_score = score
+            self.lowest_loss = cur_loss
+            self.save_checkpoint(acc,loss,model,path)
+        elif (score < self.best_score) and (cur_loss > self.lowest_loss):
+        #elif (score < self.best_score):
+            self.counter += 1
+            if self.counter >= 0.8*(self.patience):
+                print(f'Warning: EarlyStopping soon: {self.counter} out of {self.patience}')
+            if self.counter >= self.patience:
+                self.early_stop = True
+        else:
+            self.best_score = score
+            self.lowest_loss = cur_loss
+            self.best_epoch = epoch
+            self.save_checkpoint(acc,loss,model,path)
+            self.counter = 0
+        return self.early_stop
+
+    def save_checkpoint(self, acc,loss,model,path):
+        '''Saves model when validation loss decrease.'''
+        print('model saved. loss={:.4f} AUC={:.4f}'. format(loss,acc))
+        torch.save(model.state_dict(), path)

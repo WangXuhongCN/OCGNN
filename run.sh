@@ -9,6 +9,6 @@
 source activate torch
 
 
-python main.py --dataset ENZYMES --module GAT --gpu 0 --n-epochs 1000 --early-stop
+python main.py --dataset PROTEINS_full --module GAT --gpu 0 --n-epochs 1000 --early-stop
 #python main.py --dataset cora --module GAT --gpu 0 --n-epochs 4000 --early-stop
 # python main.py --dataset pubmed --module GraphSAGE --gpu 0 --n-epochs 1 --early-stop

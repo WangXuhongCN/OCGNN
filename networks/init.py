@@ -22,7 +22,7 @@ def init_model(args,input_dim):
                 args.n_layers,
                 F.relu,
                 args.dropout,
-                aggregator_type='pool')
+                aggregator_type='gcn') #mean,pool,lstm,gcn 使用pool做多图学习有大问题阿
     if args.module== 'GAT':
         model = GAT(None,
                 args.n_layers,
