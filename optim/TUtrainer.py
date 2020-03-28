@@ -41,7 +41,7 @@ def train(args, logger,dataset, model, val_dataset=None,path=None):
     #data_center= init_center(args,input_g,input_feat, model)
     data_center= torch.zeros(args.n_hidden, device=f'cuda:{args.gpu}')
     radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
-
+    #loss_fn = torch.nn.BCEWithLogitsLoss()
     model.train()
     for epoch in range(args.n_epochs):
         begin_time = time.time()
@@ -59,18 +59,19 @@ def train(args, logger,dataset, model, val_dataset=None,path=None):
             model.zero_grad()
             compute_start = time.time()
 
-            #normlizing = nn.BatchNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
-            #input_attr=normlizing(batch_graph.ndata['node_attr'])
+            normlizing = nn.BatchNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
+            input_attr=normlizing(batch_graph.ndata['node_attr'])
+
+            # normlizing = nn.InstanceNorm1d(batch_graph.ndata['node_attr'].shape[1], affine=False).cuda()
+            # input_attr=normlizing(batch_graph.ndata['node_attr'].unsqueeze(1)).squeeze()
+
             #data_center= init_center(args,batch_graph,batch_graph.ndata['node_attr'], model)
             #print('data_center',data_center)
-            outputs = model(batch_graph,batch_graph.ndata['node_attr'])
+            outputs = model(batch_graph,input_attr)
             # print('outputs mean',outputs.mean())
             # print('outputs std',outputs.std())
-            # indi = torch.argmax(ypred, dim=1)
-            # correct = torch.sum(indi == graph_labels).item()
-            # accum_correct += correct
-            # total += graph_labels.size()[0]
-            
+
+            #loss = loss_fn(outputs, batch_graph.ndata['node_labels'].float())
             loss,dist,score=loss_function(args.nu, data_center,outputs,radius,train_mask)
             #if batch_idx<=3:
                 #print(dist)
@@ -80,11 +81,11 @@ def train(args, logger,dataset, model, val_dataset=None,path=None):
             loss.backward()
             batch_compute_time = time.time() - compute_start
             computation_time += batch_compute_time
-            nn.utils.clip_grad_norm_(model.parameters(), 2.0)
+            #nn.utils.clip_grad_norm_(model.parameters(), 2.0)
             optimizer.step()
 
             radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
-            #print(radius.data)
+            print('RRR',radius.data)
             print("Epoch {:05d},loss {:.4f} with {}-th batch time(s) {:.4f}".format(
             epoch, loss.item(), batch_idx, computation_time))
         #train_accu = accum_correct / total
@@ -92,12 +93,12 @@ def train(args, logger,dataset, model, val_dataset=None,path=None):
         elapsed_time = time.time() - begin_time
         #print("Epoch {:05d}, loss {:.4f} with epoch time(s) {:.4f}".format(epoch,loss.item(), elapsed_time))
         if val_dataset is not None:
-            auc,ap,f1,acc,precision,recall,the_loss = multi_graph_evaluate(args,checkpoints_path, model, data_center,val_dataset,radius,'val')
-            print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | ". format(
-                epoch, elapsed_time, loss.item()*100000, auc,f1))
+            auc,ap,f1,acc,precision,recall,loss = multi_graph_evaluate(args,checkpoints_path, model, data_center,val_dataset,radius,'val')
+            print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | Val ACC {:.4f} | ". format(
+                epoch, elapsed_time, loss.item()*100000, auc,f1,acc))
             torch.cuda.empty_cache()
             if args.early_stop:
-                if stopper.step(auc,float(the_loss.cpu().numpy()), model,epoch,checkpoints_path):  
+                if stopper.step(auc,loss.item()*100000, model,epoch,checkpoints_path):  
                     print("best epoch is EPOCH {}, val_auc is {}%".format(stopper.best_epoch,
                                                         stopper.best_score)) 
                     break

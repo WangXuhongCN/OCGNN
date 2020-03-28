@@ -62,12 +62,12 @@ def train(args,logger,data,model,path):
 
 
 
-        auc,ap,f1,acc,precision,recall,the_loss = fixed_graph_evaluate(args,model, data_center,data,radius,'val')
+        auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,'val')
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
         if args.early_stop:
-            if stopper.step(auc,float(the_loss.cpu().numpy()), model,epoch,checkpoints_path):   
+            if stopper.step(auc,loss.item(), model,epoch,checkpoints_path):   
                 break
 
     #model_path=checkpoints_path+f'{epoch}+bestcheckpoint.pt'

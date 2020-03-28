@@ -5,3 +5,27 @@
 2020-03-26 21:36:33,973-OCGNN-INFO-Test f1:0.7289,acc:0.6308,pre:0.5751,recall:0.9951
 2020-03-26 21:36:33,973-OCGNN-INFO-
 
+2020-03-27 21:22:01,319-OCGNN-INFO-Start training
+2020-03-27 21:22:01,334-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 21:22:01,335-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 21:24:00,505-OCGNN-INFO-Start training
+2020-03-27 21:24:00,506-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 21:24:00,508-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 21:26:01,757-OCGNN-INFO-Start training
+2020-03-27 21:26:01,757-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 21:26:01,758-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 21:27:00,501-OCGNN-INFO-Start training
+2020-03-27 21:27:00,502-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 21:27:00,503-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 22:37:35,315-OCGNN-INFO-Start training
+2020-03-27 22:37:35,341-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 22:37:35,341-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 22:40:00,759-OCGNN-INFO-Start training
+2020-03-27 22:40:00,760-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 22:40:00,760-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-27 22:44:01,332-OCGNN-INFO-Start training
+2020-03-27 22:44:01,333-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-27 22:44:01,333-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-28 00:33:26,766-OCGNN-INFO-Start training
+2020-03-28 00:33:26,789-OCGNN-INFO-dropout:0.5, nu:0.5,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-28 00:33:26,789-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005

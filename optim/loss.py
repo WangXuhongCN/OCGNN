@@ -50,7 +50,10 @@ def init_center(args,input_g,input_feat, model, eps=0.001):
 
 def get_radius(dist: torch.Tensor, nu: float):
     """Optimally solve for radius R via the (1-nu)-quantile of distances."""
-    return np.quantile(np.sqrt(dist.clone().data.cpu().numpy()), 1 - nu)
+    radius=np.quantile(np.sqrt(dist.clone().data.cpu().numpy()), 1 - nu)
+    # if radius<0.1:
+    #     radius=0.1
+    return radius
 
 class EarlyStopping:
     def __init__(self, patience=10):

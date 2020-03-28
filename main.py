@@ -46,7 +46,7 @@ if __name__ == '__main__':
     register_data_args(parser)
     parser.add_argument("--dropout", type=float, default=0.5,
             help="dropout probability")
-    parser.add_argument("--nu", type=float, default=0.1,
+    parser.add_argument("--nu", type=float, default=0.2,
             help="hyperparameter nu (must be 0 < nu <= 1)")
     parser.add_argument("--gpu", type=int, default=0,
             help="gpu")
@@ -64,9 +64,9 @@ if __name__ == '__main__':
             help="normal class")
     parser.add_argument("--n-epochs", type=int, default=5000,
             help="number of training epochs")
-    parser.add_argument("--n-hidden", type=int, default=64,
+    parser.add_argument("--n-hidden", type=int, default=32,
             help="number of hidden gnn units")
-    parser.add_argument("--n-layers", type=int, default=1,
+    parser.add_argument("--n-layers", type=int, default=2,
             help="number of hidden gnn layers")
     parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")
