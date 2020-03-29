@@ -64,11 +64,12 @@ class EarlyStopping:
         score = acc
         cur_loss=loss
         if (self.best_score is None) or (self.lowest_loss is None):
+        #if self.lowest_loss is None:
             self.best_score = score
             self.lowest_loss = cur_loss
             self.save_checkpoint(acc,loss,model,path)
-        elif (score < self.best_score) and (cur_loss > self.lowest_loss):
-        #elif (score < self.best_score):
+        elif cur_loss > self.lowest_loss:
+        #elif (score < self.best_score) and (cur_loss > self.lowest_loss):
             self.counter += 1
             if self.counter >= 0.8*(self.patience):
                 print(f'Warning: EarlyStopping soon: {self.counter} out of {self.patience}')

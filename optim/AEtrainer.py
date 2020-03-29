@@ -10,6 +10,10 @@ from sklearn.metrics import f1_score, accuracy_score,precision_score,recall_scor
 
 from optim.loss import EarlyStopping
 
+#choose mode of GAE, A means kipf's GAE, X means AE with considering network structure, AX means Ding's Dominant model.
+# GAE_mode can be selected form 'AX', 'A' or 'X'.
+GAE_mode='AX'
+
 
 def train(args,logger,data,model,path):
 
@@ -34,7 +38,7 @@ def train(args,logger,data,model,path):
     adj=data['g'].adjacency_matrix().to_dense().cuda()
     loss_fn = nn.MSELoss()
     #train_inputs=data['features']
-    print('adj dim',adj[data['train_mask']].size())
+    #print('adj dim',adj[data['train_mask']].size())
 
     dur = []
     model.train()
@@ -46,7 +50,7 @@ def train(args,logger,data,model,path):
 
         z,re_x,re_adj= model(data['g'],data['features'])
 
-        loss=Dom_loss(re_x,re_adj,adj,data['features'],data['train_mask'],loss_fn)
+        loss=Recon_loss(re_x,re_adj,adj,data['features'],data['train_mask'],loss_fn,GAE_mode)
         #loss,dist,_=loss_fn(args.nu, data_center,outputs,radius,data['train_mask'])
 
 
@@ -66,7 +70,7 @@ def train(args,logger,data,model,path):
             if stopper.step(auc,val_loss.item(), model,epoch,checkpoints_path):   
                 break
 
-    print(f'loading model before testing.')
+    print('loading model before testing.')
     model.load_state_dict(torch.load(checkpoints_path))
 
     auc,ap,_ = fixed_graph_evaluate(args,model,data,adj,data['test_mask'])
@@ -77,10 +81,26 @@ def train(args,logger,data,model,path):
     # logger.info('\n')
     return model
 
-def Dom_loss(re_x,re_adj,adj,x,mask,loss_fn):
-    A_loss=loss_fn(re_x[mask], x[mask])
-    S_loss=loss_fn(re_adj[mask], adj[mask])
-    return 0.8*A_loss + 0.2*S_loss
+def Recon_loss(re_x,re_adj,adj,x,mask,loss_fn,mode):
+    #S_loss: structure loss A_loss: Attribute loss
+    if mode=='A':
+        return loss_fn(re_x[mask], x[mask])
+    if mode=='X':
+        return loss_fn(re_x[mask], x[mask]) 
+    if mode=='AX':     
+        return 0.8*loss_fn(re_x[mask], x[mask]) + 0.2*loss_fn(re_adj[mask], adj[mask])
+
+def anomaly_score(re_x,re_adj,adj,x,mask,loss_fn,mode):
+    if mode=='A':
+        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
+        return torch.mean(S_scores,1)
+    if mode=='X':
+        A_scores=F.mse_loss(re_x[mask], x[mask], reduce=False)
+        return torch.mean(A_scores,1)
+    if mode=='AX': 
+        A_scores=F.mse_loss(re_x[mask], x[mask], reduce=False)
+        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
+        return 0.8*torch.mean(A_scores,1)+0.2*torch.mean(S_scores,1)
 
 def fixed_graph_evaluate(args,model,data,adj,mask):
     loss_fn = nn.MSELoss()
@@ -94,11 +114,12 @@ def fixed_graph_evaluate(args,model,data,adj,mask):
         
         loss_mask=mask.bool() & data['labels'].bool()
         #print(loss_mask.)
-        loss=Dom_loss(re_x,re_adj, adj, data['features'],loss_mask,loss_fn)
+        loss=Recon_loss(re_x,re_adj, adj, data['features'],loss_mask,loss_fn,GAE_mode)
         #print(recon[data['val_mask']].size())
-        A_scores=F.mse_loss(re_x[mask], data['features'][mask], reduce=False)
-        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
-        scores=torch.mean(A_scores,1)+torch.mean(S_scores,1)
+        scores=anomaly_score(re_x,re_adj, adj, data['features'],mask,loss_fn,GAE_mode)
+        # A_scores=F.mse_loss(re_x[mask], data['features'][mask], reduce=False)
+        # S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
+        # scores=torch.mean(A_scores,1)+torch.mean(S_scores,1)
 
         labels=labels.cpu().numpy()
         # print(labels.shape)

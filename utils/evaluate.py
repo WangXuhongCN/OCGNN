@@ -4,25 +4,19 @@ from optim.loss import loss_function,anomaly_score
 import numpy as np
 import torch.nn as nn
 
-def fixed_graph_evaluate(args,path,model, data_center,data,radius,mode='val'):
-    if mode=='test':
-        print(f'model loaded.')
-        model.load_state_dict(torch.load(path))
-        
+def fixed_graph_evaluate(args,path,model, data_center,data,radius,mask):
+
     model.eval()
     with torch.no_grad():
         outputs= model(data['g'],data['features'])  
 
-        if mode=='val':
-            labels = data['labels'][data['val_mask']]
-            loss_mask=data['val_mask'].bool() & data['labels'].bool()
-            #print(loss_mask.)
-            _,scores=anomaly_score(data_center,outputs,radius,data['val_mask'])
-            loss,_,_=loss_function(args.nu,data_center,outputs,radius,loss_mask)
+        labels = data['labels'][mask]
+        loss_mask=mask.bool() & data['labels'].bool()
+        #print(loss_mask.)
+        _,scores=anomaly_score(data_center,outputs,radius,mask)
+        loss,_,_=loss_function(args.nu,data_center,outputs,radius,loss_mask)
 
-        if mode=='test':
-            labels = data['labels'][data['test_mask']]
-            _,_,scores=loss_function(args.nu,data_center,outputs,radius,data['test_mask'])
+ 
         labels=labels.cpu().numpy()
         #dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()
@@ -36,10 +30,7 @@ def fixed_graph_evaluate(args,path,model, data_center,data,radius,mode='val'):
         precision=precision_score(labels,pred)
         f1=f1_score(labels,pred)
 
-    if mode=='val':
         return auc,ap,f1,acc,precision,recall,loss
-    if mode=='test':
-        return auc,ap,f1,acc,precision,recall
 
 def multi_graph_evaluate(args,path, model, data_center,dataloader,radius,mode='val'):
     '''

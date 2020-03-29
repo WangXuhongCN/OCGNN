@@ -62,7 +62,7 @@ def train(args,logger,data,model,path):
 
 
 
-        auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,'val')
+        auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,data['val_mask'])
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
                                             auc,f1, data['n_edges'] / np.mean(dur) / 1000))
@@ -70,13 +70,10 @@ def train(args,logger,data,model,path):
             if stopper.step(auc,loss.item(), model,epoch,checkpoints_path):   
                 break
 
-    #model_path=checkpoints_path+f'{epoch}+bestcheckpoint.pt'
+    print('loading model before testing.')
+    model.load_state_dict(torch.load(checkpoints_path))
 
-    if args.early_stop:
-        print(f'model loaded.')
-        model.load_state_dict(torch.load(checkpoints_path))
-
-    auc,ap,f1,acc,precision,recall = fixed_graph_evaluate(args,checkpoints_path,model, data_center,data,radius,'test')
+    auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path,model, data_center,data,radius,data['test_mask'])
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))

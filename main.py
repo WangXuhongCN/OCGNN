@@ -22,6 +22,10 @@ def main(args):
     logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
     logger=logging.getLogger('OCGNN')
 
+    
+    print('model:',args.module)
+    print('seed:',args.seed)
+
     if args.dataset in 'PROTEINS_full'+'ENZYMES'+'FRANKENSTEIN':
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
         model=init_model(args,input_dim)
@@ -56,7 +60,7 @@ if __name__ == '__main__':
     parser.add_argument("--seed", type=int, default=52,
             help="random seed, -1 means dont fix seed")
     parser.add_argument("--module", type=str, default='GraphSAGE',
-            help="GCN/GAT/GIN/GraphSAGE")
+            help="GCN/GAT/GIN/GraphSAGE/GAE")
     parser.add_argument('--n-worker', type=int,default=1,
             help='number of workers when dataloading')
     parser.add_argument('--batch-size', type=int,default=128,

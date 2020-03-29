@@ -1,0 +1,220 @@
+normal_class is 2
+----Data statistics------'
+      #Edges 10556
+      #Classes 7
+      #Train samples 490
+      #Val samples 245
+      #Test samples 409
+Epoch 00000 | Time(s) 2.8982 | Loss 5004.9491 | Val AUROC 0.4420 | Val loss 0.0500 | ETputs(KTEPS) 3.64
+model saved. loss=0.0500 AUC=0.4420
+Epoch 00001 | Time(s) 2.8982 | Loss 5004.4060 | Val AUROC 0.4439 | Val loss 0.0500 | ETputs(KTEPS) 3.64
+model saved. loss=0.0500 AUC=0.4439
+Epoch 00002 | Time(s) 2.8982 | Loss 5004.3590 | Val AUROC 0.4474 | Val loss 0.0500 | ETputs(KTEPS) 3.64
+model saved. loss=0.0500 AUC=0.4474
+Epoch 00003 | Time(s) 2.8982 | Loss 5004.3337 | Val AUROC 0.4499 | Val loss 0.0500 | ETputs(KTEPS) 3.64
+model saved. loss=0.0500 AUC=0.4499
+Epoch 00004 | Time(s) 2.8982 | Loss 5004.3058 | Val AUROC 0.4520 | Val loss 0.0500 | ETputs(KTEPS) 3.64
+model saved. loss=0.0500 AUC=0.4520
+Epoch 00005 | Time(s) 1.4541 | Loss 5004.2477 | Val AUROC 0.4529 | Val loss 0.0500 | ETputs(KTEPS) 7.26
+model saved. loss=0.0500 AUC=0.4529
+Epoch 00006 | Time(s) 1.4541 | Loss 5004.1888 | Val AUROC 0.4542 | Val loss 0.0500 | ETputs(KTEPS) 7.26
+model saved. loss=0.0500 AUC=0.4542
+Epoch 00007 | Time(s) 1.4541 | Loss 5004.1519 | Val AUROC 0.4543 | Val loss 0.0500 | ETputs(KTEPS) 7.26
+model saved. loss=0.0500 AUC=0.4543
+Epoch 00008 | Time(s) 1.4541 | Loss 5004.1374 | Val AUROC 0.4545 | Val loss 0.0500 | ETputs(KTEPS) 7.26
+model saved. loss=0.0500 AUC=0.4545
+Epoch 00009 | Time(s) 1.4541 | Loss 5004.1333 | Val AUROC 0.4545 | Val loss 0.0500 | ETputs(KTEPS) 7.26
+model saved. loss=0.0500 AUC=0.4545
+Epoch 00010 | Time(s) 0.9729 | Loss 5004.1318 | Val AUROC 0.4545 | Val loss 0.0500 | ETputs(KTEPS) 10.85
+model saved. loss=0.0500 AUC=0.4545
+Epoch 00011 | Time(s) 0.9729 | Loss 5004.1277 | Val AUROC 0.4553 | Val loss 0.0500 | ETputs(KTEPS) 10.85
+model saved. loss=0.0500 AUC=0.4553
+Epoch 00012 | Time(s) 0.9729 | Loss 5004.1214 | Val AUROC 0.4571 | Val loss 0.0500 | ETputs(KTEPS) 10.85
+model saved. loss=0.0500 AUC=0.4571
+Epoch 00013 | Time(s) 0.9729 | Loss 5004.1113 | Val AUROC 0.4593 | Val loss 0.0500 | ETputs(KTEPS) 10.85
+model saved. loss=0.0500 AUC=0.4593
+Epoch 00014 | Time(s) 0.9729 | Loss 5004.0979 | Val AUROC 0.4620 | Val loss 0.0500 | ETputs(KTEPS) 10.85
+model saved. loss=0.0500 AUC=0.4620
+Epoch 00015 | Time(s) 0.7322 | Loss 5004.0849 | Val AUROC 0.4633 | Val loss 0.0500 | ETputs(KTEPS) 14.42
+model saved. loss=0.0500 AUC=0.4633
+Epoch 00016 | Time(s) 0.7322 | Loss 5004.0737 | Val AUROC 0.4658 | Val loss 0.0500 | ETputs(KTEPS) 14.42
+model saved. loss=0.0500 AUC=0.4658
+Epoch 00017 | Time(s) 0.7322 | Loss 5004.0677 | Val AUROC 0.4670 | Val loss 0.0500 | ETputs(KTEPS) 14.42
+Epoch 00018 | Time(s) 0.7322 | Loss 5004.0659 | Val AUROC 0.4684 | Val loss 0.0500 | ETputs(KTEPS) 14.42
+Epoch 00019 | Time(s) 0.7322 | Loss 5004.0636 | Val AUROC 0.4694 | Val loss 0.0500 | ETputs(KTEPS) 14.42
+Epoch 00020 | Time(s) 0.5883 | Loss 5004.0621 | Val AUROC 0.4704 | Val loss 0.0500 | ETputs(KTEPS) 17.94
+Epoch 00021 | Time(s) 0.5883 | Loss 5004.0599 | Val AUROC 0.4712 | Val loss 0.0500 | ETputs(KTEPS) 17.94
+Epoch 00022 | Time(s) 0.5883 | Loss 5004.0580 | Val AUROC 0.4718 | Val loss 0.0500 | ETputs(KTEPS) 17.94
+Epoch 00023 | Time(s) 0.5883 | Loss 5004.0551 | Val AUROC 0.4730 | Val loss 0.0500 | ETputs(KTEPS) 17.94
+Epoch 00024 | Time(s) 0.5883 | Loss 5004.0521 | Val AUROC 0.4741 | Val loss 0.0500 | ETputs(KTEPS) 17.94
+Epoch 00025 | Time(s) 0.4919 | Loss 5004.0498 | Val AUROC 0.4752 | Val loss 0.0500 | ETputs(KTEPS) 21.46
+Epoch 00026 | Time(s) 0.4919 | Loss 5004.0476 | Val AUROC 0.4763 | Val loss 0.0500 | ETputs(KTEPS) 21.46
+Epoch 00027 | Time(s) 0.4919 | Loss 5004.0472 | Val AUROC 0.4777 | Val loss 0.0500 | ETputs(KTEPS) 21.46
+Epoch 00028 | Time(s) 0.4919 | Loss 5004.0450 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 21.46
+Epoch 00029 | Time(s) 0.4919 | Loss 5004.0446 | Val AUROC 0.4791 | Val loss 0.0500 | ETputs(KTEPS) 21.46
+Epoch 00030 | Time(s) 0.4230 | Loss 5004.0450 | Val AUROC 0.4795 | Val loss 0.0500 | ETputs(KTEPS) 24.95
+Epoch 00031 | Time(s) 0.4230 | Loss 5004.0446 | Val AUROC 0.4800 | Val loss 0.0500 | ETputs(KTEPS) 24.95
+Epoch 00032 | Time(s) 0.4230 | Loss 5004.0435 | Val AUROC 0.4804 | Val loss 0.0500 | ETputs(KTEPS) 24.95
+Epoch 00033 | Time(s) 0.4230 | Loss 5004.0428 | Val AUROC 0.4802 | Val loss 0.0500 | ETputs(KTEPS) 24.95
+Epoch 00034 | Time(s) 0.4230 | Loss 5004.0409 | Val AUROC 0.4804 | Val loss 0.0500 | ETputs(KTEPS) 24.95
+Epoch 00035 | Time(s) 0.3715 | Loss 5004.0398 | Val AUROC 0.4802 | Val loss 0.0500 | ETputs(KTEPS) 28.41
+Epoch 00036 | Time(s) 0.3715 | Loss 5004.0398 | Val AUROC 0.4808 | Val loss 0.0500 | ETputs(KTEPS) 28.41
+Epoch 00037 | Time(s) 0.3715 | Loss 5004.0394 | Val AUROC 0.4808 | Val loss 0.0500 | ETputs(KTEPS) 28.41
+Epoch 00038 | Time(s) 0.3715 | Loss 5004.0394 | Val AUROC 0.4807 | Val loss 0.0500 | ETputs(KTEPS) 28.41
+Epoch 00039 | Time(s) 0.3715 | Loss 5004.0390 | Val AUROC 0.4810 | Val loss 0.0500 | ETputs(KTEPS) 28.41
+Epoch 00040 | Time(s) 0.3314 | Loss 5004.0390 | Val AUROC 0.4810 | Val loss 0.0500 | ETputs(KTEPS) 31.85
+Epoch 00041 | Time(s) 0.3314 | Loss 5004.0375 | Val AUROC 0.4808 | Val loss 0.0500 | ETputs(KTEPS) 31.85
+Epoch 00042 | Time(s) 0.3314 | Loss 5004.0368 | Val AUROC 0.4808 | Val loss 0.0500 | ETputs(KTEPS) 31.85
+Epoch 00043 | Time(s) 0.3314 | Loss 5004.0368 | Val AUROC 0.4805 | Val loss 0.0500 | ETputs(KTEPS) 31.85
+Epoch 00044 | Time(s) 0.3314 | Loss 5004.0368 | Val AUROC 0.4806 | Val loss 0.0500 | ETputs(KTEPS) 31.85
+Epoch 00045 | Time(s) 0.2994 | Loss 5004.0368 | Val AUROC 0.4805 | Val loss 0.0500 | ETputs(KTEPS) 35.26
+Epoch 00046 | Time(s) 0.2994 | Loss 5004.0368 | Val AUROC 0.4803 | Val loss 0.0500 | ETputs(KTEPS) 35.26
+Epoch 00047 | Time(s) 0.2994 | Loss 5004.0364 | Val AUROC 0.4801 | Val loss 0.0500 | ETputs(KTEPS) 35.26
+Epoch 00048 | Time(s) 0.2994 | Loss 5004.0364 | Val AUROC 0.4799 | Val loss 0.0500 | ETputs(KTEPS) 35.26
+Epoch 00049 | Time(s) 0.2994 | Loss 5004.0361 | Val AUROC 0.4797 | Val loss 0.0500 | ETputs(KTEPS) 35.26
+Epoch 00050 | Time(s) 0.2732 | Loss 5004.0353 | Val AUROC 0.4797 | Val loss 0.0500 | ETputs(KTEPS) 38.65
+Epoch 00051 | Time(s) 0.2732 | Loss 5004.0361 | Val AUROC 0.4797 | Val loss 0.0500 | ETputs(KTEPS) 38.65
+Epoch 00052 | Time(s) 0.2732 | Loss 5004.0349 | Val AUROC 0.4796 | Val loss 0.0500 | ETputs(KTEPS) 38.65
+Epoch 00053 | Time(s) 0.2732 | Loss 5004.0349 | Val AUROC 0.4793 | Val loss 0.0500 | ETputs(KTEPS) 38.65
+Epoch 00054 | Time(s) 0.2732 | Loss 5004.0349 | Val AUROC 0.4790 | Val loss 0.0500 | ETputs(KTEPS) 38.65
+Epoch 00055 | Time(s) 0.2517 | Loss 5004.0349 | Val AUROC 0.4787 | Val loss 0.0500 | ETputs(KTEPS) 41.94
+Epoch 00056 | Time(s) 0.2517 | Loss 5004.0349 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 41.94
+Epoch 00057 | Time(s) 0.2517 | Loss 5004.0349 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 41.94
+Epoch 00058 | Time(s) 0.2517 | Loss 5004.0349 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 41.94
+Epoch 00059 | Time(s) 0.2517 | Loss 5004.0346 | Val AUROC 0.4785 | Val loss 0.0500 | ETputs(KTEPS) 41.94
+Epoch 00060 | Time(s) 0.2331 | Loss 5004.0346 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 45.29
+Epoch 00061 | Time(s) 0.2331 | Loss 5004.0346 | Val AUROC 0.4786 | Val loss 0.0500 | ETputs(KTEPS) 45.29
+Epoch 00062 | Time(s) 0.2331 | Loss 5004.0338 | Val AUROC 0.4788 | Val loss 0.0500 | ETputs(KTEPS) 45.29
+Epoch 00063 | Time(s) 0.2331 | Loss 5004.0338 | Val AUROC 0.4788 | Val loss 0.0500 | ETputs(KTEPS) 45.29
+Epoch 00064 | Time(s) 0.2331 | Loss 5004.0338 | Val AUROC 0.4787 | Val loss 0.0500 | ETputs(KTEPS) 45.29
+Epoch 00065 | Time(s) 0.2171 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 48.61
+Epoch 00066 | Time(s) 0.2171 | Loss 5004.0338 | Val AUROC 0.4790 | Val loss 0.0500 | ETputs(KTEPS) 48.61
+Epoch 00067 | Time(s) 0.2171 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 48.61
+Epoch 00068 | Time(s) 0.2171 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 48.61
+Epoch 00069 | Time(s) 0.2171 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 48.61
+Epoch 00070 | Time(s) 0.2033 | Loss 5004.0338 | Val AUROC 0.4788 | Val loss 0.0500 | ETputs(KTEPS) 51.91
+Epoch 00071 | Time(s) 0.2033 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 51.91
+model saved. loss=0.0500 AUC=0.4789
+Epoch 00072 | Time(s) 0.2033 | Loss 5004.0338 | Val AUROC 0.4788 | Val loss 0.0500 | ETputs(KTEPS) 51.91
+Epoch 00073 | Time(s) 0.2033 | Loss 5004.0338 | Val AUROC 0.4789 | Val loss 0.0500 | ETputs(KTEPS) 51.91
+Epoch 00074 | Time(s) 0.2033 | Loss 5004.0338 | Val AUROC 0.4790 | Val loss 0.0500 | ETputs(KTEPS) 51.91
+Epoch 00075 | Time(s) 0.1913 | Loss 5004.0334 | Val AUROC 0.4790 | Val loss 0.0500 | ETputs(KTEPS) 55.19
+Epoch 00076 | Time(s) 0.1913 | Loss 5004.0327 | Val AUROC 0.4791 | Val loss 0.0500 | ETputs(KTEPS) 55.19
+Epoch 00077 | Time(s) 0.1913 | Loss 5004.0323 | Val AUROC 0.4793 | Val loss 0.0500 | ETputs(KTEPS) 55.19
+Epoch 00078 | Time(s) 0.1913 | Loss 5004.0323 | Val AUROC 0.4797 | Val loss 0.0500 | ETputs(KTEPS) 55.19
+Epoch 00079 | Time(s) 0.1913 | Loss 5004.0323 | Val AUROC 0.4799 | Val loss 0.0500 | ETputs(KTEPS) 55.19
+Epoch 00080 | Time(s) 0.1806 | Loss 5004.0323 | Val AUROC 0.4799 | Val loss 0.0500 | ETputs(KTEPS) 58.44
+Epoch 00081 | Time(s) 0.1806 | Loss 5004.0323 | Val AUROC 0.4801 | Val loss 0.0500 | ETputs(KTEPS) 58.44
+Epoch 00082 | Time(s) 0.1806 | Loss 5004.0320 | Val AUROC 0.4804 | Val loss 0.0500 | ETputs(KTEPS) 58.44
+Epoch 00083 | Time(s) 0.1806 | Loss 5004.0312 | Val AUROC 0.4808 | Val loss 0.0500 | ETputs(KTEPS) 58.44
+Epoch 00084 | Time(s) 0.1806 | Loss 5004.0312 | Val AUROC 0.4809 | Val loss 0.0500 | ETputs(KTEPS) 58.44
+Epoch 00085 | Time(s) 0.1713 | Loss 5004.0312 | Val AUROC 0.4812 | Val loss 0.0500 | ETputs(KTEPS) 61.64
+Epoch 00086 | Time(s) 0.1713 | Loss 5004.0305 | Val AUROC 0.4814 | Val loss 0.0500 | ETputs(KTEPS) 61.64
+Epoch 00087 | Time(s) 0.1713 | Loss 5004.0305 | Val AUROC 0.4818 | Val loss 0.0500 | ETputs(KTEPS) 61.64
+Epoch 00088 | Time(s) 0.1713 | Loss 5004.0305 | Val AUROC 0.4822 | Val loss 0.0500 | ETputs(KTEPS) 61.64
+Epoch 00089 | Time(s) 0.1713 | Loss 5004.0293 | Val AUROC 0.4828 | Val loss 0.0500 | ETputs(KTEPS) 61.64
+Epoch 00090 | Time(s) 0.1629 | Loss 5004.0293 | Val AUROC 0.4834 | Val loss 0.0500 | ETputs(KTEPS) 64.80
+Epoch 00091 | Time(s) 0.1629 | Loss 5004.0290 | Val AUROC 0.4838 | Val loss 0.0500 | ETputs(KTEPS) 64.80
+Epoch 00092 | Time(s) 0.1629 | Loss 5004.0286 | Val AUROC 0.4847 | Val loss 0.0500 | ETputs(KTEPS) 64.80
+Epoch 00093 | Time(s) 0.1629 | Loss 5004.0275 | Val AUROC 0.4859 | Val loss 0.0500 | ETputs(KTEPS) 64.80
+Epoch 00094 | Time(s) 0.1629 | Loss 5004.0267 | Val AUROC 0.4870 | Val loss 0.0500 | ETputs(KTEPS) 64.80
+Epoch 00095 | Time(s) 0.1553 | Loss 5004.0267 | Val AUROC 0.4884 | Val loss 0.0500 | ETputs(KTEPS) 67.95
+Epoch 00096 | Time(s) 0.1553 | Loss 5004.0256 | Val AUROC 0.4901 | Val loss 0.0500 | ETputs(KTEPS) 67.95
+Epoch 00097 | Time(s) 0.1553 | Loss 5004.0245 | Val AUROC 0.4918 | Val loss 0.0500 | ETputs(KTEPS) 67.95
+Epoch 00098 | Time(s) 0.1553 | Loss 5004.0238 | Val AUROC 0.4936 | Val loss 0.0500 | ETputs(KTEPS) 67.95
+Epoch 00099 | Time(s) 0.1553 | Loss 5004.0219 | Val AUROC 0.4958 | Val loss 0.0500 | ETputs(KTEPS) 67.95
+Epoch 00100 | Time(s) 0.1486 | Loss 5004.0212 | Val AUROC 0.4979 | Val loss 0.0500 | ETputs(KTEPS) 71.04
+Epoch 00101 | Time(s) 0.1486 | Loss 5004.0189 | Val AUROC 0.5009 | Val loss 0.0500 | ETputs(KTEPS) 71.04
+Epoch 00102 | Time(s) 0.1486 | Loss 5004.0171 | Val AUROC 0.5034 | Val loss 0.0500 | ETputs(KTEPS) 71.04
+Epoch 00103 | Time(s) 0.1486 | Loss 5004.0156 | Val AUROC 0.5063 | Val loss 0.0500 | ETputs(KTEPS) 71.04
+Epoch 00104 | Time(s) 0.1486 | Loss 5004.0126 | Val AUROC 0.5102 | Val loss 0.0500 | ETputs(KTEPS) 71.04
+Epoch 00105 | Time(s) 0.1426 | Loss 5004.0092 | Val AUROC 0.5161 | Val loss 0.0500 | ETputs(KTEPS) 74.03
+Epoch 00106 | Time(s) 0.1426 | Loss 5004.0055 | Val AUROC 0.5213 | Val loss 0.0500 | ETputs(KTEPS) 74.03
+Epoch 00107 | Time(s) 0.1426 | Loss 5004.0018 | Val AUROC 0.5278 | Val loss 0.0500 | ETputs(KTEPS) 74.03
+Epoch 00108 | Time(s) 0.1426 | Loss 5003.9973 | Val AUROC 0.5338 | Val loss 0.0500 | ETputs(KTEPS) 74.03
+Epoch 00109 | Time(s) 0.1426 | Loss 5003.9914 | Val AUROC 0.5418 | Val loss 0.0500 | ETputs(KTEPS) 74.03
+Epoch 00110 | Time(s) 0.1376 | Loss 5003.9850 | Val AUROC 0.5529 | Val loss 0.0500 | ETputs(KTEPS) 76.71
+Epoch 00111 | Time(s) 0.1376 | Loss 5003.9772 | Val AUROC 0.5642 | Val loss 0.0500 | ETputs(KTEPS) 76.71
+Epoch 00112 | Time(s) 0.1376 | Loss 5003.9675 | Val AUROC 0.5766 | Val loss 0.0500 | ETputs(KTEPS) 76.71
+Epoch 00113 | Time(s) 0.1376 | Loss 5003.9556 | Val AUROC 0.5924 | Val loss 0.0500 | ETputs(KTEPS) 76.71
+Epoch 00114 | Time(s) 0.1376 | Loss 5003.9414 | Val AUROC 0.6129 | Val loss 0.0500 | ETputs(KTEPS) 76.71
+Epoch 00115 | Time(s) 0.1325 | Loss 5003.9243 | Val AUROC 0.6332 | Val loss 0.0500 | ETputs(KTEPS) 79.69
+Epoch 00116 | Time(s) 0.1325 | Loss 5003.9034 | Val AUROC 0.6581 | Val loss 0.0500 | ETputs(KTEPS) 79.69
+Epoch 00117 | Time(s) 0.1325 | Loss 5003.8766 | Val AUROC 0.6843 | Val loss 0.0500 | ETputs(KTEPS) 79.69
+Epoch 00118 | Time(s) 0.1325 | Loss 5003.8438 | Val AUROC 0.7073 | Val loss 0.0500 | ETputs(KTEPS) 79.69
+Epoch 00119 | Time(s) 0.1325 | Loss 5003.8021 | Val AUROC 0.7330 | Val loss 0.0500 | ETputs(KTEPS) 79.69
+Epoch 00120 | Time(s) 0.1277 | Loss 5003.7500 | Val AUROC 0.7577 | Val loss 0.0500 | ETputs(KTEPS) 82.66
+Epoch 00121 | Time(s) 0.1277 | Loss 5003.6814 | Val AUROC 0.7817 | Val loss 0.0501 | ETputs(KTEPS) 82.66
+Epoch 00122 | Time(s) 0.1277 | Loss 5003.5920 | Val AUROC 0.8040 | Val loss 0.0501 | ETputs(KTEPS) 82.66
+Epoch 00123 | Time(s) 0.1277 | Loss 5003.4724 | Val AUROC 0.8206 | Val loss 0.0501 | ETputs(KTEPS) 82.66
+Epoch 00124 | Time(s) 0.1277 | Loss 5003.3141 | Val AUROC 0.8377 | Val loss 0.0501 | ETputs(KTEPS) 82.66
+Epoch 00125 | Time(s) 0.1233 | Loss 5003.1114 | Val AUROC 0.8523 | Val loss 0.0501 | ETputs(KTEPS) 85.61
+Epoch 00126 | Time(s) 0.1233 | Loss 5002.8458 | Val AUROC 0.8658 | Val loss 0.0501 | ETputs(KTEPS) 85.61
+Epoch 00127 | Time(s) 0.1233 | Loss 5002.5024 | Val AUROC 0.8920 | Val loss 0.0501 | ETputs(KTEPS) 85.61
+Epoch 00128 | Time(s) 0.1233 | Loss 5002.0620 | Val AUROC 0.9002 | Val loss 0.0501 | ETputs(KTEPS) 85.61
+Epoch 00129 | Time(s) 0.1233 | Loss 5001.4965 | Val AUROC 0.9340 | Val loss 0.0501 | ETputs(KTEPS) 85.61
+Epoch 00130 | Time(s) 0.1199 | Loss 5000.7507 | Val AUROC 0.9432 | Val loss 0.0501 | ETputs(KTEPS) 88.06
+Epoch 00131 | Time(s) 0.1199 | Loss 4999.7456 | Val AUROC 0.9544 | Val loss 0.0502 | ETputs(KTEPS) 88.06
+Epoch 00132 | Time(s) 0.1199 | Loss 4998.4153 | Val AUROC 0.9603 | Val loss 0.0502 | ETputs(KTEPS) 88.06
+Epoch 00133 | Time(s) 0.1199 | Loss 4996.7062 | Val AUROC 0.9623 | Val loss 0.0502 | ETputs(KTEPS) 88.06
+Epoch 00134 | Time(s) 0.1199 | Loss 4994.5202 | Val AUROC 0.9630 | Val loss 0.0503 | ETputs(KTEPS) 88.06
+Epoch 00135 | Time(s) 0.1163 | Loss 4991.6677 | Val AUROC 0.9637 | Val loss 0.0504 | ETputs(KTEPS) 90.78
+Epoch 00136 | Time(s) 0.1163 | Loss 4988.0423 | Val AUROC 0.9641 | Val loss 0.0504 | ETputs(KTEPS) 90.78
+Epoch 00137 | Time(s) 0.1163 | Loss 4983.4348 | Val AUROC 0.9637 | Val loss 0.0506 | ETputs(KTEPS) 90.78
+Epoch 00138 | Time(s) 0.1163 | Loss 4977.6267 | Val AUROC 0.9647 | Val loss 0.0507 | ETputs(KTEPS) 90.78
+Epoch 00139 | Time(s) 0.1163 | Loss 4970.3453 | Val AUROC 0.9647 | Val loss 0.0509 | ETputs(KTEPS) 90.78
+Epoch 00140 | Time(s) 0.1128 | Loss 4961.2187 | Val AUROC 0.9649 | Val loss 0.0512 | ETputs(KTEPS) 93.58
+Epoch 00141 | Time(s) 0.1128 | Loss 4949.7832 | Val AUROC 0.9650 | Val loss 0.0514 | ETputs(KTEPS) 93.58
+Epoch 00142 | Time(s) 0.1128 | Loss 4935.4959 | Val AUROC 0.9649 | Val loss 0.0519 | ETputs(KTEPS) 93.58
+Epoch 00143 | Time(s) 0.1128 | Loss 4917.7025 | Val AUROC 0.9647 | Val loss 0.0523 | ETputs(KTEPS) 93.58
+Epoch 00144 | Time(s) 0.1128 | Loss 4895.6368 | Val AUROC 0.9649 | Val loss 0.0530 | ETputs(KTEPS) 93.58
+Epoch 00145 | Time(s) 0.1095 | Loss 4868.7909 | Val AUROC 0.9649 | Val loss 0.0539 | ETputs(KTEPS) 96.36
+Epoch 00146 | Time(s) 0.1095 | Loss 4836.7463 | Val AUROC 0.9652 | Val loss 0.0548 | ETputs(KTEPS) 96.36
+Epoch 00147 | Time(s) 0.1095 | Loss 4799.0941 | Val AUROC 0.9649 | Val loss 0.0565 | ETputs(KTEPS) 96.36
+Epoch 00148 | Time(s) 0.1095 | Loss 4755.9943 | Val AUROC 0.9653 | Val loss 0.0577 | ETputs(KTEPS) 96.36
+Epoch 00149 | Time(s) 0.1095 | Loss 4707.8699 | Val AUROC 0.9655 | Val loss 0.0601 | ETputs(KTEPS) 96.36
+Epoch 00150 | Time(s) 0.1065 | Loss 4655.5579 | Val AUROC 0.9658 | Val loss 0.0625 | ETputs(KTEPS) 99.08
+Epoch 00151 | Time(s) 0.1065 | Loss 4600.0596 | Val AUROC 0.9665 | Val loss 0.0653 | ETputs(KTEPS) 99.08
+Warning: EarlyStopping soon: 80 out of 100
+Epoch 00152 | Time(s) 0.1065 | Loss 4543.5391 | Val AUROC 0.9672 | Val loss 0.0699 | ETputs(KTEPS) 99.08
+Warning: EarlyStopping soon: 81 out of 100
+Epoch 00153 | Time(s) 0.1065 | Loss 4489.4833 | Val AUROC 0.9677 | Val loss 0.0725 | ETputs(KTEPS) 99.08
+Warning: EarlyStopping soon: 82 out of 100
+Epoch 00154 | Time(s) 0.1065 | Loss 4441.2315 | Val AUROC 0.9685 | Val loss 0.0791 | ETputs(KTEPS) 99.08
+Warning: EarlyStopping soon: 83 out of 100
+Epoch 00155 | Time(s) 0.1037 | Loss 4401.0207 | Val AUROC 0.9685 | Val loss 0.0815 | ETputs(KTEPS) 101.84
+Warning: EarlyStopping soon: 84 out of 100
+Epoch 00156 | Time(s) 0.1037 | Loss 4367.7464 | Val AUROC 0.9691 | Val loss 0.0868 | ETputs(KTEPS) 101.84
+Warning: EarlyStopping soon: 85 out of 100
+Epoch 00157 | Time(s) 0.1037 | Loss 4341.0700 | Val AUROC 0.9699 | Val loss 0.0919 | ETputs(KTEPS) 101.84
+Warning: EarlyStopping soon: 86 out of 100
+Epoch 00158 | Time(s) 0.1037 | Loss 4319.5933 | Val AUROC 0.9704 | Val loss 0.0936 | ETputs(KTEPS) 101.84
+Warning: EarlyStopping soon: 87 out of 100
+Epoch 00159 | Time(s) 0.1037 | Loss 4298.4609 | Val AUROC 0.9703 | Val loss 0.0981 | ETputs(KTEPS) 101.84
+Warning: EarlyStopping soon: 88 out of 100
+Epoch 00160 | Time(s) 0.1010 | Loss 4273.5327 | Val AUROC 0.9697 | Val loss 0.1003 | ETputs(KTEPS) 104.49
+Warning: EarlyStopping soon: 89 out of 100
+Epoch 00161 | Time(s) 0.1010 | Loss 4244.7828 | Val AUROC 0.9698 | Val loss 0.1006 | ETputs(KTEPS) 104.49
+Warning: EarlyStopping soon: 90 out of 100
+Epoch 00162 | Time(s) 0.1010 | Loss 4211.4671 | Val AUROC 0.9695 | Val loss 0.1029 | ETputs(KTEPS) 104.49
+Warning: EarlyStopping soon: 91 out of 100
+Epoch 00163 | Time(s) 0.1010 | Loss 4172.9707 | Val AUROC 0.9697 | Val loss 0.1035 | ETputs(KTEPS) 104.49
+Warning: EarlyStopping soon: 92 out of 100
+Epoch 00164 | Time(s) 0.1010 | Loss 4132.6463 | Val AUROC 0.9697 | Val loss 0.1026 | ETputs(KTEPS) 104.49
+Warning: EarlyStopping soon: 93 out of 100
+Epoch 00165 | Time(s) 0.0984 | Loss 4092.3797 | Val AUROC 0.9686 | Val loss 0.1038 | ETputs(KTEPS) 107.30
+Warning: EarlyStopping soon: 94 out of 100
+Epoch 00166 | Time(s) 0.0984 | Loss 4053.4142 | Val AUROC 0.9673 | Val loss 0.1039 | ETputs(KTEPS) 107.30
+Warning: EarlyStopping soon: 95 out of 100
+Epoch 00167 | Time(s) 0.0984 | Loss 4017.8884 | Val AUROC 0.9662 | Val loss 0.1029 | ETputs(KTEPS) 107.30
+Warning: EarlyStopping soon: 96 out of 100
+Epoch 00168 | Time(s) 0.0984 | Loss 3984.8723 | Val AUROC 0.9651 | Val loss 0.1041 | ETputs(KTEPS) 107.30
+Warning: EarlyStopping soon: 97 out of 100
+Epoch 00169 | Time(s) 0.0984 | Loss 3953.2740 | Val AUROC 0.9635 | Val loss 0.1048 | ETputs(KTEPS) 107.30
+Warning: EarlyStopping soon: 98 out of 100
+Epoch 00170 | Time(s) 0.0962 | Loss 3922.7042 | Val AUROC 0.9613 | Val loss 0.1048 | ETputs(KTEPS) 109.75
+Warning: EarlyStopping soon: 99 out of 100
+Epoch 00171 | Time(s) 0.0962 | Loss 3891.6979 | Val AUROC 0.9598 | Val loss 0.1071 | ETputs(KTEPS) 109.75
+Warning: EarlyStopping soon: 100 out of 100
+loading model before testing.
+Test AUROC 0.5675 | Test AUPRC 0.5382
