@@ -8,6 +8,7 @@ def fixed_graph_evaluate(args,path,model, data_center,data,radius,mode='val'):
     if mode=='test':
         print(f'model loaded.')
         model.load_state_dict(torch.load(path))
+        
     model.eval()
     with torch.no_grad():
         outputs= model(data['g'],data['features'])  

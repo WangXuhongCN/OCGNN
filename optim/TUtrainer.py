@@ -84,7 +84,7 @@ def train(args, logger,dataset, model, val_dataset=None,path=None):
             #nn.utils.clip_grad_norm_(model.parameters(), 2.0)
             optimizer.step()
 
-            radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
+            #radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
             print('RRR',radius.data)
             print("Epoch {:05d},loss {:.4f} with {}-th batch time(s) {:.4f}".format(
             epoch, loss.item(), batch_idx, computation_time))

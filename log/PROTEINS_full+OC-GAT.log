@@ -73,3 +73,6 @@
 2020-03-28 11:24:25,410-OCGNN-INFO-Start training
 2020-03-28 11:24:25,410-OCGNN-INFO-dropout:0.5, nu:0.2,seed:52,lr:0.001,self-loop:True,norm:False
 2020-03-28 11:24:25,411-OCGNN-INFO-n-epochs:10000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-28 13:10:00,693-OCGNN-INFO-Start training
+2020-03-28 13:10:00,694-OCGNN-INFO-dropout:0.5, nu:0.2,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-28 13:10:00,694-OCGNN-INFO-n-epochs:10000, n-hidden:32,n-layers:2,weight-decay:0.0005

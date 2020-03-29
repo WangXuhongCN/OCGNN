@@ -2,7 +2,7 @@ import argparse
 from dgl.data import register_data_args
 import logging
 import fire
-from optim import trainer, TUtrainer
+from optim import trainer, TUtrainer, AEtrainer
 from optim.loss import loss_function,init_center
 from datasets import dataloader,TUloader
 from networks.init import init_model
@@ -38,7 +38,10 @@ def main(args):
     else:  
         data=dataloader.loader(args)
         model=init_model(args,data['input_dim'])
-        model=trainer.train(args,logger,data,model,checkpoints_path)
+        if args.module != 'GAE':
+            model=trainer.train(args,logger,data,model,checkpoints_path)
+        else:
+            model=AEtrainer.train(args,logger,data,model,checkpoints_path)
 
 
 if __name__ == '__main__':
@@ -70,7 +73,7 @@ if __name__ == '__main__':
             help="number of hidden gnn layers")
     parser.add_argument("--weight-decay", type=float, default=5e-4,
             help="Weight for L2 loss")
-    parser.add_argument('--early-stop', action='store_true', default=True,
+    parser.add_argument('--early-stop', action='store_true', default=False,
                         help="indicates whether to use early stop or not")
     parser.add_argument("--self-loop", action='store_true',
             help="graph self-loop (default=False)")

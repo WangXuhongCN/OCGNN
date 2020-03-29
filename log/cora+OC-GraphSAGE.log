@@ -268,3 +268,9 @@
 2020-03-26 21:27:50,294-OCGNN-INFO-Test f1:0.6542,acc:0.5012,pre:0.5,recall:0.9461
 2020-03-26 21:27:50,294-OCGNN-INFO-
 
+2020-03-28 13:05:52,377-OCGNN-INFO-Start training
+2020-03-28 13:05:52,397-OCGNN-INFO-dropout:0.5, nu:0.2,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-28 13:05:52,397-OCGNN-INFO-n-epochs:4000, n-hidden:32,n-layers:2,weight-decay:0.0005
+2020-03-29 20:39:56,119-OCGNN-INFO-Start training
+2020-03-29 20:39:56,125-OCGNN-INFO-dropout:0.5, nu:0.2,seed:52,lr:0.001,self-loop:True,norm:False
+2020-03-29 20:39:56,135-OCGNN-INFO-n-epochs:1000, n-hidden:32,n-layers:2,weight-decay:0.0005

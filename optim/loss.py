@@ -2,16 +2,12 @@ import torch
 import numpy as np
 import torch.nn.functional as F
     
-def loss_function(nu,data_center,outputs,radius,mask=None):
-    # print('outputs mean',outputs.mean())
-    # print('outputs std',outputs.std())
+def loss_function(nu,data_center,outputs,radius=0,mask=None):
     dist,scores=anomaly_score(data_center,outputs,radius,mask)
-    # print('dist mean',dist.mean())
-    # print('dist std',dist.std())
     loss = radius ** 2 + (1 / nu) * torch.mean(torch.max(torch.zeros_like(scores), scores))
     return loss,dist,scores
 
-def anomaly_score(data_center,outputs,radius,mask):
+def anomaly_score(data_center,outputs,radius=0,mask= None):
     if mask == None:
         dist = torch.sum((outputs - data_center) ** 2, dim=1)
     else:

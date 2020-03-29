@@ -1,8 +1,10 @@
 import torch.nn.functional as F
 from networks.GCN import GCN
 from networks.GAT import GAT
+from networks.GAE import GAE
 from networks.GIN import GIN
 from networks.GraphSAGE import GraphSAGE
+
 
 def init_model(args,input_dim):
     # create GCN model
@@ -45,7 +47,14 @@ def init_model(args,input_dim):
                     learn_eps=False, 
                     graph_pooling_type="sum",
                     neighbor_pooling_type="sum")
-
+    if args.module== 'GAE':
+        model = GAE(None,
+                input_dim,
+                args.n_hidden*2,
+                args.n_hidden,
+                args.n_layers,
+                F.relu,
+                args.dropout)
 
     if args.gpu < 0:
         cuda = False
@@ -56,4 +65,3 @@ def init_model(args,input_dim):
         model.cuda()
 
     return model
-    

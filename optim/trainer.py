@@ -58,7 +58,7 @@ def train(args,logger,data,model,path):
 
         if epoch%5 == 0:
             dur.append(time.time() - t0)
-            radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
+            #radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
 
 
 
@@ -76,7 +76,7 @@ def train(args,logger,data,model,path):
         print(f'model loaded.')
         model.load_state_dict(torch.load(checkpoints_path))
 
-    auc,ap,f1,acc,precision,recall,_ = fixed_graph_evaluate(args,model, data_center,data,radius,'test')
+    auc,ap,f1,acc,precision,recall = fixed_graph_evaluate(args,checkpoints_path,model, data_center,data,radius,'test')
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
