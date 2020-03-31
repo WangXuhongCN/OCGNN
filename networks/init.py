@@ -24,7 +24,7 @@ def init_model(args,input_dim):
                 args.n_layers,
                 F.relu,
                 args.dropout,
-                aggregator_type='gcn') #mean,pool,lstm,gcn 使用pool做多图学习有大问题阿
+                aggregator_type='pool') #mean,pool,lstm,gcn 使用pool做多图学习有大问题阿
     if args.module== 'GAT':
         model = GAT(None,
                 args.n_layers,
@@ -50,11 +50,11 @@ def init_model(args,input_dim):
     if args.module== 'GAE':
         model = GAE(None,
                 input_dim,
-                args.n_hidden*2,
-                args.n_hidden,
-                args.n_layers,
-                F.relu,
-                args.dropout)
+                n_hidden=args.n_hidden*2,
+                n_classes=args.n_hidden,
+                n_layers=args.n_layers,
+                activation=F.relu,
+                dropout=args.dropout)
 
     if args.gpu < 0:
         cuda = False

@@ -1,8 +1,0 @@
-  File "main.py", line 26
-    print('model:',args.module)
-                              ^
-TabError: inconsistent use of tabs and spaces in indentation
-  File "main.py", line 26
-    print('model:',args.module)
-                              ^
-TabError: inconsistent use of tabs and spaces in indentation

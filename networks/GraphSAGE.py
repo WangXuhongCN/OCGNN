@@ -26,6 +26,7 @@ class GraphSAGE(nn.Module):
         # output layer
         self.layers.append(SAGEConv(n_hidden, n_classes, aggregator_type, feat_drop=dropout, bias=True, activation=None)) # activation None
 
+        
     def forward(self, g, features):
         h = features
         for layer in self.layers:

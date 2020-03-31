@@ -12,7 +12,7 @@ from optim.loss import EarlyStopping
 
 #choose mode of GAE, A means kipf's GAE, X means AE with considering network structure, AX means Ding's Dominant model.
 # GAE_mode can be selected form 'AX', 'A' or 'X'.
-GAE_mode='AX'
+GAE_mode='A'
 
 
 def train(args,logger,data,model,path):
@@ -70,15 +70,18 @@ def train(args,logger,data,model,path):
             if stopper.step(auc,val_loss.item(), model,epoch,checkpoints_path):   
                 break
 
-    print('loading model before testing.')
-    model.load_state_dict(torch.load(checkpoints_path))
+    if args.early_stop:
+        print('loading model before testing.')
+        model.load_state_dict(torch.load(checkpoints_path))
 
+        #if epoch%100 == 0:
     auc,ap,_ = fixed_graph_evaluate(args,model,data,adj,data['test_mask'])
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
     #print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-    # logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
-    # logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-    # logger.info('\n')
+    logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
+    #logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    logger.info('\n')
+
     return model
 
 def Recon_loss(re_x,re_adj,adj,x,mask,loss_fn,mode):
@@ -88,19 +91,19 @@ def Recon_loss(re_x,re_adj,adj,x,mask,loss_fn,mode):
     if mode=='X':
         return loss_fn(re_x[mask], x[mask]) 
     if mode=='AX':     
-        return 0.8*loss_fn(re_x[mask], x[mask]) + 0.2*loss_fn(re_adj[mask], adj[mask])
+        return 0.5*loss_fn(re_x[mask], x[mask]) + 0.5*loss_fn(re_adj[mask], adj[mask])
 
 def anomaly_score(re_x,re_adj,adj,x,mask,loss_fn,mode):
     if mode=='A':
-        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
+        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduction='none')
         return torch.mean(S_scores,1)
     if mode=='X':
-        A_scores=F.mse_loss(re_x[mask], x[mask], reduce=False)
+        A_scores=F.mse_loss(re_x[mask], x[mask], reduction='none')
         return torch.mean(A_scores,1)
     if mode=='AX': 
-        A_scores=F.mse_loss(re_x[mask], x[mask], reduce=False)
-        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
-        return 0.8*torch.mean(A_scores,1)+0.2*torch.mean(S_scores,1)
+        A_scores=F.mse_loss(re_x[mask], x[mask], reduction='none')
+        S_scores=F.mse_loss(re_adj[mask], adj[mask], reduction='none')
+        return 0.5*torch.mean(A_scores,1)+0.5*torch.mean(S_scores,1)
 
 def fixed_graph_evaluate(args,model,data,adj,mask):
     loss_fn = nn.MSELoss()
@@ -117,8 +120,8 @@ def fixed_graph_evaluate(args,model,data,adj,mask):
         loss=Recon_loss(re_x,re_adj, adj, data['features'],loss_mask,loss_fn,GAE_mode)
         #print(recon[data['val_mask']].size())
         scores=anomaly_score(re_x,re_adj, adj, data['features'],mask,loss_fn,GAE_mode)
-        # A_scores=F.mse_loss(re_x[mask], data['features'][mask], reduce=False)
-        # S_scores=F.mse_loss(re_adj[mask], adj[mask], reduce=False)
+        # A_scores=F.mse_loss(re_x[mask], data['features'][mask], reduction='none')
+        # S_scores=F.mse_loss(re_adj[mask], adj[mask], reduction='none')
         # scores=torch.mean(A_scores,1)+torch.mean(S_scores,1)
 
         labels=labels.cpu().numpy()

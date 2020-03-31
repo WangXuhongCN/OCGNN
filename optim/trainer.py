@@ -49,6 +49,8 @@ def train(args,logger,data,model,path):
         # forward
 
         outputs= model(input_g,input_feat)
+        print('model:',args.module)
+        print('output size:',outputs.size())
         
         loss,dist,_=loss_function(args.nu, data_center,outputs,radius,data['train_mask'])
 
@@ -60,18 +62,17 @@ def train(args,logger,data,model,path):
             dur.append(time.time() - t0)
             #radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
 
-
-
-        auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,data['val_mask'])
-        print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val F1 {:.4f} | "
+        
+        auc,ap,f1,acc,precision,recall,val_loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,data['val_mask'])
+        print("Epoch {:05d} | Time(s) {:.4f} | Train Loss {:.4f} | Val Loss {:.4f} | Val AUROC {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
-                                            auc,f1, data['n_edges'] / np.mean(dur) / 1000))
+                                            val_loss.item()*100000, auc, data['n_edges'] / np.mean(dur) / 1000))
         if args.early_stop:
-            if stopper.step(auc,loss.item(), model,epoch,checkpoints_path):   
+            if stopper.step(auc,val_loss.item(), model,epoch,checkpoints_path):   
                 break
-
-    print('loading model before testing.')
-    model.load_state_dict(torch.load(checkpoints_path))
+    if args.early_stop:
+        print('loading model before testing.')
+        model.load_state_dict(torch.load(checkpoints_path))
 
     auc,ap,f1,acc,precision,recall,loss = fixed_graph_evaluate(args,checkpoints_path,model, data_center,data,radius,data['test_mask'])
     print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))

@@ -23,8 +23,8 @@ def main(args):
     logger=logging.getLogger('OCGNN')
 
     
-    print('model:',args.module)
-    print('seed:',args.seed)
+#     print('model:',args.module)
+#     print('seed:',args.seed)
 
     if args.dataset in 'PROTEINS_full'+'ENZYMES'+'FRANKENSTEIN':
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
@@ -83,16 +83,20 @@ if __name__ == '__main__':
             help="graph self-loop (default=False)")
     parser.add_argument("--norm", action='store_true',
             help="graph normalization (default=False)")
-    parser.set_defaults(self_loop=False)
+    parser.set_defaults(self_loop=True)
     parser.set_defaults(norm=False)
     args = parser.parse_args()
     if args.module=='GCN':
-        args.self_loop=True
+        #args.self_loop=True
         args.norm=True
-    if args.module=='GAT':
-        args.self_loop=True
-    if args.module=='GraphSAGE':
-        args.self_loop=True
+    if args.module=='GAE':
+        args.lr=0.005
+        args.dropout=0.
+        args.weight_decay=0.
+        # args.n_hidden=32
+    #     args.self_loop=True
+    # if args.module=='GraphSAGE':
+    #     args.self_loop=True
 
     if args.dataset in ('citeseer' + 'reddit'):
         args.normal_class=3
