@@ -3,19 +3,24 @@ import torch
 from optim.loss import loss_function,anomaly_score
 import numpy as np
 import torch.nn as nn
+import time
 
 def fixed_graph_evaluate(args,path,model, data_center,data,radius,mask):
 
     model.eval()
     with torch.no_grad():
-        outputs= model(data['g'],data['features'])  
-
         labels = data['labels'][mask]
         loss_mask=mask.bool() & data['labels'].bool()
+
+        #test_t0 = time.time()
+        outputs= model(data['g'],data['features'])  
+
+
         #print(loss_mask.)
         _,scores=anomaly_score(data_center,outputs,radius,mask)
+        #test_dur = time.time()-test_t0
         loss,_,_=loss_function(args.nu,data_center,outputs,radius,loss_mask)
-
+        #print("Test Time {:.4f}".format(test_dur))
  
         labels=labels.cpu().numpy()
         #dist=dist.cpu().numpy()

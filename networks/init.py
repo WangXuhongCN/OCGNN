@@ -64,4 +64,9 @@ def init_model(args,input_dim):
     if cuda:
         model.cuda()
 
+    print(f'Parameter number of {args.module} Net is: {count_parameters(model)}')
+
     return model
+
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)

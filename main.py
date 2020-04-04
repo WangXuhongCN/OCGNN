@@ -90,7 +90,7 @@ if __name__ == '__main__':
         #args.self_loop=True
         args.norm=True
     if args.module=='GAE':
-        args.lr=0.005
+        args.lr=0.002
         args.dropout=0.
         args.weight_decay=0.
         # args.n_hidden=32

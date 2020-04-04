@@ -12,7 +12,7 @@ from optim.loss import EarlyStopping
 
 #choose mode of GAE, A means kipf's GAE, X means AE with considering network structure, AX means Ding's Dominant model.
 # GAE_mode can be selected form 'AX', 'A' or 'X'.
-GAE_mode='A'
+GAE_mode='AX'
 
 
 def train(args,logger,data,model,path):
@@ -28,7 +28,7 @@ def train(args,logger,data,model,path):
 
     logger.info(f'n-epochs:{args.n_epochs}, n-hidden:{args.n_hidden},n-layers:{args.n_layers},weight-decay:{args.weight_decay}')
 
-    optimizer = torch.optim.AdamW(model.parameters(),
+    optimizer = torch.optim.Adam(model.parameters(),
                                  lr=args.lr,
                                  weight_decay=args.weight_decay)
     if args.early_stop:
@@ -42,27 +42,38 @@ def train(args,logger,data,model,path):
 
     dur = []
     model.train()
+
+    #创立矩阵以存储结果曲线
+    arr_epoch=np.arange(args.n_epochs)
+    arr_loss=np.zeros(args.n_epochs)
+    arr_valauc=np.zeros(args.n_epochs)
+    arr_testauc=np.zeros(args.n_epochs)
+
     for epoch in range(args.n_epochs):
         #model.train()
-        if epoch %5 == 0:
-            t0 = time.time()
+        #if epoch %5 == 0:
+        t0 = time.time()
         # forward
 
         z,re_x,re_adj= model(data['g'],data['features'])
 
         loss=Recon_loss(re_x,re_adj,adj,data['features'],data['train_mask'],loss_fn,GAE_mode)
-        #loss,dist,_=loss_fn(args.nu, data_center,outputs,radius,data['train_mask'])
 
-
+        #保存训练loss
+        arr_loss[epoch]=loss.item()
+        #
 
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
-        if epoch%5 == 0:
-            dur.append(time.time() - t0)
+        if epoch >= 3:
+            dur=time.time() - t0
         
         auc,ap,val_loss=fixed_graph_evaluate(args,model,data,adj,data['val_mask'])
+        #保存验证集AUC
+        arr_valauc[epoch]=auc
+        #保存验证集AUC
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Val AUROC {:.4f} | Val loss {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
                                             auc,val_loss, data['n_edges'] / np.mean(dur) / 1000))
@@ -75,12 +86,19 @@ def train(args,logger,data,model,path):
         model.load_state_dict(torch.load(checkpoints_path))
 
         #if epoch%100 == 0:
+    
     auc,ap,_ = fixed_graph_evaluate(args,model,data,adj,data['test_mask'])
-    print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
+    test_dur=0
+    #保存测试集AUC
+    arr_testauc[epoch]=auc
+    #保存测试集AUC
+    print("Test Time {:.4f} | Test AUROC {:.4f} | Test AUPRC {:.4f}".format(test_dur,auc,ap))
     #print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-    logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
+    #logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
     #logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
-    logger.info('\n')
+    #logger.info('\n')
+
+    #np.savez('Dom3.npz',epoch=arr_epoch,loss=arr_loss,valauc=arr_valauc,testauc=arr_testauc)
 
     return model
 
@@ -110,16 +128,19 @@ def fixed_graph_evaluate(args,model,data,adj,mask):
 
     model.eval()
     with torch.no_grad():
-        
-        z,re_x,re_adj= model(data['g'],data['features'])
-
         labels = data['labels'][mask]
         
         loss_mask=mask.bool() & data['labels'].bool()
-        #print(loss_mask.)
+
+        #test_t0=time.time()
+        z,re_x,re_adj= model(data['g'],data['features'])
+
         loss=Recon_loss(re_x,re_adj, adj, data['features'],loss_mask,loss_fn,GAE_mode)
+        #test_dur = time.time()-test_t0
+        #print("Test Time {:.4f}".format(test_dur))
         #print(recon[data['val_mask']].size())
         scores=anomaly_score(re_x,re_adj, adj, data['features'],mask,loss_fn,GAE_mode)
+        
         # A_scores=F.mse_loss(re_x[mask], data['features'][mask], reduction='none')
         # S_scores=F.mse_loss(re_adj[mask], adj[mask], reduction='none')
         # scores=torch.mean(A_scores,1)+torch.mean(S_scores,1)

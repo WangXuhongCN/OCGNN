@@ -27,7 +27,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 #我加的
-checkpoints
+#checkpoints
 #
 # PyInstaller
 #  Usually these files are written by a python script from a template
