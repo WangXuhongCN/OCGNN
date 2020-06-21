@@ -1,7 +1,8 @@
 import argparse
+import torch
 from dgl.data import register_data_args
 import logging
-import fire
+#import fire
 from optim import trainer, TUtrainer, AEtrainer
 from optim.loss import loss_function,init_center
 from datasets import dataloader,TUloader
@@ -22,7 +23,7 @@ def main(args):
     logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
     logger=logging.getLogger('OCGNN')
 
-    
+
 #     print('model:',args.module)
 #     print('seed:',args.seed)
 
@@ -30,16 +31,16 @@ def main(args):
         train_loader, val_loader, test_loader, input_dim, label_dim=TUloader.loader(args)
         model=init_model(args,input_dim)
         model=TUtrainer.train(args,logger,train_loader,model,val_dataset=val_loader,path=checkpoints_path)
-        # auc,ap,f1,acc,precision,recall,_= multi_graph_evaluate(args,checkpoints_path, 
-        #     model, data_center,test_loader,radius,mode='test') 
-        
+        # auc,ap,f1,acc,precision,recall,_= multi_graph_evaluate(args,checkpoints_path,
+        #     model, data_center,test_loader,radius,mode='test')
+
         # torch.cuda.empty_cache()
         # print("Test AUROC {:.4f} | Test AUPRC {:.4f}".format(auc,ap))
         # print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
         # logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
         # logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
         # logger.info('\n')
-    else:  
+    else:
         data=dataloader.loader(args)
         model=init_model(args,data['input_dim'])
         if args.module != 'GAE':
@@ -103,6 +104,7 @@ if __name__ == '__main__':
     if args.dataset in ('cora' + 'pubmed'):
         args.normal_class=2
     if args.dataset in 'TU_PROTEINS_full':
-        args.normal_class=0    
+        args.normal_class=0
 
-    fire.Fire(main(args))
+    #fire.Fire(main(args))
+    main(args)
