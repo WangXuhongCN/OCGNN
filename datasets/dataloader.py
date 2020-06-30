@@ -77,7 +77,7 @@ def loader(args):
 def emb_dataloader(args):
     # load and preprocess dataset
     data = load_data(args)
-    normal_class=get_normal_class(args)
+    normal_class=args.normal_class
     labels,train_mask,val_mask,test_mask=one_class_processing(data,normal_class,args)
 
     features = torch.FloatTensor(data.features)

@@ -3,7 +3,7 @@ from dgl.data import register_data_args
 import time
 from datasets.dataloader import emb_dataloader
 from utils.evaluate import baseline_evaluate
-import fire
+#import fire
 import logging
 from embedding.get_embedding import embedding
 from pyod.models.ocsvm import OCSVM
@@ -26,9 +26,18 @@ def main():
 	parser.add_argument("--emb-method", type=str, default='DeepWalk',
 			help="embedding methods: DeepWalk, Node2Vec, LINE, SDNE, Struc2Vec")  
 	parser.add_argument("--ad-method", type=str, default='OCSVM',
-			help="embedding methods: PCA,OCSVM,IF,AE")            
+			help="embedding methods: PCA,OCSVM,IF,AE")     
+	parser.add_argument("--normal-class", type=int, default=0,
+            help="normal class")       
 	args = parser.parse_args()
-	
+
+	if args.dataset in ('citeseer' + 'reddit'):
+		args.normal_class=3
+	if args.dataset in ('cora' + 'pubmed'):
+		args.normal_class=2
+	if args.dataset in 'TU_PROTEINS_full':
+		args.normal_class=0
+
 	if args.seed!=-1:
 		np.random.seed(args.seed)
 		torch.manual_seed(args.seed)
@@ -65,6 +74,8 @@ def main():
 		clf = PCA(contamination=0.1)
 	if args.ad_method=='AE':
 		clf = AutoEncoder(contamination=0.1)
+	
+
 
 	t1 = time.time()
 	clf.fit(data[datadict['train_mask']])
@@ -98,5 +109,5 @@ def main():
 if __name__ == '__main__':
 
     #print(args)
-	#main()
-    fire.Fire(main)
+	main()
+    #fire.Fire(main)
