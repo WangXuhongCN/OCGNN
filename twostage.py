@@ -3,7 +3,7 @@ from dgl.data import register_data_args
 import time
 from datasets.dataloader import emb_dataloader
 from utils.evaluate import baseline_evaluate
-#import fire
+import fire
 import logging
 from embedding.get_embedding import embedding
 from pyod.models.ocsvm import OCSVM
@@ -109,5 +109,5 @@ def main():
 if __name__ == '__main__':
 
     #print(args)
-	main()
-    #fire.Fire(main)
+	#main()
+    fire.Fire(main)
