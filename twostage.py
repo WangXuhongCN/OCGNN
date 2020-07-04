@@ -43,7 +43,7 @@ def main():
 		torch.manual_seed(args.seed)
 		torch.cuda.manual_seed_all(args.seed)
 
-	logging.basicConfig(filename="./log/baseline.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
+	logging.basicConfig(filename=f"./log/{args.dataset}-twostage-{args.seed}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
 	logger=logging.getLogger('baseline')
 
 

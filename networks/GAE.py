@@ -59,32 +59,3 @@ class GAE(nn.Module):
         z_=self.S_decoder(g,z) 
         adj=self.InnerProducter(z_)
         return z,recon,adj
-
-# class GCN(nn.Module):
-#     def __init__(self,
-#                  g,
-#                  in_feats,
-#                  n_hidden,
-#                  n_classes,
-#                  n_layers,
-#                  activation,
-#                  dropout):
-#         super(GCN, self).__init__()
-#         self.g = g
-#         self.layers = nn.ModuleList()
-#         # input layer
-#         self.layers.append(GraphConv(in_feats, n_hidden, bias=True, activation=activation))
-#         # hidden layers
-#         for i in range(n_layers - 1):
-#             self.layers.append(GraphConv(n_hidden, n_hidden,  bias=True, activation=activation))
-#         # output layer
-#         self.layers.append(GraphConv(n_hidden, n_classes,bias=True))
-#         self.dropout = nn.Dropout(p=dropout)
-#         print(self.layers)
-#     def forward(self,g, features):
-#         h = features
-#         for i, layer in enumerate(self.layers):
-#             if i != 0:
-#                 h = self.dropout(h)
-#             h = layer(g, h)
-#         return h

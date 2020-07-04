@@ -1,5 +1,5 @@
-# ECML-PKDD-2020-my-paper
-The anonymous Pytorch and [DGL](https://github.com/dmlc/dgl) implement of the paper. 
+# One-Class Graph Neural Networks for Anomaly Detection in Attributed Networks (OCGNN)
+The Pytorch and [DGL](https://github.com/dmlc/dgl) implement of the paper. 
 
 ## Details of our dataset
 The Cora dataset has 7 categories of machine learning papers: "Case Based", "Genetic Algorithms", "**Neural Networks (Class label = 2 in the DGL dataloader)**", "Probabilistic Methods", "Reinforcement Learning", "Rule Learning", "Theory"; 
@@ -26,7 +26,7 @@ python twostage.py --dataset [cora / citeseer / pubmed] --mode [A/X/AX] --emb-me
 
 ### Requirements:
 Pyod>=0.7.6
-tensorflow>=1.4.0,<=1.12.0
+tensorflow>=1.4.0,<=1.14.0
 gensim==3.6.0
 DGL>=0.4.2
 sklearn>=0.20.1
