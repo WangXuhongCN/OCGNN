@@ -1,424 +1,424 @@
-2020-07-01 06:42:43,177-baseline-INFO-
+2020-07-04 08:12:01,703-baseline-INFO-
 
-2020-07-01 06:42:43,177-baseline-INFO-
+2020-07-04 08:12:01,703-baseline-INFO-
 
-2020-07-01 06:42:43,177-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:Node2Vec
-2020-07-01 06:42:43,177-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:42:43,458-baseline-INFO-AUC:0.5724,AP:0.563
-2020-07-01 06:42:43,458-baseline-INFO-f1:0.2545,acc:0.5313,pre:0.6217,recall:0.16
-2020-07-01 06:42:43,459-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:42:43,890-baseline-INFO-AUC:0.5642,AP:0.5607
-2020-07-01 06:42:43,890-baseline-INFO-f1:0.2445,acc:0.5291,pre:0.6173,recall:0.1524
-2020-07-01 06:42:52,868-baseline-INFO-
+2020-07-04 08:12:01,703-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:Node2Vec
+2020-07-04 08:12:01,703-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:12:01,974-baseline-INFO-AUC:0.6004,AP:0.5882
+2020-07-04 08:12:01,974-baseline-INFO-f1:0.2746,acc:0.5415,pre:0.6571,recall:0.1736
+2020-07-04 08:12:01,974-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:12:02,394-baseline-INFO-AUC:0.6011,AP:0.5908
+2020-07-04 08:12:02,394-baseline-INFO-f1:0.2875,acc:0.5456,pre:0.6648,recall:0.1834
+2020-07-04 08:12:11,107-baseline-INFO-
 
-2020-07-01 06:42:52,868-baseline-INFO-
+2020-07-04 08:12:11,107-baseline-INFO-
 
-2020-07-01 06:42:52,868-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:Node2Vec
-2020-07-01 06:42:52,868-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:42:54,236-baseline-INFO-AUC:0.6144,AP:0.5885
-2020-07-01 06:42:54,236-baseline-INFO-f1:0.3078,acc:0.5449,pre:0.6425,recall:0.2024
-2020-07-01 06:42:54,236-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:42:56,512-baseline-INFO-AUC:0.5982,AP:0.5856
-2020-07-01 06:42:56,513-baseline-INFO-f1:0.294,acc:0.5425,pre:0.6432,recall:0.1905
-2020-07-01 06:43:01,494-baseline-INFO-
+2020-07-04 08:12:11,107-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:Node2Vec
+2020-07-04 08:12:11,107-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:12:12,476-baseline-INFO-AUC:0.6008,AP:0.5829
+2020-07-04 08:12:12,476-baseline-INFO-f1:0.2872,acc:0.544,pre:0.6576,recall:0.1837
+2020-07-04 08:12:12,476-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:12:14,755-baseline-INFO-AUC:0.6059,AP:0.5934
+2020-07-04 08:12:14,755-baseline-INFO-f1:0.2911,acc:0.5471,pre:0.6691,recall:0.186
+2020-07-04 08:12:19,720-baseline-INFO-
 
-2020-07-01 06:43:01,494-baseline-INFO-
+2020-07-04 08:12:19,720-baseline-INFO-
 
-2020-07-01 06:43:01,494-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:Node2Vec
-2020-07-01 06:43:01,494-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:43:01,541-baseline-INFO-AUC:0.5845,AP:0.5695
-2020-07-01 06:43:01,541-baseline-INFO-f1:0.2505,acc:0.5288,pre:0.6118,recall:0.1575
-2020-07-01 06:43:01,541-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:43:01,619-baseline-INFO-AUC:0.61,AP:0.5987
-2020-07-01 06:43:01,619-baseline-INFO-f1:0.2914,acc:0.5504,pre:0.6868,recall:0.185
-2020-07-01 06:43:06,554-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:12:19,720-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:Node2Vec
+2020-07-04 08:12:19,720-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:12:19,765-baseline-INFO-AUC:0.5928,AP:0.5769
+2020-07-04 08:12:19,765-baseline-INFO-f1:0.2731,acc:0.5402,pre:0.6518,recall:0.1727
+2020-07-04 08:12:19,765-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:12:19,837-baseline-INFO-AUC:0.5993,AP:0.5879
+2020-07-04 08:12:19,837-baseline-INFO-f1:0.2882,acc:0.5446,pre:0.6588,recall:0.1845
+2020-07-04 08:12:24,785-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:43:06,567-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:12:24,794-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:43:06,755-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:12:24,962-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:43:52,010-baseline-INFO-
+2020-07-04 08:13:10,189-baseline-INFO-
 
-2020-07-01 06:43:52,010-baseline-INFO-
+2020-07-04 08:13:10,189-baseline-INFO-
 
-2020-07-01 06:43:52,010-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:Node2Vec
-2020-07-01 06:43:52,010-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:43:52,127-baseline-INFO-AUC:0.6046,AP:0.592
-2020-07-01 06:43:52,127-baseline-INFO-f1:0.314,acc:0.5487,pre:0.6542,recall:0.2066
-2020-07-01 06:43:52,127-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:43:52,301-baseline-INFO-AUC:0.5916,AP:0.5735
-2020-07-01 06:43:52,301-baseline-INFO-f1:0.277,acc:0.5372,pre:0.6322,recall:0.1773
-2020-07-01 06:44:00,097-baseline-INFO-
+2020-07-04 08:13:10,189-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:Node2Vec
+2020-07-04 08:13:10,189-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:13:10,315-baseline-INFO-AUC:0.5924,AP:0.5766
+2020-07-04 08:13:10,315-baseline-INFO-f1:0.2731,acc:0.5402,pre:0.6518,recall:0.1727
+2020-07-04 08:13:10,315-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:13:10,524-baseline-INFO-AUC:0.599,AP:0.5877
+2020-07-04 08:13:10,524-baseline-INFO-f1:0.2889,acc:0.5448,pre:0.6594,recall:0.185
+2020-07-04 08:13:18,370-baseline-INFO-
 
-2020-07-01 06:44:00,097-baseline-INFO-
+2020-07-04 08:13:18,370-baseline-INFO-
 
-2020-07-01 06:44:00,097-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:Node2Vec
-2020-07-01 06:44:00,097-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:44:00,962-baseline-INFO-AUC:0.6829,AP:0.6709
-2020-07-01 06:44:00,962-baseline-INFO-f1:0.3764,acc:0.5792,pre:0.7264,recall:0.254
-2020-07-01 06:44:00,962-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:44:02,501-baseline-INFO-AUC:0.6754,AP:0.6579
-2020-07-01 06:44:02,501-baseline-INFO-f1:0.396,acc:0.5847,pre:0.7253,recall:0.2724
-2020-07-01 06:44:24,877-baseline-INFO-
+2020-07-04 08:13:18,370-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:Node2Vec
+2020-07-04 08:13:18,370-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:13:19,246-baseline-INFO-AUC:0.6606,AP:0.6478
+2020-07-04 08:13:19,246-baseline-INFO-f1:0.373,acc:0.5758,pre:0.7146,recall:0.2523
+2020-07-04 08:13:19,246-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:13:20,776-baseline-INFO-AUC:0.6776,AP:0.6656
+2020-07-04 08:13:20,776-baseline-INFO-f1:0.3664,acc:0.5801,pre:0.7457,recall:0.2429
+2020-07-04 08:13:43,320-baseline-INFO-
 
-2020-07-01 06:44:24,877-baseline-INFO-
+2020-07-04 08:13:43,320-baseline-INFO-
 
-2020-07-01 06:44:24,877-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:Node2Vec
-2020-07-01 06:44:24,877-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:44:31,478-baseline-INFO-AUC:0.6027,AP:0.5909
-2020-07-01 06:44:31,478-baseline-INFO-f1:0.2669,acc:0.5373,pre:0.6419,recall:0.1685
-2020-07-01 06:44:31,478-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:44:42,474-baseline-INFO-AUC:0.6016,AP:0.5765
-2020-07-01 06:44:42,475-baseline-INFO-f1:0.264,acc:0.5342,pre:0.6279,recall:0.1672
-2020-07-01 06:44:48,483-baseline-INFO-
+2020-07-04 08:13:43,320-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:Node2Vec
+2020-07-04 08:13:43,320-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:13:49,984-baseline-INFO-AUC:0.5998,AP:0.5822
+2020-07-04 08:13:49,984-baseline-INFO-f1:0.2829,acc:0.5428,pre:0.6554,recall:0.1804
+2020-07-04 08:13:49,985-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:14:01,085-baseline-INFO-AUC:0.6048,AP:0.5925
+2020-07-04 08:14:01,085-baseline-INFO-f1:0.2905,acc:0.5471,pre:0.6697,recall:0.1855
+2020-07-04 08:14:07,165-baseline-INFO-
 
-2020-07-01 06:44:48,483-baseline-INFO-
+2020-07-04 08:14:07,165-baseline-INFO-
 
-2020-07-01 06:44:48,483-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:Node2Vec
-2020-07-01 06:44:48,483-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:44:49,348-baseline-INFO-AUC:0.7174,AP:0.7036
-2020-07-01 06:44:49,348-baseline-INFO-f1:0.4666,acc:0.6118,pre:0.7454,recall:0.3395
-2020-07-01 06:44:49,348-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:44:50,789-baseline-INFO-AUC:0.724,AP:0.7086
-2020-07-01 06:44:50,789-baseline-INFO-f1:0.4684,acc:0.6109,pre:0.7385,recall:0.343
-2020-07-01 06:44:55,729-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:14:07,165-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:Node2Vec
+2020-07-04 08:14:07,165-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:14:08,119-baseline-INFO-AUC:0.7167,AP:0.7029
+2020-07-04 08:14:08,119-baseline-INFO-f1:0.4289,acc:0.6054,pre:0.7761,recall:0.2964
+2020-07-04 08:14:08,119-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:14:09,711-baseline-INFO-AUC:0.7311,AP:0.7192
+2020-07-04 08:14:09,711-baseline-INFO-f1:0.4664,acc:0.6228,pre:0.7963,recall:0.3298
+2020-07-04 08:14:14,697-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:44:55,738-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:14:14,706-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:44:55,903-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:14:14,874-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:46:30,836-baseline-INFO-
+2020-07-04 08:15:49,788-baseline-INFO-
 
-2020-07-01 06:46:30,836-baseline-INFO-
+2020-07-04 08:15:49,788-baseline-INFO-
 
-2020-07-01 06:46:30,836-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:Node2Vec
-2020-07-01 06:46:30,836-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:46:31,168-baseline-INFO-AUC:0.7254,AP:0.7132
-2020-07-01 06:46:31,168-baseline-INFO-f1:0.47,acc:0.6143,pre:0.7509,recall:0.3421
-2020-07-01 06:46:31,168-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:46:31,784-baseline-INFO-AUC:0.7275,AP:0.709
-2020-07-01 06:46:31,784-baseline-INFO-f1:0.4673,acc:0.6172,pre:0.7677,recall:0.3359
-2020-07-01 06:46:37,745-baseline-INFO-
+2020-07-04 08:15:49,788-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:Node2Vec
+2020-07-04 08:15:49,788-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:15:50,124-baseline-INFO-AUC:0.7165,AP:0.7028
+2020-07-04 08:15:50,124-baseline-INFO-f1:0.427,acc:0.6046,pre:0.7751,recall:0.2947
+2020-07-04 08:15:50,124-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:15:50,738-baseline-INFO-AUC:0.731,AP:0.7191
+2020-07-04 08:15:50,739-baseline-INFO-f1:0.4659,acc:0.6226,pre:0.7961,recall:0.3293
+2020-07-04 08:15:56,734-baseline-INFO-
 
-2020-07-01 06:46:37,746-baseline-INFO-
+2020-07-04 08:15:56,734-baseline-INFO-
 
-2020-07-01 06:46:37,746-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:LINE
-2020-07-01 06:46:37,746-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:46:38,026-baseline-INFO-AUC:0.51,AP:0.5198
-2020-07-01 06:46:38,026-baseline-INFO-f1:0.1989,acc:0.5089,pre:0.5393,recall:0.1219
-2020-07-01 06:46:38,026-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:46:38,455-baseline-INFO-AUC:0.508,AP:0.5179
-2020-07-01 06:46:38,455-baseline-INFO-f1:0.2006,acc:0.5141,pre:0.5647,recall:0.122
-2020-07-01 06:46:46,929-baseline-INFO-
+2020-07-04 08:15:56,734-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:LINE
+2020-07-04 08:15:56,734-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:15:57,007-baseline-INFO-AUC:0.5228,AP:0.5184
+2020-07-04 08:15:57,007-baseline-INFO-f1:0.2029,acc:0.511,pre:0.5485,recall:0.1245
+2020-07-04 08:15:57,007-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:15:57,425-baseline-INFO-AUC:0.5125,AP:0.5227
+2020-07-04 08:15:57,425-baseline-INFO-f1:0.2154,acc:0.5207,pre:0.5927,recall:0.1316
+2020-07-04 08:16:05,919-baseline-INFO-
 
-2020-07-01 06:46:46,929-baseline-INFO-
+2020-07-04 08:16:05,919-baseline-INFO-
 
-2020-07-01 06:46:46,929-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:LINE
-2020-07-01 06:46:46,929-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:46:48,309-baseline-INFO-AUC:0.4857,AP:0.4999
-2020-07-01 06:46:48,309-baseline-INFO-f1:0.1751,acc:0.5055,pre:0.5277,recall:0.105
-2020-07-01 06:46:48,309-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:46:50,602-baseline-INFO-AUC:0.5101,AP:0.5127
-2020-07-01 06:46:50,602-baseline-INFO-f1:0.2056,acc:0.5131,pre:0.5573,recall:0.126
-2020-07-01 06:46:55,548-baseline-INFO-
+2020-07-04 08:16:05,919-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:LINE
+2020-07-04 08:16:05,919-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:16:07,287-baseline-INFO-AUC:0.5188,AP:0.5156
+2020-07-04 08:16:07,287-baseline-INFO-f1:0.1855,acc:0.5093,pre:0.5455,recall:0.1118
+2020-07-04 08:16:07,287-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:16:09,564-baseline-INFO-AUC:0.5078,AP:0.5185
+2020-07-04 08:16:09,564-baseline-INFO-f1:0.1992,acc:0.5138,pre:0.564,recall:0.1209
+2020-07-04 08:16:14,522-baseline-INFO-
 
-2020-07-01 06:46:55,548-baseline-INFO-
+2020-07-04 08:16:14,523-baseline-INFO-
 
-2020-07-01 06:46:55,548-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:LINE
-2020-07-01 06:46:55,548-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:46:55,591-baseline-INFO-AUC:0.4938,AP:0.5107
-2020-07-01 06:46:55,591-baseline-INFO-f1:0.2089,acc:0.5157,pre:0.5698,recall:0.1279
-2020-07-01 06:46:55,591-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:46:55,658-baseline-INFO-AUC:0.5094,AP:0.5142
-2020-07-01 06:46:55,659-baseline-INFO-f1:0.2064,acc:0.5098,pre:0.5409,recall:0.1275
-2020-07-01 06:47:00,562-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:16:14,525-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:LINE
+2020-07-04 08:16:14,525-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:16:14,576-baseline-INFO-AUC:0.5118,AP:0.5126
+2020-07-04 08:16:14,577-baseline-INFO-f1:0.1895,acc:0.511,pre:0.5533,recall:0.1143
+2020-07-04 08:16:14,577-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:16:14,656-baseline-INFO-AUC:0.5012,AP:0.5161
+2020-07-04 08:16:14,656-baseline-INFO-f1:0.1983,acc:0.5154,pre:0.5728,recall:0.1199
+2020-07-04 08:16:19,586-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:47:00,571-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:16:19,595-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:47:00,736-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:16:19,761-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:47:45,501-baseline-INFO-
+2020-07-04 08:17:04,714-baseline-INFO-
 
-2020-07-01 06:47:45,501-baseline-INFO-
+2020-07-04 08:17:04,715-baseline-INFO-
 
-2020-07-01 06:47:45,501-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:LINE
-2020-07-01 06:47:45,501-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:47:45,624-baseline-INFO-AUC:0.5159,AP:0.5211
-2020-07-01 06:47:45,624-baseline-INFO-f1:0.1916,acc:0.5106,pre:0.5502,recall:0.116
-2020-07-01 06:47:45,624-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:47:45,818-baseline-INFO-AUC:0.5022,AP:0.5067
-2020-07-01 06:47:45,819-baseline-INFO-f1:0.1839,acc:0.5085,pre:0.5409,recall:0.1108
-2020-07-01 06:47:53,394-baseline-INFO-
+2020-07-04 08:17:04,715-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:LINE
+2020-07-04 08:17:04,715-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:17:04,838-baseline-INFO-AUC:0.5114,AP:0.5124
+2020-07-04 08:17:04,838-baseline-INFO-f1:0.1893,acc:0.5106,pre:0.551,recall:0.1143
+2020-07-04 08:17:04,838-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:17:05,052-baseline-INFO-AUC:0.5011,AP:0.516
+2020-07-04 08:17:05,052-baseline-INFO-f1:0.1981,acc:0.5146,pre:0.5687,recall:0.1199
+2020-07-04 08:17:12,429-baseline-INFO-
 
-2020-07-01 06:47:53,394-baseline-INFO-
+2020-07-04 08:17:12,429-baseline-INFO-
 
-2020-07-01 06:47:53,394-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:LINE
-2020-07-01 06:47:53,394-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:47:54,269-baseline-INFO-AUC:0.6038,AP:0.5824
-2020-07-01 06:47:54,270-baseline-INFO-f1:0.2635,acc:0.5267,pre:0.5935,recall:0.1693
-2020-07-01 06:47:54,270-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:47:55,811-baseline-INFO-AUC:0.6084,AP:0.5935
-2020-07-01 06:47:55,811-baseline-INFO-f1:0.2729,acc:0.5438,pre:0.6713,recall:0.1712
-2020-07-01 06:48:18,160-baseline-INFO-
+2020-07-04 08:17:12,429-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:LINE
+2020-07-04 08:17:12,429-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:17:13,297-baseline-INFO-AUC:0.6341,AP:0.6214
+2020-07-04 08:17:13,298-baseline-INFO-f1:0.3261,acc:0.5555,pre:0.6737,recall:0.2151
+2020-07-04 08:17:13,298-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:17:14,845-baseline-INFO-AUC:0.6287,AP:0.621
+2020-07-04 08:17:14,845-baseline-INFO-f1:0.316,acc:0.5535,pre:0.6744,recall:0.2063
+2020-07-04 08:17:36,762-baseline-INFO-
 
-2020-07-01 06:48:18,160-baseline-INFO-
+2020-07-04 08:17:36,762-baseline-INFO-
 
-2020-07-01 06:48:18,160-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:LINE
-2020-07-01 06:48:18,160-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:48:24,754-baseline-INFO-AUC:0.5073,AP:0.5112
-2020-07-01 06:48:24,754-baseline-INFO-f1:0.1905,acc:0.5072,pre:0.5331,recall:0.116
-2020-07-01 06:48:24,754-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:48:35,718-baseline-INFO-AUC:0.5162,AP:0.5204
-2020-07-01 06:48:35,718-baseline-INFO-f1:0.1994,acc:0.5085,pre:0.5367,recall:0.1225
-2020-07-01 06:48:41,706-baseline-INFO-
+2020-07-04 08:17:36,762-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:LINE
+2020-07-04 08:17:36,762-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:17:43,380-baseline-INFO-AUC:0.5182,AP:0.5151
+2020-07-04 08:17:43,380-baseline-INFO-f1:0.1855,acc:0.5093,pre:0.5455,recall:0.1118
+2020-07-04 08:17:43,380-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:17:54,412-baseline-INFO-AUC:0.5072,AP:0.5181
+2020-07-04 08:17:54,412-baseline-INFO-f1:0.1984,acc:0.5136,pre:0.5629,recall:0.1204
+2020-07-04 08:18:00,432-baseline-INFO-
 
-2020-07-01 06:48:41,706-baseline-INFO-
+2020-07-04 08:18:00,432-baseline-INFO-
 
-2020-07-01 06:48:41,706-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:LINE
-2020-07-01 06:48:41,706-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:48:42,571-baseline-INFO-AUC:0.6977,AP:0.6907
-2020-07-01 06:48:42,571-baseline-INFO-f1:0.47,acc:0.6152,pre:0.7547,recall:0.3412
-2020-07-01 06:48:42,571-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:48:44,008-baseline-INFO-AUC:0.7118,AP:0.7017
-2020-07-01 06:48:44,009-baseline-INFO-f1:0.4668,acc:0.6147,pre:0.7571,recall:0.3374
-2020-07-01 06:48:48,995-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:18:00,432-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:LINE
+2020-07-04 08:18:00,432-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:18:01,297-baseline-INFO-AUC:0.701,AP:0.6939
+2020-07-04 08:18:01,297-baseline-INFO-f1:0.4188,acc:0.6016,pre:0.774,recall:0.287
+2020-07-04 08:18:01,297-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:18:02,743-baseline-INFO-AUC:0.7129,AP:0.7101
+2020-07-04 08:18:02,744-baseline-INFO-f1:0.4527,acc:0.6162,pre:0.7881,recall:0.3176
+2020-07-04 08:18:07,721-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:48:49,004-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:18:07,730-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:48:49,171-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:18:07,898-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:50:24,071-baseline-INFO-
+2020-07-04 08:19:42,718-baseline-INFO-
 
-2020-07-01 06:50:24,072-baseline-INFO-
+2020-07-04 08:19:42,718-baseline-INFO-
 
-2020-07-01 06:50:24,072-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:LINE
-2020-07-01 06:50:24,072-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:50:24,418-baseline-INFO-AUC:0.7144,AP:0.7021
-2020-07-01 06:50:24,418-baseline-INFO-f1:0.4412,acc:0.6054,pre:0.7556,recall:0.3116
-2020-07-01 06:50:24,418-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:50:25,032-baseline-INFO-AUC:0.7124,AP:0.7049
-2020-07-01 06:50:25,032-baseline-INFO-f1:0.4639,acc:0.6137,pre:0.7572,recall:0.3343
-2020-07-01 06:50:30,937-baseline-INFO-
+2020-07-04 08:19:42,718-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:LINE
+2020-07-04 08:19:42,718-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:19:43,045-baseline-INFO-AUC:0.7009,AP:0.6938
+2020-07-04 08:19:43,045-baseline-INFO-f1:0.4178,acc:0.6012,pre:0.7735,recall:0.2862
+2020-07-04 08:19:43,045-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:19:43,639-baseline-INFO-AUC:0.7128,AP:0.71
+2020-07-04 08:19:43,640-baseline-INFO-f1:0.4527,acc:0.6162,pre:0.7881,recall:0.3176
+2020-07-04 08:19:49,338-baseline-INFO-
 
-2020-07-01 06:50:30,937-baseline-INFO-
+2020-07-04 08:19:49,338-baseline-INFO-
 
-2020-07-01 06:50:30,937-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:SDNE
-2020-07-01 06:50:30,937-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:50:31,208-baseline-INFO-AUC:0.4634,AP:0.4601
-2020-07-01 06:50:31,209-baseline-INFO-f1:0.0957,acc:0.4721,pre:0.3333,recall:0.0559
-2020-07-01 06:50:31,209-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:50:31,625-baseline-INFO-AUC:0.4661,AP:0.4677
-2020-07-01 06:50:31,625-baseline-INFO-f1:0.1149,acc:0.4834,pre:0.4,recall:0.0671
-2020-07-01 06:50:39,985-baseline-INFO-
+2020-07-04 08:19:49,338-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:SDNE
+2020-07-04 08:19:49,338-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:19:49,602-baseline-INFO-AUC:0.4673,AP:0.4714
+2020-07-04 08:19:49,602-baseline-INFO-f1:0.1112,acc:0.4856,pre:0.4086,recall:0.0644
+2020-07-04 08:19:49,602-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:19:50,010-baseline-INFO-AUC:0.4433,AP:0.4498
+2020-07-04 08:19:50,010-baseline-INFO-f1:0.1034,acc:0.4757,pre:0.3563,recall:0.0605
+2020-07-04 08:19:58,344-baseline-INFO-
 
-2020-07-01 06:50:39,985-baseline-INFO-
+2020-07-04 08:19:58,344-baseline-INFO-
 
-2020-07-01 06:50:39,985-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:SDNE
-2020-07-01 06:50:39,985-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:50:41,351-baseline-INFO-AUC:0.4503,AP:0.4626
-2020-07-01 06:50:41,352-baseline-INFO-f1:0.0999,acc:0.4809,pre:0.3757,recall:0.0576
-2020-07-01 06:50:41,352-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:50:43,628-baseline-INFO-AUC:0.4587,AP:0.4605
-2020-07-01 06:50:43,628-baseline-INFO-f1:0.0845,acc:0.4714,pre:0.3148,recall:0.0488
-2020-07-01 06:50:48,512-baseline-INFO-
+2020-07-04 08:19:58,344-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:SDNE
+2020-07-04 08:19:58,344-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:19:59,713-baseline-INFO-AUC:0.4714,AP:0.475
+2020-07-04 08:19:59,713-baseline-INFO-f1:0.1057,acc:0.4843,pre:0.3978,recall:0.061
+2020-07-04 08:19:59,713-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:20:01,990-baseline-INFO-AUC:0.444,AP:0.4508
+2020-07-04 08:20:01,990-baseline-INFO-f1:0.1007,acc:0.4737,pre:0.3452,recall:0.0589
+2020-07-04 08:20:06,894-baseline-INFO-
 
-2020-07-01 06:50:48,512-baseline-INFO-
+2020-07-04 08:20:06,894-baseline-INFO-
 
-2020-07-01 06:50:48,512-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:SDNE
-2020-07-01 06:50:48,512-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:50:48,554-baseline-INFO-AUC:0.4819,AP:0.4798
-2020-07-01 06:50:48,554-baseline-INFO-f1:0.112,acc:0.4831,pre:0.3969,recall:0.0652
-2020-07-01 06:50:48,554-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:50:48,622-baseline-INFO-AUC:0.4636,AP:0.4685
-2020-07-01 06:50:48,622-baseline-INFO-f1:0.115,acc:0.4879,pre:0.4226,recall:0.0666
-2020-07-01 06:50:53,504-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:20:06,895-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:SDNE
+2020-07-04 08:20:06,895-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:20:06,937-baseline-INFO-AUC:0.4694,AP:0.4778
+2020-07-04 08:20:06,937-baseline-INFO-f1:0.1127,acc:0.4865,pre:0.414,recall:0.0652
+2020-07-04 08:20:06,937-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:20:07,008-baseline-INFO-AUC:0.4454,AP:0.4529
+2020-07-04 08:20:07,008-baseline-INFO-f1:0.1079,acc:0.475,pre:0.3582,recall:0.0635
+2020-07-04 08:20:11,825-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:50:53,513-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:20:11,833-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:50:53,681-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:20:11,998-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:51:38,749-baseline-INFO-
+2020-07-04 08:20:57,053-baseline-INFO-
 
-2020-07-01 06:51:38,749-baseline-INFO-
+2020-07-04 08:20:57,053-baseline-INFO-
 
-2020-07-01 06:51:38,750-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:SDNE
-2020-07-01 06:51:38,750-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:51:38,871-baseline-INFO-AUC:0.4575,AP:0.4654
-2020-07-01 06:51:38,871-baseline-INFO-f1:0.1121,acc:0.4771,pre:0.3714,recall:0.066
-2020-07-01 06:51:38,871-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:51:39,072-baseline-INFO-AUC:0.4599,AP:0.465
-2020-07-01 06:51:39,072-baseline-INFO-f1:0.112,acc:0.4803,pre:0.3839,recall:0.0655
-2020-07-01 06:51:46,460-baseline-INFO-
+2020-07-04 08:20:57,053-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:SDNE
+2020-07-04 08:20:57,053-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:20:57,177-baseline-INFO-AUC:0.4693,AP:0.4778
+2020-07-04 08:20:57,178-baseline-INFO-f1:0.1127,acc:0.4865,pre:0.414,recall:0.0652
+2020-07-04 08:20:57,178-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:20:57,392-baseline-INFO-AUC:0.4452,AP:0.4528
+2020-07-04 08:20:57,392-baseline-INFO-f1:0.1079,acc:0.475,pre:0.3582,recall:0.0635
+2020-07-04 08:21:04,751-baseline-INFO-
 
-2020-07-01 06:51:46,460-baseline-INFO-
+2020-07-04 08:21:04,751-baseline-INFO-
 
-2020-07-01 06:51:46,460-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:SDNE
-2020-07-01 06:51:46,460-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:51:47,335-baseline-INFO-AUC:0.5194,AP:0.4994
-2020-07-01 06:51:47,336-baseline-INFO-f1:0.1386,acc:0.4894,pre:0.4429,recall:0.0821
-2020-07-01 06:51:47,336-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:51:48,851-baseline-INFO-AUC:0.5561,AP:0.5174
-2020-07-01 06:51:48,851-baseline-INFO-f1:0.1367,acc:0.4897,pre:0.4429,recall:0.0808
-2020-07-01 06:52:10,829-baseline-INFO-
+2020-07-04 08:21:04,752-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:SDNE
+2020-07-04 08:21:04,752-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:21:05,623-baseline-INFO-AUC:0.5757,AP:0.541
+2020-07-04 08:21:05,624-baseline-INFO-f1:0.1673,acc:0.5025,pre:0.513,recall:0.0999
+2020-07-04 08:21:05,624-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:21:07,167-baseline-INFO-AUC:0.5466,AP:0.5151
+2020-07-04 08:21:07,167-baseline-INFO-f1:0.1539,acc:0.4945,pre:0.4714,recall:0.092
+2020-07-04 08:21:29,077-baseline-INFO-
 
-2020-07-01 06:52:10,829-baseline-INFO-
+2020-07-04 08:21:29,077-baseline-INFO-
 
-2020-07-01 06:52:10,829-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:SDNE
-2020-07-01 06:52:10,829-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:52:17,468-baseline-INFO-AUC:0.4462,AP:0.4588
-2020-07-01 06:52:17,468-baseline-INFO-f1:0.1062,acc:0.4797,pre:0.3763,recall:0.0618
-2020-07-01 06:52:17,468-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:52:28,544-baseline-INFO-AUC:0.459,AP:0.4653
-2020-07-01 06:52:28,544-baseline-INFO-f1:0.0951,acc:0.4829,pre:0.3794,recall:0.0544
-2020-07-01 06:52:34,508-baseline-INFO-
+2020-07-04 08:21:29,077-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:SDNE
+2020-07-04 08:21:29,077-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:21:35,685-baseline-INFO-AUC:0.4715,AP:0.4753
+2020-07-04 08:21:35,685-baseline-INFO-f1:0.1057,acc:0.4843,pre:0.3978,recall:0.061
+2020-07-04 08:21:35,685-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:21:46,688-baseline-INFO-AUC:0.4412,AP:0.4501
+2020-07-04 08:21:46,688-baseline-INFO-f1:0.1032,acc:0.4745,pre:0.351,recall:0.0605
+2020-07-04 08:21:52,682-baseline-INFO-
 
-2020-07-01 06:52:34,508-baseline-INFO-
+2020-07-04 08:21:52,682-baseline-INFO-
 
-2020-07-01 06:52:34,508-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:SDNE
-2020-07-01 06:52:34,508-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:52:35,464-baseline-INFO-AUC:0.6485,AP:0.6378
-2020-07-01 06:52:35,465-baseline-INFO-f1:0.351,acc:0.5601,pre:0.669,recall:0.2379
-2020-07-01 06:52:35,465-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:52:37,055-baseline-INFO-AUC:0.6623,AP:0.6381
-2020-07-01 06:52:37,056-baseline-INFO-f1:0.3485,acc:0.5641,pre:0.6892,recall:0.2332
-2020-07-01 06:52:41,945-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:21:52,682-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:SDNE
+2020-07-04 08:21:52,682-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:21:53,637-baseline-INFO-AUC:0.662,AP:0.6376
+2020-07-04 08:21:53,637-baseline-INFO-f1:0.3303,acc:0.5605,pre:0.6938,recall:0.2168
+2020-07-04 08:21:53,637-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:21:55,225-baseline-INFO-AUC:0.6539,AP:0.6302
+2020-07-04 08:21:55,225-baseline-INFO-f1:0.3376,acc:0.5613,pre:0.6886,recall:0.2236
+2020-07-04 08:22:00,163-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:52:41,954-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:22:00,172-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:52:42,119-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:22:00,342-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:54:17,245-baseline-INFO-
+2020-07-04 08:23:35,011-baseline-INFO-
 
-2020-07-01 06:54:17,245-baseline-INFO-
+2020-07-04 08:23:35,012-baseline-INFO-
 
-2020-07-01 06:54:17,245-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:SDNE
-2020-07-01 06:54:17,245-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:54:17,584-baseline-INFO-AUC:0.6739,AP:0.6532
-2020-07-01 06:54:17,584-baseline-INFO-f1:0.3523,acc:0.5673,pre:0.7003,recall:0.2354
-2020-07-01 06:54:17,584-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:54:18,195-baseline-INFO-AUC:0.6557,AP:0.626
-2020-07-01 06:54:18,195-baseline-INFO-f1:0.3296,acc:0.5547,pre:0.6662,recall:0.219
-2020-07-01 06:54:24,722-baseline-INFO-
+2020-07-04 08:23:35,012-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:SDNE
+2020-07-04 08:23:35,012-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:23:35,346-baseline-INFO-AUC:0.6619,AP:0.6376
+2020-07-04 08:23:35,346-baseline-INFO-f1:0.3303,acc:0.5605,pre:0.6938,recall:0.2168
+2020-07-04 08:23:35,346-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:23:35,955-baseline-INFO-AUC:0.6538,AP:0.6302
+2020-07-04 08:23:35,955-baseline-INFO-f1:0.3376,acc:0.5613,pre:0.6886,recall:0.2236
+2020-07-04 08:23:41,936-baseline-INFO-
 
-2020-07-01 06:54:24,722-baseline-INFO-
+2020-07-04 08:23:41,936-baseline-INFO-
 
-2020-07-01 06:54:24,722-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:Struc2Vec
-2020-07-01 06:54:24,722-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:54:24,992-baseline-INFO-AUC:0.4803,AP:0.4759
-2020-07-01 06:54:24,992-baseline-INFO-f1:0.1188,acc:0.4848,pre:0.41,recall:0.0694
-2020-07-01 06:54:24,992-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:54:25,405-baseline-INFO-AUC:0.4863,AP:0.4828
-2020-07-01 06:54:25,405-baseline-INFO-f1:0.1314,acc:0.4895,pre:0.4393,recall:0.0772
-2020-07-01 06:54:33,848-baseline-INFO-
+2020-07-04 08:23:41,936-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:IF emb-method:Struc2Vec
+2020-07-04 08:23:41,936-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:23:42,210-baseline-INFO-AUC:0.4906,AP:0.4894
+2020-07-04 08:23:42,210-baseline-INFO-f1:0.1395,acc:0.4932,pre:0.4619,recall:0.0821
+2020-07-04 08:23:42,210-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:23:42,627-baseline-INFO-AUC:0.4851,AP:0.4834
+2020-07-04 08:23:42,627-baseline-INFO-f1:0.1466,acc:0.4971,pre:0.483,recall:0.0864
+2020-07-04 08:23:51,056-baseline-INFO-
 
-2020-07-01 06:54:33,848-baseline-INFO-
+2020-07-04 08:23:51,056-baseline-INFO-
 
-2020-07-01 06:54:33,848-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:Struc2Vec
-2020-07-01 06:54:33,849-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:54:35,216-baseline-INFO-AUC:0.4904,AP:0.4893
-2020-07-01 06:54:35,217-baseline-INFO-f1:0.1378,acc:0.4915,pre:0.4528,recall:0.0813
-2020-07-01 06:54:35,217-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:54:37,494-baseline-INFO-AUC:0.487,AP:0.4841
-2020-07-01 06:54:37,494-baseline-INFO-f1:0.1309,acc:0.4872,pre:0.4282,recall:0.0772
-2020-07-01 06:54:42,485-baseline-INFO-
+2020-07-04 08:23:51,056-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:OCSVM emb-method:Struc2Vec
+2020-07-04 08:23:51,056-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:23:52,429-baseline-INFO-AUC:0.4868,AP:0.4873
+2020-07-04 08:23:52,429-baseline-INFO-f1:0.1331,acc:0.4928,pre:0.4577,recall:0.0779
+2020-07-04 08:23:52,429-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:23:54,707-baseline-INFO-AUC:0.4815,AP:0.4822
+2020-07-04 08:23:54,707-baseline-INFO-f1:0.1416,acc:0.4917,pre:0.4545,recall:0.0838
+2020-07-04 08:23:59,702-baseline-INFO-
 
-2020-07-01 06:54:42,485-baseline-INFO-
+2020-07-04 08:23:59,702-baseline-INFO-
 
-2020-07-01 06:54:42,485-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:Struc2Vec
-2020-07-01 06:54:42,485-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:54:42,527-baseline-INFO-AUC:0.4739,AP:0.477
-2020-07-01 06:54:42,527-baseline-INFO-f1:0.1487,acc:0.486,pre:0.4327,recall:0.0898
-2020-07-01 06:54:42,527-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:54:42,604-baseline-INFO-AUC:0.4839,AP:0.4823
-2020-07-01 06:54:42,604-baseline-INFO-f1:0.1505,acc:0.4895,pre:0.4472,recall:0.0904
-2020-07-01 06:54:47,555-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:23:59,702-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:PCA emb-method:Struc2Vec
+2020-07-04 08:23:59,702-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:23:59,747-baseline-INFO-AUC:0.4874,AP:0.4876
+2020-07-04 08:23:59,747-baseline-INFO-f1:0.1278,acc:0.4915,pre:0.449,recall:0.0745
+2020-07-04 08:23:59,747-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:23:59,818-baseline-INFO-AUC:0.4839,AP:0.4831
+2020-07-04 08:23:59,819-baseline-INFO-f1:0.14,acc:0.4915,pre:0.4528,recall:0.0828
+2020-07-04 08:24:04,710-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:54:47,564-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:24:04,719-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:54:47,733-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:24:04,885-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:55:32,662-baseline-INFO-
+2020-07-04 08:24:49,793-baseline-INFO-
 
-2020-07-01 06:55:32,663-baseline-INFO-
+2020-07-04 08:24:49,793-baseline-INFO-
 
-2020-07-01 06:55:32,663-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:Struc2Vec
-2020-07-01 06:55:32,663-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:55:32,776-baseline-INFO-AUC:0.5045,AP:0.4979
-2020-07-01 06:55:32,776-baseline-INFO-f1:0.1386,acc:0.4949,pre:0.4706,recall:0.0813
-2020-07-01 06:55:32,776-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:55:32,981-baseline-INFO-AUC:0.4725,AP:0.4795
-2020-07-01 06:55:32,982-baseline-INFO-f1:0.1398,acc:0.4874,pre:0.4339,recall:0.0833
-2020-07-01 06:55:40,518-baseline-INFO-
+2020-07-04 08:24:49,793-baseline-INFO-Parameters dataset:pubmed datamode:A ad-method:AE emb-method:Struc2Vec
+2020-07-04 08:24:49,793-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:24:49,917-baseline-INFO-AUC:0.4873,AP:0.4876
+2020-07-04 08:24:49,917-baseline-INFO-f1:0.1277,acc:0.4911,pre:0.4467,recall:0.0745
+2020-07-04 08:24:49,917-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:24:50,132-baseline-INFO-AUC:0.4839,AP:0.4831
+2020-07-04 08:24:50,132-baseline-INFO-f1:0.14,acc:0.4915,pre:0.4528,recall:0.0828
+2020-07-04 08:24:57,588-baseline-INFO-
 
-2020-07-01 06:55:40,518-baseline-INFO-
+2020-07-04 08:24:57,588-baseline-INFO-
 
-2020-07-01 06:55:40,518-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:Struc2Vec
-2020-07-01 06:55:40,518-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:55:41,427-baseline-INFO-AUC:0.5885,AP:0.5614
-2020-07-01 06:55:41,428-baseline-INFO-f1:0.1944,acc:0.5157,pre:0.5774,recall:0.1169
-2020-07-01 06:55:41,428-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:55:42,997-baseline-INFO-AUC:0.5957,AP:0.5592
-2020-07-01 06:55:42,997-baseline-INFO-f1:0.2065,acc:0.5121,pre:0.5519,recall:0.127
-2020-07-01 06:56:04,981-baseline-INFO-
+2020-07-04 08:24:57,588-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:IF emb-method:Struc2Vec
+2020-07-04 08:24:57,588-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:24:58,466-baseline-INFO-AUC:0.5901,AP:0.5618
+2020-07-04 08:24:58,466-baseline-INFO-f1:0.21,acc:0.5127,pre:0.5543,recall:0.1296
+2020-07-04 08:24:58,466-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:24:59,987-baseline-INFO-AUC:0.5759,AP:0.5498
+2020-07-04 08:24:59,987-baseline-INFO-f1:0.2003,acc:0.5113,pre:0.5502,recall:0.1225
+2020-07-04 08:25:22,002-baseline-INFO-
 
-2020-07-01 06:56:04,981-baseline-INFO-
+2020-07-04 08:25:22,003-baseline-INFO-
 
-2020-07-01 06:56:04,982-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:Struc2Vec
-2020-07-01 06:56:04,982-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:56:11,585-baseline-INFO-AUC:0.4751,AP:0.4786
-2020-07-01 06:56:11,585-baseline-INFO-f1:0.1409,acc:0.489,pre:0.442,recall:0.0838
-2020-07-01 06:56:11,585-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:56:22,596-baseline-INFO-AUC:0.4957,AP:0.4865
-2020-07-01 06:56:22,596-baseline-INFO-f1:0.1276,acc:0.4862,pre:0.4217,recall:0.0752
-2020-07-01 06:56:28,578-baseline-INFO-
+2020-07-04 08:25:22,003-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:OCSVM emb-method:Struc2Vec
+2020-07-04 08:25:22,003-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:25:28,622-baseline-INFO-AUC:0.487,AP:0.4872
+2020-07-04 08:25:28,622-baseline-INFO-f1:0.1331,acc:0.4928,pre:0.4577,recall:0.0779
+2020-07-04 08:25:28,622-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:25:39,651-baseline-INFO-AUC:0.4809,AP:0.4819
+2020-07-04 08:25:39,651-baseline-INFO-f1:0.14,acc:0.4912,pre:0.4515,recall:0.0828
+2020-07-04 08:25:45,724-baseline-INFO-
 
-2020-07-01 06:56:28,578-baseline-INFO-
+2020-07-04 08:25:45,724-baseline-INFO-
 
-2020-07-01 06:56:28,578-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:Struc2Vec
-2020-07-01 06:56:28,578-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:56:29,443-baseline-INFO-AUC:0.6877,AP:0.6904
-2020-07-01 06:56:29,443-baseline-INFO-f1:0.4402,acc:0.6016,pre:0.74,recall:0.3133
-2020-07-01 06:56:29,446-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:56:30,876-baseline-INFO-AUC:0.6827,AP:0.6838
-2020-07-01 06:56:30,876-baseline-INFO-f1:0.4345,acc:0.5966,pre:0.7262,recall:0.31
-2020-07-01 06:56:35,874-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+2020-07-04 08:25:45,724-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:PCA emb-method:Struc2Vec
+2020-07-04 08:25:45,724-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:25:46,678-baseline-INFO-AUC:0.6727,AP:0.6722
+2020-07-04 08:25:46,678-baseline-INFO-f1:0.3902,acc:0.5885,pre:0.753,recall:0.2633
+2020-07-04 08:25:46,678-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:25:48,263-baseline-INFO-AUC:0.6818,AP:0.6856
+2020-07-04 08:25:48,263-baseline-INFO-f1:0.4255,acc:0.6015,pre:0.7615,recall:0.2952
+2020-07-04 08:25:53,278-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
-2020-07-01 06:56:35,883-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+2020-07-04 08:25:53,287-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
 Instructions for updating:
 Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-2020-07-01 06:56:36,050-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+2020-07-04 08:25:53,454-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-2020-07-01 06:58:10,935-baseline-INFO-
+2020-07-04 08:27:28,415-baseline-INFO-
 
-2020-07-01 06:58:10,935-baseline-INFO-
+2020-07-04 08:27:28,416-baseline-INFO-
 
-2020-07-01 06:58:10,935-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:Struc2Vec
-2020-07-01 06:58:10,935-baseline-INFO--------------Evaluating Validation Results--------------
-2020-07-01 06:58:11,268-baseline-INFO-AUC:0.6642,AP:0.6624
-2020-07-01 06:58:11,268-baseline-INFO-f1:0.419,acc:0.5914,pre:0.725,recall:0.2947
-2020-07-01 06:58:11,268-baseline-INFO--------------Evaluating Test Results--------------
-2020-07-01 06:58:11,884-baseline-INFO-AUC:0.6838,AP:0.6914
-2020-07-01 06:58:11,884-baseline-INFO-f1:0.4284,acc:0.6007,pre:0.7532,recall:0.2993
+2020-07-04 08:27:28,416-baseline-INFO-Parameters dataset:pubmed datamode:AX ad-method:AE emb-method:Struc2Vec
+2020-07-04 08:27:28,416-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 08:27:28,747-baseline-INFO-AUC:0.6726,AP:0.6721
+2020-07-04 08:27:28,747-baseline-INFO-f1:0.3902,acc:0.5885,pre:0.753,recall:0.2633
+2020-07-04 08:27:28,747-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 08:27:29,339-baseline-INFO-AUC:0.6817,AP:0.6855
+2020-07-04 08:27:29,339-baseline-INFO-f1:0.4255,acc:0.6015,pre:0.7615,recall:0.2952

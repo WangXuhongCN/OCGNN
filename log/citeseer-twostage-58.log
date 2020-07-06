@@ -1,0 +1,424 @@
+2020-07-04 11:03:58,308-baseline-INFO-
+
+2020-07-04 11:03:58,308-baseline-INFO-
+
+2020-07-04 11:03:58,308-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:IF emb-method:Node2Vec
+2020-07-04 11:03:58,308-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:03:58,381-baseline-INFO-AUC:0.5634,AP:0.5757
+2020-07-04 11:03:58,381-baseline-INFO-f1:0.3239,acc:0.5429,pre:0.6216,recall:0.219
+2020-07-04 11:03:58,381-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:03:58,466-baseline-INFO-AUC:0.5262,AP:0.5428
+2020-07-04 11:03:58,466-baseline-INFO-f1:0.2797,acc:0.5157,pre:0.541,recall:0.1886
+2020-07-04 11:04:01,452-baseline-INFO-
+
+2020-07-04 11:04:01,452-baseline-INFO-
+
+2020-07-04 11:04:01,452-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:OCSVM emb-method:Node2Vec
+2020-07-04 11:04:01,452-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:01,467-baseline-INFO-AUC:0.6242,AP:0.6391
+2020-07-04 11:04:01,467-baseline-INFO-f1:0.3784,acc:0.5619,pre:0.6512,recall:0.2667
+2020-07-04 11:04:01,467-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:01,488-baseline-INFO-AUC:0.5606,AP:0.5581
+2020-07-04 11:04:01,488-baseline-INFO-f1:0.3167,acc:0.5328,pre:0.5846,recall:0.2171
+2020-07-04 11:04:04,456-baseline-INFO-
+
+2020-07-04 11:04:04,457-baseline-INFO-
+
+2020-07-04 11:04:04,459-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:PCA emb-method:Node2Vec
+2020-07-04 11:04:04,459-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:04,466-baseline-INFO-AUC:0.6605,AP:0.6648
+2020-07-04 11:04:04,467-baseline-INFO-f1:0.4684,acc:0.6,pre:0.6981,recall:0.3524
+2020-07-04 11:04:04,467-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:04,478-baseline-INFO-AUC:0.5982,AP:0.5916
+2020-07-04 11:04:04,478-baseline-INFO-f1:0.3586,acc:0.5413,pre:0.5921,recall:0.2571
+2020-07-04 11:04:07,473-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:04:07,481-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:04:07,748-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:04:13,459-baseline-INFO-
+
+2020-07-04 11:04:13,460-baseline-INFO-
+
+2020-07-04 11:04:13,460-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:AE emb-method:Node2Vec
+2020-07-04 11:04:13,460-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:13,484-baseline-INFO-AUC:0.6615,AP:0.6685
+2020-07-04 11:04:13,484-baseline-INFO-f1:0.4615,acc:0.6,pre:0.7059,recall:0.3429
+2020-07-04 11:04:13,484-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:13,511-baseline-INFO-AUC:0.6013,AP:0.593
+2020-07-04 11:04:13,511-baseline-INFO-f1:0.352,acc:0.5385,pre:0.5867,recall:0.2514
+2020-07-04 11:04:17,824-baseline-INFO-
+
+2020-07-04 11:04:17,824-baseline-INFO-
+
+2020-07-04 11:04:17,824-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:IF emb-method:Node2Vec
+2020-07-04 11:04:17,824-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:18,290-baseline-INFO-AUC:0.564,AP:0.5742
+2020-07-04 11:04:18,290-baseline-INFO-f1:0.0885,acc:0.5095,pre:0.625,recall:0.0476
+2020-07-04 11:04:18,290-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:19,029-baseline-INFO-AUC:0.4893,AP:0.4951
+2020-07-04 11:04:19,029-baseline-INFO-f1:0.0847,acc:0.5071,pre:0.5714,recall:0.0457
+2020-07-04 11:04:22,812-baseline-INFO-
+
+2020-07-04 11:04:22,812-baseline-INFO-
+
+2020-07-04 11:04:22,812-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:OCSVM emb-method:Node2Vec
+2020-07-04 11:04:22,812-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:23,127-baseline-INFO-AUC:0.6232,AP:0.6382
+2020-07-04 11:04:23,127-baseline-INFO-f1:0.381,acc:0.5667,pre:0.6667,recall:0.2667
+2020-07-04 11:04:23,127-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:23,651-baseline-INFO-AUC:0.5594,AP:0.5566
+2020-07-04 11:04:23,651-baseline-INFO-f1:0.3025,acc:0.5271,pre:0.5714,recall:0.2057
+2020-07-04 11:04:27,179-baseline-INFO-
+
+2020-07-04 11:04:27,179-baseline-INFO-
+
+2020-07-04 11:04:27,179-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:PCA emb-method:Node2Vec
+2020-07-04 11:04:27,179-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:04:27,597-baseline-INFO-AUC:0.5724,AP:0.5517
+2020-07-04 11:04:27,597-baseline-INFO-f1:0.2571,acc:0.5048,pre:0.5143,recall:0.1714
+2020-07-04 11:04:27,597-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:04:28,273-baseline-INFO-AUC:0.5667,AP:0.5663
+2020-07-04 11:04:28,273-baseline-INFO-f1:0.3197,acc:0.5271,pre:0.5652,recall:0.2229
+2020-07-04 11:04:31,279-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:04:31,288-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:04:31,556-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:08:56,363-baseline-INFO-
+
+2020-07-04 11:08:56,363-baseline-INFO-
+
+2020-07-04 11:08:56,363-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:AE emb-method:Node2Vec
+2020-07-04 11:08:56,363-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:08:56,594-baseline-INFO-AUC:0.5727,AP:0.5524
+2020-07-04 11:08:56,594-baseline-INFO-f1:0.2571,acc:0.5048,pre:0.5143,recall:0.1714
+2020-07-04 11:08:56,594-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:08:56,958-baseline-INFO-AUC:0.567,AP:0.5664
+2020-07-04 11:08:56,958-baseline-INFO-f1:0.3197,acc:0.5271,pre:0.5652,recall:0.2229
+2020-07-04 11:09:00,516-baseline-INFO-
+
+2020-07-04 11:09:00,516-baseline-INFO-
+
+2020-07-04 11:09:00,516-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:IF emb-method:LINE
+2020-07-04 11:09:00,516-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:00,588-baseline-INFO-AUC:0.591,AP:0.6109
+2020-07-04 11:09:00,588-baseline-INFO-f1:0.2878,acc:0.5286,pre:0.5882,recall:0.1905
+2020-07-04 11:09:00,588-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:00,673-baseline-INFO-AUC:0.5867,AP:0.5747
+2020-07-04 11:09:00,673-baseline-INFO-f1:0.2969,acc:0.5413,pre:0.6296,recall:0.1943
+2020-07-04 11:09:03,699-baseline-INFO-
+
+2020-07-04 11:09:03,699-baseline-INFO-
+
+2020-07-04 11:09:03,699-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:OCSVM emb-method:LINE
+2020-07-04 11:09:03,699-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:03,713-baseline-INFO-AUC:0.5801,AP:0.6022
+2020-07-04 11:09:03,713-baseline-INFO-f1:0.2963,acc:0.5476,pre:0.6667,recall:0.1905
+2020-07-04 11:09:03,713-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:03,735-baseline-INFO-AUC:0.5835,AP:0.5783
+2020-07-04 11:09:03,735-baseline-INFO-f1:0.2655,acc:0.5271,pre:0.5882,recall:0.1714
+2020-07-04 11:09:06,711-baseline-INFO-
+
+2020-07-04 11:09:06,711-baseline-INFO-
+
+2020-07-04 11:09:06,711-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:PCA emb-method:LINE
+2020-07-04 11:09:06,711-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:06,717-baseline-INFO-AUC:0.5789,AP:0.6178
+2020-07-04 11:09:06,717-baseline-INFO-f1:0.2857,acc:0.5476,pre:0.6786,recall:0.181
+2020-07-04 11:09:06,717-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:06,726-baseline-INFO-AUC:0.5832,AP:0.578
+2020-07-04 11:09:06,726-baseline-INFO-f1:0.2432,acc:0.5214,pre:0.5745,recall:0.1543
+2020-07-04 11:09:09,666-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:09:09,674-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:09:09,939-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:09:15,632-baseline-INFO-
+
+2020-07-04 11:09:15,632-baseline-INFO-
+
+2020-07-04 11:09:15,632-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:AE emb-method:LINE
+2020-07-04 11:09:15,632-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:15,647-baseline-INFO-AUC:0.5795,AP:0.6168
+2020-07-04 11:09:15,647-baseline-INFO-f1:0.2727,acc:0.5429,pre:0.6667,recall:0.1714
+2020-07-04 11:09:15,647-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:15,671-baseline-INFO-AUC:0.5832,AP:0.5778
+2020-07-04 11:09:15,671-baseline-INFO-f1:0.2353,acc:0.5185,pre:0.5652,recall:0.1486
+2020-07-04 11:09:19,992-baseline-INFO-
+
+2020-07-04 11:09:19,993-baseline-INFO-
+
+2020-07-04 11:09:19,993-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:IF emb-method:LINE
+2020-07-04 11:09:19,993-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:20,454-baseline-INFO-AUC:0.5504,AP:0.572
+2020-07-04 11:09:20,454-baseline-INFO-f1:0.1197,acc:0.5095,pre:0.5833,recall:0.0667
+2020-07-04 11:09:20,454-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:21,190-baseline-INFO-AUC:0.509,AP:0.516
+2020-07-04 11:09:21,190-baseline-INFO-f1:0.1031,acc:0.5043,pre:0.5263,recall:0.0571
+2020-07-04 11:09:24,928-baseline-INFO-
+
+2020-07-04 11:09:24,928-baseline-INFO-
+
+2020-07-04 11:09:24,928-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:OCSVM emb-method:LINE
+2020-07-04 11:09:24,928-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:25,238-baseline-INFO-AUC:0.5797,AP:0.6013
+2020-07-04 11:09:25,238-baseline-INFO-f1:0.2963,acc:0.5476,pre:0.6667,recall:0.1905
+2020-07-04 11:09:25,238-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:25,753-baseline-INFO-AUC:0.583,AP:0.5774
+2020-07-04 11:09:25,753-baseline-INFO-f1:0.2578,acc:0.5242,pre:0.58,recall:0.1657
+2020-07-04 11:09:29,278-baseline-INFO-
+
+2020-07-04 11:09:29,279-baseline-INFO-
+
+2020-07-04 11:09:29,279-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:PCA emb-method:LINE
+2020-07-04 11:09:29,279-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:09:29,698-baseline-INFO-AUC:0.5721,AP:0.5522
+2020-07-04 11:09:29,698-baseline-INFO-f1:0.2676,acc:0.5048,pre:0.5135,recall:0.181
+2020-07-04 11:09:29,698-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:09:30,376-baseline-INFO-AUC:0.5689,AP:0.5671
+2020-07-04 11:09:30,376-baseline-INFO-f1:0.3387,acc:0.5328,pre:0.5753,recall:0.24
+2020-07-04 11:09:33,412-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:09:33,420-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:09:33,682-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:13:58,365-baseline-INFO-
+
+2020-07-04 11:13:58,365-baseline-INFO-
+
+2020-07-04 11:13:58,365-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:AE emb-method:LINE
+2020-07-04 11:13:58,365-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:13:58,596-baseline-INFO-AUC:0.5724,AP:0.5524
+2020-07-04 11:13:58,596-baseline-INFO-f1:0.2657,acc:0.5,pre:0.5,recall:0.181
+2020-07-04 11:13:58,596-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:13:58,957-baseline-INFO-AUC:0.5692,AP:0.5673
+2020-07-04 11:13:58,957-baseline-INFO-f1:0.3387,acc:0.5328,pre:0.5753,recall:0.24
+2020-07-04 11:14:02,515-baseline-INFO-
+
+2020-07-04 11:14:02,515-baseline-INFO-
+
+2020-07-04 11:14:02,515-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:IF emb-method:SDNE
+2020-07-04 11:14:02,515-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:02,587-baseline-INFO-AUC:0.6155,AP:0.6408
+2020-07-04 11:14:02,587-baseline-INFO-f1:0.2481,acc:0.5381,pre:0.6667,recall:0.1524
+2020-07-04 11:14:02,587-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:02,671-baseline-INFO-AUC:0.5836,AP:0.5991
+2020-07-04 11:14:02,671-baseline-INFO-f1:0.274,acc:0.547,pre:0.6818,recall:0.1714
+2020-07-04 11:14:05,638-baseline-INFO-
+
+2020-07-04 11:14:05,638-baseline-INFO-
+
+2020-07-04 11:14:05,638-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:OCSVM emb-method:SDNE
+2020-07-04 11:14:05,638-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:05,653-baseline-INFO-AUC:0.6245,AP:0.6507
+2020-07-04 11:14:05,653-baseline-INFO-f1:0.25,acc:0.5429,pre:0.6957,recall:0.1524
+2020-07-04 11:14:05,653-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:05,674-baseline-INFO-AUC:0.5815,AP:0.5977
+2020-07-04 11:14:05,674-baseline-INFO-f1:0.2624,acc:0.5356,pre:0.6304,recall:0.1657
+2020-07-04 11:14:08,623-baseline-INFO-
+
+2020-07-04 11:14:08,623-baseline-INFO-
+
+2020-07-04 11:14:08,624-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:PCA emb-method:SDNE
+2020-07-04 11:14:08,624-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:08,630-baseline-INFO-AUC:0.613,AP:0.6454
+2020-07-04 11:14:08,630-baseline-INFO-f1:0.303,acc:0.5619,pre:0.7407,recall:0.1905
+2020-07-04 11:14:08,630-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:08,639-baseline-INFO-AUC:0.5703,AP:0.5927
+2020-07-04 11:14:08,639-baseline-INFO-f1:0.2691,acc:0.5356,pre:0.625,recall:0.1714
+2020-07-04 11:14:11,611-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:14:11,620-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:14:11,886-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:14:17,616-baseline-INFO-
+
+2020-07-04 11:14:17,616-baseline-INFO-
+
+2020-07-04 11:14:17,616-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:AE emb-method:SDNE
+2020-07-04 11:14:17,616-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:17,633-baseline-INFO-AUC:0.6161,AP:0.6468
+2020-07-04 11:14:17,633-baseline-INFO-f1:0.303,acc:0.5619,pre:0.7407,recall:0.1905
+2020-07-04 11:14:17,633-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:17,662-baseline-INFO-AUC:0.5713,AP:0.5931
+2020-07-04 11:14:17,662-baseline-INFO-f1:0.2691,acc:0.5356,pre:0.625,recall:0.1714
+2020-07-04 11:14:22,030-baseline-INFO-
+
+2020-07-04 11:14:22,031-baseline-INFO-
+
+2020-07-04 11:14:22,031-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:IF emb-method:SDNE
+2020-07-04 11:14:22,031-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:22,504-baseline-INFO-AUC:0.5998,AP:0.6118
+2020-07-04 11:14:22,504-baseline-INFO-f1:0.1833,acc:0.5333,pre:0.7333,recall:0.1048
+2020-07-04 11:14:22,504-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:23,266-baseline-INFO-AUC:0.5261,AP:0.5535
+2020-07-04 11:14:23,267-baseline-INFO-f1:0.2095,acc:0.5271,pre:0.6286,recall:0.1257
+2020-07-04 11:14:27,004-baseline-INFO-
+
+2020-07-04 11:14:27,005-baseline-INFO-
+
+2020-07-04 11:14:27,005-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:OCSVM emb-method:SDNE
+2020-07-04 11:14:27,005-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:27,310-baseline-INFO-AUC:0.6256,AP:0.6505
+2020-07-04 11:14:27,310-baseline-INFO-f1:0.25,acc:0.5429,pre:0.6957,recall:0.1524
+2020-07-04 11:14:27,310-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:27,818-baseline-INFO-AUC:0.5918,AP:0.6019
+2020-07-04 11:14:27,819-baseline-INFO-f1:0.2624,acc:0.5356,pre:0.6304,recall:0.1657
+2020-07-04 11:14:31,334-baseline-INFO-
+
+2020-07-04 11:14:31,334-baseline-INFO-
+
+2020-07-04 11:14:31,334-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:PCA emb-method:SDNE
+2020-07-04 11:14:31,335-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:14:31,752-baseline-INFO-AUC:0.6122,AP:0.5895
+2020-07-04 11:14:31,752-baseline-INFO-f1:0.3056,acc:0.5238,pre:0.5641,recall:0.2095
+2020-07-04 11:14:31,752-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:14:32,435-baseline-INFO-AUC:0.5917,AP:0.5904
+2020-07-04 11:14:32,435-baseline-INFO-f1:0.3636,acc:0.5413,pre:0.5897,recall:0.2629
+2020-07-04 11:14:35,454-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:14:35,463-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:14:35,741-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:19:00,717-baseline-INFO-
+
+2020-07-04 11:19:00,717-baseline-INFO-
+
+2020-07-04 11:19:00,717-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:AE emb-method:SDNE
+2020-07-04 11:19:00,717-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:00,949-baseline-INFO-AUC:0.6123,AP:0.5896
+2020-07-04 11:19:00,949-baseline-INFO-f1:0.3056,acc:0.5238,pre:0.5641,recall:0.2095
+2020-07-04 11:19:00,952-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:01,314-baseline-INFO-AUC:0.5918,AP:0.5903
+2020-07-04 11:19:01,314-baseline-INFO-f1:0.3636,acc:0.5413,pre:0.5897,recall:0.2629
+2020-07-04 11:19:04,974-baseline-INFO-
+
+2020-07-04 11:19:04,974-baseline-INFO-
+
+2020-07-04 11:19:04,974-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:IF emb-method:Struc2Vec
+2020-07-04 11:19:04,975-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:05,045-baseline-INFO-AUC:0.6169,AP:0.6373
+2020-07-04 11:19:05,046-baseline-INFO-f1:0.3529,acc:0.581,pre:0.7742,recall:0.2286
+2020-07-04 11:19:05,046-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:05,128-baseline-INFO-AUC:0.5551,AP:0.5684
+2020-07-04 11:19:05,128-baseline-INFO-f1:0.2931,acc:0.5328,pre:0.5965,recall:0.1943
+2020-07-04 11:19:08,108-baseline-INFO-
+
+2020-07-04 11:19:08,108-baseline-INFO-
+
+2020-07-04 11:19:08,108-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:OCSVM emb-method:Struc2Vec
+2020-07-04 11:19:08,108-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:08,123-baseline-INFO-AUC:0.6183,AP:0.6405
+2020-07-04 11:19:08,123-baseline-INFO-f1:0.365,acc:0.5857,pre:0.7812,recall:0.2381
+2020-07-04 11:19:08,123-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:08,144-baseline-INFO-AUC:0.5683,AP:0.5669
+2020-07-04 11:19:08,144-baseline-INFO-f1:0.2771,acc:0.5242,pre:0.5714,recall:0.1829
+2020-07-04 11:19:11,116-baseline-INFO-
+
+2020-07-04 11:19:11,116-baseline-INFO-
+
+2020-07-04 11:19:11,117-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:PCA emb-method:Struc2Vec
+2020-07-04 11:19:11,117-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:11,123-baseline-INFO-AUC:0.6249,AP:0.648
+2020-07-04 11:19:11,123-baseline-INFO-f1:0.3597,acc:0.5762,pre:0.7353,recall:0.2381
+2020-07-04 11:19:11,123-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:11,132-baseline-INFO-AUC:0.5566,AP:0.5603
+2020-07-04 11:19:11,132-baseline-INFO-f1:0.2857,acc:0.5299,pre:0.5893,recall:0.1886
+2020-07-04 11:19:14,115-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:19:14,124-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:19:14,385-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:19:20,075-baseline-INFO-
+
+2020-07-04 11:19:20,076-baseline-INFO-
+
+2020-07-04 11:19:20,076-baseline-INFO-Parameters dataset:citeseer datamode:A ad-method:AE emb-method:Struc2Vec
+2020-07-04 11:19:20,076-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:20,098-baseline-INFO-AUC:0.6234,AP:0.6475
+2020-07-04 11:19:20,098-baseline-INFO-f1:0.3597,acc:0.5762,pre:0.7353,recall:0.2381
+2020-07-04 11:19:20,099-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:20,127-baseline-INFO-AUC:0.5573,AP:0.5604
+2020-07-04 11:19:20,127-baseline-INFO-f1:0.2857,acc:0.5299,pre:0.5893,recall:0.1886
+2020-07-04 11:19:24,448-baseline-INFO-
+
+2020-07-04 11:19:24,448-baseline-INFO-
+
+2020-07-04 11:19:24,448-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:IF emb-method:Struc2Vec
+2020-07-04 11:19:24,448-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:24,907-baseline-INFO-AUC:0.5731,AP:0.5992
+2020-07-04 11:19:24,907-baseline-INFO-f1:0.1667,acc:0.5238,pre:0.6667,recall:0.0952
+2020-07-04 11:19:24,907-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:25,641-baseline-INFO-AUC:0.4758,AP:0.5038
+2020-07-04 11:19:25,641-baseline-INFO-f1:0.1106,acc:0.4957,pre:0.4583,recall:0.0629
+2020-07-04 11:19:29,389-baseline-INFO-
+
+2020-07-04 11:19:29,389-baseline-INFO-
+
+2020-07-04 11:19:29,390-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:OCSVM emb-method:Struc2Vec
+2020-07-04 11:19:29,390-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:29,698-baseline-INFO-AUC:0.6191,AP:0.641
+2020-07-04 11:19:29,698-baseline-INFO-f1:0.365,acc:0.5857,pre:0.7812,recall:0.2381
+2020-07-04 11:19:29,698-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:30,210-baseline-INFO-AUC:0.5679,AP:0.5661
+2020-07-04 11:19:30,210-baseline-INFO-f1:0.2783,acc:0.5271,pre:0.5818,recall:0.1829
+2020-07-04 11:19:33,717-baseline-INFO-
+
+2020-07-04 11:19:33,717-baseline-INFO-
+
+2020-07-04 11:19:33,717-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:PCA emb-method:Struc2Vec
+2020-07-04 11:19:33,717-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:19:34,115-baseline-INFO-AUC:0.5904,AP:0.5722
+2020-07-04 11:19:34,115-baseline-INFO-f1:0.3172,acc:0.5286,pre:0.575,recall:0.219
+2020-07-04 11:19:34,115-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:19:34,752-baseline-INFO-AUC:0.5786,AP:0.5755
+2020-07-04 11:19:34,752-baseline-INFO-f1:0.3557,acc:0.5356,pre:0.5769,recall:0.2571
+2020-07-04 11:19:37,747-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-07-04 11:19:37,756-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-07-04 11:19:38,023-tensorflow-WARNING-From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-07-04 11:24:02,879-baseline-INFO-
+
+2020-07-04 11:24:02,879-baseline-INFO-
+
+2020-07-04 11:24:02,879-baseline-INFO-Parameters dataset:citeseer datamode:AX ad-method:AE emb-method:Struc2Vec
+2020-07-04 11:24:02,879-baseline-INFO--------------Evaluating Validation Results--------------
+2020-07-04 11:24:03,109-baseline-INFO-AUC:0.59,AP:0.572
+2020-07-04 11:24:03,109-baseline-INFO-f1:0.3151,acc:0.5238,pre:0.561,recall:0.219
+2020-07-04 11:24:03,109-baseline-INFO--------------Evaluating Test Results--------------
+2020-07-04 11:24:03,471-baseline-INFO-AUC:0.5791,AP:0.5759
+2020-07-04 11:24:03,471-baseline-INFO-f1:0.3557,acc:0.5356,pre:0.5769,recall:0.2571

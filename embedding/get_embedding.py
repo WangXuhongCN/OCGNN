@@ -25,7 +25,7 @@ def embedding(args,datadict):
             model = SDNE(datadict['g'],hidden_size=[256,128])
             model.train(batch_size=1024,epochs=100,verbose=2)
         if args.emb_method=='Struc2Vec':
-            model = Struc2Vec(datadict['g'], 10, 80, workers=4, verbose=40, )
+            model = Struc2Vec(datadict['g'], walk_length=10, num_walks=80, workers=4, verbose=40, )
             model.train(window_size = 5, iter = 3)
 
         
