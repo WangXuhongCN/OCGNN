@@ -25,7 +25,9 @@ def fixed_graph_evaluate(args,path,model, data_center,data,radius,mask):
         labels=labels.cpu().numpy()
         #dist=dist.cpu().numpy()
         scores=scores.cpu().numpy()
-        pred=thresholding(scores,0)
+
+        threshold=0
+        pred=thresholding(scores,threshold)
 
         auc=roc_auc_score(labels, scores)
         ap=average_precision_score(labels, scores)
