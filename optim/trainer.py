@@ -13,7 +13,10 @@ from optim.loss import loss_function,init_center,get_radius,EarlyStopping
 from utils import fixed_graph_evaluate
 
 def train(args,logger,data,model,path):
-
+    if args.gpu < 0:
+        device = torch.device('cpu')
+    else:
+        device = torch.device('cuda:%d' % args.gpu)
     checkpoints_path=path
 
     # logging.basicConfig(filename=f"./log/{args.dataset}+OC-{args.module}.log",filemode="a",format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",level=logging.INFO)
@@ -36,7 +39,7 @@ def train(args,logger,data,model,path):
     input_g=data['g']
 
     data_center= init_center(args,input_g,input_feat, model)
-    radius=torch.tensor(0, device=f'cuda:{args.gpu}')# radius R initialized with 0 by default.
+    radius=torch.tensor(0, device=device)# radius R initialized with 0 by default.
 
 
     #创立矩阵以存储结果曲线
@@ -68,7 +71,7 @@ def train(args,logger,data,model,path):
         if epoch>= 3:
             dur.append(time.time() - t0)
 
-        #radius.data=torch.tensor(get_radius(dist, args.nu), device=f'cuda:{args.gpu}')
+        radius.data=torch.tensor(get_radius(dist, args.nu), device=device)
 
 
         auc,ap,f1,acc,precision,recall,val_loss = fixed_graph_evaluate(args,checkpoints_path, model, data_center,data,radius,data['val_mask'])
@@ -78,6 +81,7 @@ def train(args,logger,data,model,path):
         print("Epoch {:05d} | Time(s) {:.4f} | Train Loss {:.4f} | Val Loss {:.4f} | Val AUROC {:.4f} | "
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item()*100000,
                                             val_loss.item()*100000, auc, data['n_edges'] / np.mean(dur) / 1000))
+        print(f'Val f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
         if args.early_stop:
             if stopper.step(auc,val_loss.item(), model,epoch,checkpoints_path):
                 break
@@ -93,7 +97,7 @@ def train(args,logger,data,model,path):
     arr_testauc[epoch]=auc
     #保存测试集AUC
     print("Test Time {:.4f} | Test AUROC {:.4f} | Test AUPRC {:.4f}".format(test_dur,auc,ap))
-    # print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
+    print(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     # logger.info("Current epoch: {:d} Test AUROC {:.4f} | Test AUPRC {:.4f}".format(epoch,auc,ap))
     # logger.info(f'Test f1:{round(f1,4)},acc:{round(acc,4)},pre:{round(precision,4)},recall:{round(recall,4)}')
     # logger.info('\n')

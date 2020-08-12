@@ -22,8 +22,12 @@ def anomaly_score(data_center,outputs,radius=0,mask= None):
 
 def init_center(args,input_g,input_feat, model, eps=0.001):
     """Initialize hypersphere center c as the mean from an initial forward pass on the data."""
+    if args.gpu < 0:
+        device = torch.device('cpu')
+    else:
+        device = torch.device('cuda:%d' % args.gpu)
     n_samples = 0
-    c = torch.zeros(args.n_hidden, device=f'cuda:{args.gpu}')
+    c = torch.zeros(args.n_hidden, device=device)
 
     model.eval()
     with torch.no_grad():
