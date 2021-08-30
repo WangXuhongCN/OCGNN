@@ -49,6 +49,7 @@ def loader(args):
 
     # graph preprocess and calculate normalization factor
     g = data.graph
+    
         
     # add self loop
     if args.self_loop:
@@ -58,6 +59,7 @@ def loader(args):
         g.add_edges_from(zip(g.nodes(), g.nodes()))
 
     g = DGLGraph(g)
+    g = g.to(torch.device('cuda:0'))
     n_edges = g.number_of_edges()
     if args.norm:
         
